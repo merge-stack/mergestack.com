@@ -9,7 +9,7 @@ import { Box } from '@mui/material';
 const LayoutHoc = (Component: React.ComponentType<object>) =>
   function Hoc({ ...props }) {
     return (
-      <Box component={'div'}>
+      <Box component='div'>
       {/* <Container sx={{padding:'0 !important'}} maxWidth="xl"> */}
         <Header />
         <Component {...props} />

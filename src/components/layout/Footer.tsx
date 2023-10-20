@@ -10,73 +10,54 @@ import {
   ListItemIcon,
   styled,
 } from '@mui/material';
-import LogoWhiteIcon from 'src/assets/svg/Logo-white';
+import LogoWhiteIcon from '../../../public/assets/svg/Logo-white';
 import {
-  FbFooterIcon,
-  InstagramFooterIcon,
-  TwitterFooterIcon,
-  LinkedInFooterIcon,
-  RatingStarsIcon,
-  ClutchIcon,
-  PhoneIcon,
-  LocationPinIcon,
-  EmailIcon,
-} from 'src/assets/svg/footer-icons';
+  NoPaddingListItem,
+  ContainerStyle,
+  GridItemStyle,
+  BoxTextStyle,
+  SocialIconsStyle,
+  LinkListStyle,
+  ListItemStyle,
+  ListItemIcons,
+} from '../../../public/assets/styles/footer-style';
+import { FbFooterIcon } from 'public/assets/svg/fb-icon';
+import { InstagramFooterIcon } from 'public/assets/svg/instagram-icon';
+import { LinkedInFooterIcon } from 'public/assets/svg/linkedin-icon';
+import { EmailIcon } from 'public/assets/svg/email-icon';
+import { TwitterFooterIcon } from 'public/assets/svg/twitter-icon';
+import { RatingStarsIcon } from 'public/assets/svg/rating-stars-icon';
+import { PhoneIcon } from 'public/assets/svg/phone-icon';
+import { LocationPinIcon } from 'public/assets/svg/location-pin-icon';
+import { ClutchIcon } from 'public/assets/svg/clutch-icon';
 
-
-const NoPaddingListItem = styled(ListItem)(({ theme }) => ({
-  paddingLeft: 0,
-  alignItems:'baseline'
-}));
-
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <div style={{ backgroundColor: '#106897', color: '#fff' }}>
-      <Container sx={{ paddingBlock: '2rem' }} maxWidth={'lg'}>
+    <Box component="div" style={ContainerStyle}>
+      <Container maxWidth="lg">
         <Grid container columnSpacing={11}>
-          <Grid
-            display={'flex'}
-            flexDirection={'column'}
-            gap={'0.75rem'}
-            item
-            xs={12}
-            sm={3}
-          >
-            <LogoWhiteIcon/>
-            <Box
-              sx={{
-                color: 'white',
-                fontSize: '1rem',
-                fontWeight: 400,
-                margin: 0,
-              }}
-              component={'p'}
-            >
+          <Grid item xs={12} sm={3} sx={GridItemStyle}>
+            <LogoWhiteIcon />
+            <Box sx={BoxTextStyle} component="p">
               Mergestack is a technology consulting organization that builds,
-              designs and delivers top services to enterprises along with
+              designs, and delivers top services to enterprises along with
               in-house 1300+ developers.
             </Box>
-            <Box sx={{ display: 'flex', gap: '1rem' }}>
+            <Box sx={SocialIconsStyle}>
               <FbFooterIcon />
               <InstagramFooterIcon />
               <TwitterFooterIcon />
               <LinkedInFooterIcon />
             </Box>
-
             <Box
-              display={'flex'}
-              flexWrap={'wrap'}
-              columnGap={'1rem'}
-              sx={{
-                textTransform: 'uppercase',
-                fontSize: '10px',
-                letterSpacing: '0.5px',
-                fontWeight: '600',
-              }}
+              display="flex"
+              flexWrap="wrap"
+              columnGap="1rem"
+              sx={LinkListStyle}
             >
               Reviewed on
               <RatingStarsIcon />
-              <Box display={'flex'} alignItems={'end'} gap={'0.5rem'}>
+              <Box display="flex" alignItems="end" gap="0.5rem">
                 <ClutchIcon />
                 31 reviews
               </Box>
@@ -86,32 +67,32 @@ const Footer: React.FC = () => {
             <Typography variant="h6">Services</Typography>
             <List disablePadding>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Web Development
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Mobile Development
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Product Design
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   UI/UX Design
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   DevOps
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Quality Assurance (QA)
                 </Link>
               </NoPaddingListItem>
@@ -121,32 +102,32 @@ const Footer: React.FC = () => {
             <Typography variant="h6">Quick Links</Typography>
             <List disablePadding>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   About
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Services
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Portfolio
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Careers
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Blog
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link href="#" sx={ListItemStyle}>
                   Contact Us
                 </Link>
               </NoPaddingListItem>
@@ -156,26 +137,38 @@ const Footer: React.FC = () => {
             <Typography variant="h6">Get In Touch</Typography>
             <List disablePadding>
               <NoPaddingListItem>
-                <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
+                <ListItemIcon sx={ListItemIcons}>
                   <PhoneIcon />
                 </ListItemIcon>
-                <Link target="_blank" href="tel:+(323) 750-1234" sx={{ color: '#fff' }}>
+                <Link
+                  target="_blank"
+                  href="tel:+(323) 750-1234"
+                  sx={ListItemStyle}
+                >
                   +(323) 750-1234
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
+                <ListItemIcon sx={ListItemIcons}>
                   <EmailIcon />
                 </ListItemIcon>
-                <Link target="_blank" href="mailto:info@mergestack.com" sx={{ color: '#fff' }}>
+                <Link
+                  target="_blank"
+                  href="mailto:info@mergestack.com"
+                  sx={ListItemStyle}
+                >
                   info@mergestack.com
                 </Link>
               </NoPaddingListItem>
               <NoPaddingListItem>
-                <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
+                <ListItemIcon sx={ListItemIcons}>
                   <LocationPinIcon />
                 </ListItemIcon>
-                <Link target="_blank" href="https://maps.app.goo.gl/M3W3BDjLCZmX29gn7" sx={{ color: '#fff' }}>
+                <Link
+                  target="_blank"
+                  href="https://maps.app.goo.gl/M3W3BDjLCZmX29gn7"
+                  sx={ListItemStyle}
+                >
                   80-C, opposite to bank square market, Block C Model Town,
                   Lahore, 54700
                 </Link>
@@ -184,7 +177,7 @@ const Footer: React.FC = () => {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </Box>
   );
 };
 
