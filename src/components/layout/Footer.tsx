@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
                 <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
                   <PhoneIcon />
                 </ListItemIcon>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link target="_blank" href="tel:+(323) 750-1234" sx={{ color: '#fff' }}>
                   +(323) 750-1234
                 </Link>
               </NoPaddingListItem>
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
                 <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
                   <EmailIcon />
                 </ListItemIcon>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link target="_blank" href="mailto:info@mergestack.com" sx={{ color: '#fff' }}>
                   info@mergestack.com
                 </Link>
               </NoPaddingListItem>
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
                 <ListItemIcon sx={{paddingRight:'0.625rem', minWidth:'auto'}}>
                   <LocationPinIcon />
                 </ListItemIcon>
-                <Link href="#" sx={{ color: '#fff' }}>
+                <Link target="_blank" href="https://maps.app.goo.gl/M3W3BDjLCZmX29gn7" sx={{ color: '#fff' }}>
                   80-C, opposite to bank square market, Block C Model Town,
                   Lahore, 54700
                 </Link>
