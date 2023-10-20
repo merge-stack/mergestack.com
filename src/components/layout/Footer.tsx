@@ -10,6 +10,7 @@ import {
   ListItemIcon,
   styled,
 } from '@mui/material';
+import LogoWhiteIcon from 'src/assets/svg/Logo-white';
 import {
   FbFooterIcon,
   InstagramFooterIcon,
@@ -21,7 +22,7 @@ import {
   LocationPinIcon,
   EmailIcon,
 } from 'src/assets/svg/footer-icons';
-import logoWhite from '../../assets/images/logoWhite.png';
+
 
 const NoPaddingListItem = styled(ListItem)(({ theme }) => ({
   paddingLeft: 0,
@@ -41,12 +42,7 @@ const Footer: React.FC = () => {
             xs={12}
             sm={3}
           >
-            <Box
-              sx={{ display: 'block' }}
-              component="img"
-              alt="Logo Light"
-              src={'../../assets/images/logoWhite.png'}
-            />
+            <LogoWhiteIcon/>
             <Box
               sx={{
                 color: 'white',
