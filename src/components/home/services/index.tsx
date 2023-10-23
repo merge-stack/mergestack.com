@@ -13,6 +13,9 @@ const useStyles = makeStyles({
   container: {
     paddingBlock: '2rem',
   },
+  gridContainer: {
+    marginBlock: '2rem',
+  },
   
 });
 
@@ -25,7 +28,7 @@ const Services = () => {
         <br />
         Variety of IT Services
       </Typography>
-      <Grid className={classes.container} container columnSpacing={2} rowSpacing={4}>
+      <Grid className={classes.gridContainer} container columnSpacing={2} rowSpacing={4}>
         <Grid item xs={12} sm={4}>
           <ServicesBox
             icon={<WebDevIcon />}
