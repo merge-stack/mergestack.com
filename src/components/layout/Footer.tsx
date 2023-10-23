@@ -6,11 +6,9 @@ import {
   Container,
   Box,
   List,
-  ListItem,
   ListItemIcon,
-  styled,
 } from '@mui/material';
-import LogoWhiteIcon from '../../../public/assets/svg/Logo-white';
+import LogoWhiteIcon from 'public/assets/svg/Logo-white';
 import {
   NoPaddingListItem,
   ContainerStyle,
@@ -20,7 +18,7 @@ import {
   LinkListStyle,
   ListItemStyle,
   ListItemIcons,
-} from '../../../public/assets/styles/footer-style';
+} from 'public/assets/styles/footer-style';
 import { FbFooterIcon } from 'public/assets/svg/fb-icon';
 import { InstagramFooterIcon } from 'public/assets/svg/instagram-icon';
 import { LinkedInFooterIcon } from 'public/assets/svg/linkedin-icon';
