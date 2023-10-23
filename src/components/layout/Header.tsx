@@ -11,7 +11,7 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from 'public/assets/svg/Logo';
+import Logo from 'src/components/svg/Logo';
 
 const theme = createTheme({
   components: {

@@ -5,16 +5,18 @@ import Container from '@mui/material/Container';
 import Header from 'src/components/layout/Header';
 import Footer from 'src/components/layout/Footer';
 import { Box } from '@mui/material';
+import HomePage from 'src/components/home';
 
 const LayoutHoc = (Component: React.ComponentType<object>) =>
   function Hoc({ ...props }) {
     return (
-      <Box component='div'>
-      {/* <Container sx={{padding:'0 !important'}} maxWidth="xl"> */}
+      <Box component="div">
         <Header />
-        <Component {...props} />
+        <Container maxWidth="lg">
+          <HomePage/>
+          <Component {...props} />
+        </Container>
         <Footer />
-      {/* </Container> */}
       </Box>
     );
   };
