@@ -6,9 +6,7 @@ import {
   Container,
   Box,
   List,
-  ListItem,
   ListItemIcon,
-  styled,
 } from '@mui/material';
 import LogoWhiteIcon from '../svg/Logo-white';
 import {
