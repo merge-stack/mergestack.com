@@ -3,20 +3,20 @@ import { Grid, Typography, Paper, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-  iconWrapper: {
+  iconsWrapper: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   textWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '0.75rem'
+    gap: '1.25rem',
   },
   heading: {
     fontSize: '20px',
     fontWeight: '700',
-    lineHeight: 1
+    lineHeight: 1,
   },
   tagline: {
     fontSize: '16px',
@@ -30,20 +30,25 @@ interface ServicesBoxProps {
   content: string;
 }
 
-const ServicesBox: React.FC<ServicesBoxProps> = ({ icon, heading, content }) => {
-    
+const ServicesBox: React.FC<ServicesBoxProps> = ({
+  icon,
+  heading,
+  content,
+}) => {
   const classes = useStyles();
   return (
     <Paper elevation={0}>
       <Grid container>
         <Grid item xs={12} sm={3}>
-          <Box className={classes.iconWrapper}>
-            {icon}
-          </Box>
+          <Box className={classes.iconsWrapper}>{icon}</Box>
         </Grid>
         <Grid item xs={12} sm={9} className={classes.textWrapper}>
-          <Typography className={classes.heading} variant="h6">{heading}</Typography>
-          <Typography className={classes.tagline} variant="body1">{content}</Typography>
+          <Typography className={classes.heading} variant="h6">
+            {heading}
+          </Typography>
+          <Typography className={classes.tagline} variant="body1">
+            {content}
+          </Typography>
         </Grid>
       </Grid>
     </Paper>

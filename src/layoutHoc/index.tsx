@@ -14,7 +14,6 @@ const LayoutHoc = (Component: React.ComponentType<object>) =>
         <Header />
         <Container maxWidth="lg">
           <HomePage/>
-          <Component {...props} />
         </Container>
         <Footer />
       </Box>
