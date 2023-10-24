@@ -10,7 +10,7 @@ const LogoWhiteIcon = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <rect width="185" height="36" fill="#F5F5F5" />
-      <g clip-path="url(#clip0_0_1)">
+      <g clipPath="url(#clip0_0_1)">
         <rect
           width="1920"
           height="4567"

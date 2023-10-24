@@ -1,8 +1,10 @@
 import React from 'react';
-import { Grid, Typography, Button, Paper, Box } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import ServicesBox from './services';
 import { WebDevIcon } from 'src/components/svg/webDevIcon';
+import servicesData from './services.json';
+
 const useStyles = makeStyles({
   heading: {
     fontSize: '60px',
@@ -16,7 +18,6 @@ const useStyles = makeStyles({
   gridContainer: {
     marginBlock: '2rem',
   },
-  
 });
 
 const Services = () => {
@@ -28,61 +29,21 @@ const Services = () => {
         <br />
         Variety of IT Services
       </Typography>
-      <Grid className={classes.gridContainer} container columnSpacing={2} rowSpacing={4}>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <ServicesBox
-            icon={<WebDevIcon />}
-            heading="Web Development"
-            content="We carry more than just good coding
-        skills. Our experience makes us stand
-        out from other web development."
-          />
-        </Grid>
+      <Grid
+        className={classes.gridContainer}
+        container
+        columnSpacing={2}
+        rowSpacing={6}
+      >
+        {servicesData.map((service) => (
+          <Grid item xs={12} sm={4} key={service.id}>
+            <ServicesBox
+              icon={<WebDevIcon />}
+              heading={service.heading}
+              content={service.content}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
