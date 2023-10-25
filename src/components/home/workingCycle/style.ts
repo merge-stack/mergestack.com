@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     gap: '1rem',
+    position: 'relative'
   },
   iconWrapper: {
     position: 'relative',
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    fontSize: '28px !important',
+    fontSize: '20px !important',
     textAlign: 'center',
     fontWeight: 600,
 
@@ -79,6 +80,19 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'large',
     },
   },
+  arrowUp : {
+    position: 'absolute',
+    top: '0',
+    left: '105%',
+    transform: 'translateX(-50%)',
+  },
+  
+  arrowDown : {
+    position: 'absolute',
+    bottom: '7rem',
+    left: '100%',
+    transform: 'translateX(-50%)',
+  }
 }));
 
 export default useStyles;
