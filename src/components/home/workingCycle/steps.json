@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "bulb-icon",
+        "title": "Project Discussion",
+        "text": "Extensible for web iterate process before meta services impact with olisticly enable client."
+    },
+    {
+        "id": 2,
+        "icon": "testing-icon",
+        "title": "Testing & Trying",
+        "text": "Extensible for web iterate process before meta services impact with olisticly enable client."
+    },
+    {
+        "id": 3,
+        "icon": "execute-icon",
+        "title": "Execute & install",
+        "text": "Extensible for web iterate process before meta services impact with olisticly enable client."
+    },
+    {
+        "id": 4,
+        "icon": "care-icon",
+        "title": "We Care About",
+        "text": "Extensible for web iterate process before meta services impact with olisticly enable client."
+    }
+]
