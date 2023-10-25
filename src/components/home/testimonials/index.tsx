@@ -83,18 +83,7 @@ const TestimonialSection: React.FC = () => {
     const classes = useStyles();
     const [activeSlide, setActiveSlide] = useState(0);
   
-    const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);
-  
-    // const handleNext = () => {
-    //   setActiveSlide((prevSlide) => (prevSlide + 1) % totalCircles);
-    // };
-  
-    // const handlePrev = () => {
-    //   setActiveSlide(
-    //     (prevSlide) => (prevSlide - 1 + totalCircles) % totalCircles,
-    //   );
-    // };
-  
+    const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);  
     const getVisibleTestimonials = () => {
       const start = activeSlide * itemsPerSlide;
       return testimonialsData.slice(start, start + itemsPerSlide);
@@ -121,7 +110,7 @@ const TestimonialSection: React.FC = () => {
                 <Typography fontWeight="900" variant="h6">
                   {testimonialsData.title}
                 </Typography>
-                <Typography variant="body1">{testimonialsData.text}</Typography>
+                <Typography variant="body1">&quot;{testimonialsData.text}&quot;</Typography>
               </Box>
               <Box display="flex" gap="1rem">
                 <Image

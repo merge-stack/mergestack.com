@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     backgroundImage: `url(${HomeBanner.src})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
     paddingBlock: '2rem !important',
     marginBlock: '1rem',
   },
