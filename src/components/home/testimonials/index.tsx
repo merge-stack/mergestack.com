@@ -7,7 +7,6 @@ import {
   Rating,
   Container,
 } from '@mui/material';
-import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
@@ -39,7 +38,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '2rem',
     display: 'flex',
     flexWrap: 'wrap',
+    backgroundColor: 'transparent',
     gap: '1.625rem',
+    border: '1px solid #e1e1e1',
+    borderRadius: '15px',
     '@media (max-width: 600px)': {
       width: '100%'
     },
@@ -96,7 +98,6 @@ const TestimonialSection: React.FC = () => {
     return testimonialsData.slice(start, start + itemsPerSlide);
   };
 
-  const totalCircle = Math.ceil(testimonialsData.length / itemsPerSlide);
 
   return (
     <Box className={classes.root}>
@@ -142,11 +143,11 @@ const TestimonialSection: React.FC = () => {
         </Box>
 
         <div className={classes.circlesContainer}>
-          <IconButton onClick={handlePrev}>
+          {/* <IconButton onClick={handlePrev}>
             <CircleIcon color="primary" className={classes.circleIcon} />
-          </IconButton>
+          </IconButton> */}
           <>
-            {Array.from({ length: totalCircle }, (_, index) => (
+            {Array.from({ length: totalCircles }, (_, index) => (
               <IconButton key={index} onClick={handleNext}>
                 <CircleIcon
                   fontSize="large"
