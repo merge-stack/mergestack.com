@@ -9,7 +9,7 @@ export const NoPaddingListItem = styled(ListItem)(({ theme }) => ({
 export const ContainerStyle = {
   backgroundColor: '#106897',
   color: '#fff',
-  paddingBlock: '2rem',
+  paddingBlock: '4rem',
 };
 
 export const GridItemStyle = {

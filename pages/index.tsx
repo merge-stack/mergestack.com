@@ -14,7 +14,6 @@ function Home() {
     <Container maxWidth="lg">
       <Box
         sx={{
-          my: 4,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

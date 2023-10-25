@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Twitter Footer Icon
+
 export const CurvedArrowUp: React.FC = () => (
   <svg
     width="148"

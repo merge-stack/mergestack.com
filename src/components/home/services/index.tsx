@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   container: {
-    paddingBlock: '2rem',
+    paddingBlock: '4rem',
   },
   gridContainer: {
     marginBlock: '2rem',

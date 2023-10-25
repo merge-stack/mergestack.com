@@ -11,13 +11,11 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from './testimonials.json';
-import { blue } from '@mui/material/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '2rem',
+    paddingBlock: '4rem',
     backgroundColor: '#f7f7f7',
-    marginBlock: '2rem',
     width: '98.5vw',
   },
   containers: {
@@ -39,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '2rem',
     display: 'flex',
     flexWrap: 'wrap',
+    alignContent: 'space-between',
     backgroundColor: 'transparent',
     gap: '1.625rem',
     border: '1px solid #e1e1e1',

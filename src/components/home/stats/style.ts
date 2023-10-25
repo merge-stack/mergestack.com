@@ -2,29 +2,24 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: '4rem',
-    paddingBottom: '6rem',
-    width: '98dvw',
+    width: '100%',
+    marginTop: '-4rem',
+    paddingBlock: '0.5rem',
     backgroundColor: '#f7f7f7',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: '3rem',
+    borderRadius: '15px'
   },
   stepContainer: {
-    paddingBlock: '2rem',
-    '& > :nth-child(even)': {
-      marginTop: '4rem',
-      '@media (max-width: 600px)': {
-        marginTop: '0',
-      },
-    },
+    paddingBlock: '1rem',
   },
   stepWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '1rem',
+    gap: '1rem'
   },
   iconWrapper: {
     position: 'relative',
@@ -63,6 +58,16 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'x-large',
     },
   },
+  textWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+  titleWrapper: {
+    display: 'flex',
+    alignItems: 'baseline',
+    gap: '0.25rem'
+  },
   title: {
     fontSize: '28px !important',
     textAlign: 'center',
@@ -72,6 +77,15 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'x-large',
     },
   },
+  subtitle: {
+    fontSize: '18px !important',
+    textAlign: 'center',
+    fontWeight: 600,
+
+    '@media (max-width: 600px)': {
+      fontSize: 'large',
+    },
+  },
   tagline: {
     textAlign: 'center',
 
@@ -79,6 +93,18 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'large',
     },
   },
+  lineWrapper: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    marginBottom: '0.875rem'
+  },
+  verticalLine: {
+    width: '2px',
+    height: '37px',
+    background: '#9e9e9e',
+  },
+  
 }));
 
 export default useStyles;

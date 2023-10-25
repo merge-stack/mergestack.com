@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Twitter Footer Icon
+
 export const WebDevIcon: React.FC = () => (
   <svg
     width="53"

@@ -4,6 +4,7 @@ import Services from './services';
 import ContactSection from './contact';
 import TestimonialSlider from './testimonials';
 import WorkingCycle from './workingCycle';
+import Stats from './stats';
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <HomepageBanner />
       <Services/>
       <WorkingCycle/>
+      <Stats/>
       <TestimonialSlider/>
       <ContactSection/>
     </>
