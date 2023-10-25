@@ -11,6 +11,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from './testimonials.json';
+import { blue } from '@mui/material/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textAlign: 'center',
     fontWeight: 600,
-    
+
     '@media (max-width: 600px)': {
-        fontSize: 'x-large'
-      },
+      fontSize: 'x-large',
+    },
   },
   testimonialWrapper: {
     width: '33%',
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #e1e1e1',
     borderRadius: '15px',
     '@media (max-width: 600px)': {
-      width: '100%'
+      width: '100%',
     },
   },
   testimonialContainer: {
@@ -65,8 +66,9 @@ const useStyles = makeStyles((theme) => ({
   },
   circleIcon: {
     fontSize: '1rem',
-    '& > hover': {
+    '& .active': {
       fill: 'blue',
+      color: 'blue',
     },
   },
   circlesContainer: {
@@ -78,26 +80,25 @@ const useStyles = makeStyles((theme) => ({
 const itemsPerSlide = 3;
 
 const TestimonialSection: React.FC = () => {
-  const classes = useStyles();
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);
-
-  const handleNext = () => {
-    setActiveSlide((prevSlide) => (prevSlide + 1) % totalCircles);
-  };
-
-  const handlePrev = () => {
-    setActiveSlide(
-      (prevSlide) => (prevSlide - 1 + totalCircles) % totalCircles,
-    );
-  };
-
-  const getVisibleTestimonials = () => {
-    const start = activeSlide * itemsPerSlide;
-    return testimonialsData.slice(start, start + itemsPerSlide);
-  };
-
+    const classes = useStyles();
+    const [activeSlide, setActiveSlide] = useState(0);
+  
+    const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);
+  
+    // const handleNext = () => {
+    //   setActiveSlide((prevSlide) => (prevSlide + 1) % totalCircles);
+    // };
+  
+    // const handlePrev = () => {
+    //   setActiveSlide(
+    //     (prevSlide) => (prevSlide - 1 + totalCircles) % totalCircles,
+    //   );
+    // };
+  
+    const getVisibleTestimonials = () => {
+      const start = activeSlide * itemsPerSlide;
+      return testimonialsData.slice(start, start + itemsPerSlide);
+    };
 
   return (
     <Box className={classes.root}>
@@ -143,16 +144,18 @@ const TestimonialSection: React.FC = () => {
         </Box>
 
         <div className={classes.circlesContainer}>
-          {/* <IconButton onClick={handlePrev}>
-            <CircleIcon color="primary" className={classes.circleIcon} />
-          </IconButton> */}
           <>
             {Array.from({ length: totalCircles }, (_, index) => (
-              <IconButton key={index} onClick={handleNext}>
+              <IconButton
+                key={index}
+                onClick={() => setActiveSlide(index)} // Set the active slide on circle click
+              >
                 <CircleIcon
                   fontSize="large"
-                  color="disabled"
-                  className={classes.circleIcon}
+                  color={index === activeSlide ? 'primary' : 'disabled'} // Set color based on the active slide
+                  className={`${classes.circleIcon} ${
+                    index === activeSlide ? 'active' : ''
+                  }`}
                 />
               </IconButton>
             ))}

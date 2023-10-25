@@ -30,5 +30,37 @@
         "author": "Marvin McKinney",
         "designation": "College Student",
         "img": "/assets/images/team3.png"
+    },
+    {
+        "id": 5,
+        "title": "Totally reliable IT service",
+        "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
+        "author": "Dianne Russell",
+        "designation": "Marketing Expert",
+        "img": "/assets/images/team4.png"
+    },
+    {
+        "id": 6,
+        "title": "Best company ever",
+        "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+        "author": "Marvin McKinney",
+        "designation": "College Student",
+        "img": "/assets/images/team3.png"
+    },
+    {
+        "id": 7,
+        "title": "Best company ever",
+        "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+        "author": "Marvin McKinney",
+        "designation": "College Student",
+        "img": "/assets/images/team3.png"
+    },
+    {
+        "id": 8,
+        "title": "Totally reliable IT service",
+        "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
+        "author": "Dianne Russell",
+        "designation": "Marketing Expert",
+        "img": "/assets/images/team4.png"
     }
 ]
