@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     borderRadius: '20px',
     backgroundColor: '#F7F7F9',
     paddingBlock: '2.5rem',
+    width: '100%'
   },
   titleWrapper: {
     display: 'flex',

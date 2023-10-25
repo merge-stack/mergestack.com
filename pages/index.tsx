@@ -7,6 +7,7 @@ import Link from 'src/Link';
 import ProTip from 'src/ProTip';
 import Copyright from 'src/Copyright';
 import LayoutHoc from 'src/layoutHoc';
+import HomePage from 'src/components/home';
 
 function Home() {
   return (
@@ -20,14 +21,7 @@ function Home() {
           alignItems: 'center',
         }}
       >
-        <Typography variant="h4" component="h1" gutterBottom>
-          Material UI - Next.js example in TypeScript
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
+        <HomePage/>
       </Box>
     </Container>
   );

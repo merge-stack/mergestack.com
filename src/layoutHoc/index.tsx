@@ -1,9 +1,10 @@
 import React from 'react';
+import Container from '@mui/material/Container';
 
 // Components imports
 import Header from 'src/components/layout/Header';
 import Footer from 'src/components/layout/Footer';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import HomePage from 'src/components/home';
 
 const LayoutHoc = (Component: React.ComponentType<object>) =>
@@ -11,9 +12,9 @@ const LayoutHoc = (Component: React.ComponentType<object>) =>
     return (
       <Box component="div">
         <Header />
-        <Container maxWidth="lg">
-          <HomePage/>
-        </Container>
+
+        <Component {...props} />
+
         <Footer />
       </Box>
     );
