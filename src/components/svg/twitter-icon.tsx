@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const TwitterFooterIcon: React.FC = () => (
   <svg
     width="32"

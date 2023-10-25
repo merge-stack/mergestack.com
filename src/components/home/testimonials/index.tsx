@@ -79,14 +79,14 @@ const useStyles = makeStyles((theme) => ({
 const itemsPerSlide = 3;
 
 const TestimonialSection: React.FC = () => {
-    const classes = useStyles();
-    const [activeSlide, setActiveSlide] = useState(0);
-  
-    const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);  
-    const getVisibleTestimonials = () => {
-      const start = activeSlide * itemsPerSlide;
-      return testimonialsData.slice(start, start + itemsPerSlide);
-    };
+  const classes = useStyles();
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);
+  const getVisibleTestimonials = () => {
+    const start = activeSlide * itemsPerSlide;
+    return testimonialsData.slice(start, start + itemsPerSlide);
+  };
 
   return (
     <Box className={classes.root}>
@@ -109,7 +109,9 @@ const TestimonialSection: React.FC = () => {
                 <Typography fontWeight="900" variant="h6">
                   {testimonialsData.title}
                 </Typography>
-                <Typography variant="body1">&quot;{testimonialsData.text}&quot;</Typography>
+                <Typography variant="body1">
+                  &quot;{testimonialsData.text}&quot;
+                </Typography>
               </Box>
               <Box display="flex" gap="1rem">
                 <Image

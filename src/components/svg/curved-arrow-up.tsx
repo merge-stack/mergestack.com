@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const CurvedArrowUp: React.FC = () => (
   <svg
     width="148"

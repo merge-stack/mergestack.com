@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const WebDevIcon: React.FC = () => (
   <svg
     width="53"

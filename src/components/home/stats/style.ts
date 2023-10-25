@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     gap: '3rem',
-    borderRadius: '15px'
+    borderRadius: '15px',
   },
   stepContainer: {
     paddingBlock: '1rem',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '1rem'
+    gap: '1rem',
   },
   iconWrapper: {
     position: 'relative',
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   titleWrapper: {
     display: 'flex',
     alignItems: 'baseline',
-    gap: '0.25rem'
+    gap: '0.25rem',
   },
   title: {
     fontSize: '28px !important',
@@ -97,14 +97,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'flex-end',
     justifyContent: 'center',
-    marginBottom: '0.875rem'
+    marginBottom: '0.875rem',
   },
   verticalLine: {
     width: '2px',
     height: '37px',
     background: '#9e9e9e',
   },
-  
 }));
 
 export default useStyles;

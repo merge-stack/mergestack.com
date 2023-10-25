@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     backgroundColor: '#F7F7F9',
     paddingBlock: '2.5rem',
     marginBlock: '4rem',
-    width: '100%'
+    width: '100%',
   },
   titleWrapper: {
     display: 'flex',
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     fontWeight: 600,
     width: '50%',
     textAlign: 'center',
-    lineHeight: 1
+    lineHeight: 1,
   },
   icons: {
     fill: '#4FB0E3',
@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     fontWeight: '600',
     borderRadius: '20px !important',
     backgroundColor: '#4FB0E3 !important',
-    marginTop: '1rem'
+    marginTop: '1rem',
   },
 
   '@media (max-width: 600px)': {
@@ -51,11 +51,10 @@ const useStyles = makeStyles({
       fontSize: '12px',
     },
     heading: {
-        width: '100%',
-        fontSize: 'xx-large',
+      width: '100%',
+      fontSize: 'xx-large',
     },
   },
-
 });
 
 const ContactSection = () => {
