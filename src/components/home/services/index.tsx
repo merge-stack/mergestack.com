@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import ServicesBox from './services';
+import ServicesBox from 'src/components/home/services/services';
 import { WebDevIcon } from 'src/components/svg/webDevIcon';
-import servicesData from './services.json';
+import servicesData from 'src/components/home/services/services.json';
 
 const useStyles = makeStyles({
   heading: {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Box, Paper, Typography, Container } from '@mui/material';
-import data from './stats.json';
+import data from 'src/components/home/stats/stats.json';
 import { ReviewIcon } from 'src/components/svg/review-icon';
 import { CompletedIcon } from 'src/components/svg/completed-icon';
 import { TrackIcon } from 'src/components/svg/track-icon';
 import { CustomerService } from 'src/components/svg/customer-service-icon';
-import useStyles from './style';
+import useStyles from 'src/components/home/stats/style';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
   'track-icon': <TrackIcon />,

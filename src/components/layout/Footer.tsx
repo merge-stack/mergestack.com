@@ -8,7 +8,7 @@ import {
   List,
   ListItemIcon,
 } from '@mui/material';
-import LogoWhiteIcon from '../svg/Logo-white';
+import LogoWhiteIcon from 'src/components/svg/Logo-white';
 import {
   NoPaddingListItem,
   ContainerStyle,
@@ -18,7 +18,7 @@ import {
   LinkListStyle,
   ListItemStyle,
   ListItemIcons,
-} from '../../../public/assets/styles/footer-style';
+} from 'public/assets/styles/footer-style';
 import { FbFooterIcon } from 'src/components/svg/fb-icon';
 import { InstagramFooterIcon } from 'src/components/svg/instagram-icon';
 import { LinkedInFooterIcon } from 'src/components/svg/linkedin-icon';

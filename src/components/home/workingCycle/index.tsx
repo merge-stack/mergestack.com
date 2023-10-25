@@ -1,13 +1,13 @@
 import React from 'react';
 import { Grid, Box, Paper, Typography, Container } from '@mui/material';
-import data from './steps.json';
+import data from 'src/components/home/workingCycle/steps.json';
 import { BulbIcon } from 'src/components/svg/bulb-icon';
 import { WorkerIcon } from 'src/components/svg/workers-icon';
 import { ExecuteIcon } from 'src/components/svg/execute-icon';
 import { BuildingIcon } from 'src/components/svg/building';
 import { CurvedArrowUp } from 'src/components/svg/curved-arrow-up';
 import { CurvedArrowDown } from 'src/components/svg/curved-arrow-down';
-import useStyles from './style';
+import useStyles from 'src/components/home/workingCycle/style';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
   'bulb-icon': <BulbIcon />,

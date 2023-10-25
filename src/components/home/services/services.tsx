@@ -36,6 +36,7 @@ const ServicesBox: React.FC<ServicesBoxProps> = ({
   content,
 }) => {
   const classes = useStyles();
+
   return (
     <Paper elevation={0}>
       <Grid container>

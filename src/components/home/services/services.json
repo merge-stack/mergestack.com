@@ -1,38 +1,38 @@
 [
-    {
-        "id": 1,
-        "icon": "webDevIcon",
-        "heading": "Web Development",
-        "content": "We carry more than just good coding skills. Our experience makes us stand out from other web development."
-    },
-    {
-        "id": 2,
-        "icon": "webDevIcon",
-        "heading": "Mobile Development",
-        "content": "Create complex enterprise software, ensure reliable software integration, modernise your legacy system."
-    },
-    {
-        "id": 3,
-        "icon": "webDevIcon",
-        "heading": "UI/UX Design",
-        "content": "Build the product you need on time with an experienced team that uses a clear and effective design process."
-    },
-    {
-        "id": 4,
-        "icon": "webDevIcon",
-        "heading": "QA & Testing",
-        "content": "Turn to our experts to perform comprehensive, multi-stage testing and auditing of your software."
-    },
-    {
-        "id": 5,
-        "icon": "webDevIcon",
-        "heading": "IT Counsultancy",
-        "content": "Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios."
-    },
-    {
-        "id": 6,
-        "icon": "webDevIcon",
-        "heading": "Dedicated Team",
-        "content": "Over the past decade, our customers succeed by leveraging Intellectsoft’s process of building, motivating."
-    }
+  {
+    "id": 1,
+    "icon": "webDevIcon",
+    "heading": "Web Development",
+    "content": "We carry more than just good coding skills. Our experience makes us stand out from other web development."
+  },
+  {
+    "id": 2,
+    "icon": "webDevIcon",
+    "heading": "Mobile Development",
+    "content": "Create complex enterprise software, ensure reliable software integration, modernise your legacy system."
+  },
+  {
+    "id": 3,
+    "icon": "webDevIcon",
+    "heading": "UI/UX Design",
+    "content": "Build the product you need on time with an experienced team that uses a clear and effective design process."
+  },
+  {
+    "id": 4,
+    "icon": "webDevIcon",
+    "heading": "QA & Testing",
+    "content": "Turn to our experts to perform comprehensive, multi-stage testing and auditing of your software."
+  },
+  {
+    "id": 5,
+    "icon": "webDevIcon",
+    "heading": "IT Counsultancy",
+    "content": "Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios."
+  },
+  {
+    "id": 6,
+    "icon": "webDevIcon",
+    "heading": "Dedicated Team",
+    "content": "Over the past decade, our customers succeed by leveraging Intellectsoft’s process of building, motivating."
+  }
 ]

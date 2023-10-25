@@ -10,7 +10,7 @@ import {
 import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
-import testimonialsData from './testimonials.json';
+import testimonialsData from 'src/components/home/testimonials/testimonials.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
