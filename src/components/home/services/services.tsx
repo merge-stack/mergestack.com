@@ -3,6 +3,14 @@ import { Grid, Typography, Paper, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
+  gridRoot: {
+    '@media (max-width: 600px)': {
+      gap: '1rem',
+      boxShadow: '0 0 2px #ccc',
+      borderRadius: '10px',
+      padding: '1rem'
+    },
+  },
   iconsWrapper: {
     display: 'flex',
     justifyContent: 'center',
@@ -17,10 +25,16 @@ const useStyles = makeStyles({
     fontSize: '20px',
     fontWeight: '700',
     lineHeight: 1,
+    '@media (max-width: 600px)': {
+      textAlign: 'center',
+    },
   },
   tagline: {
     fontSize: '16px',
     color: '#6D6D6D',
+    '@media (max-width: 600px)': {
+      textAlign: 'center',
+    },
   },
 });
 
@@ -39,7 +53,7 @@ const ServicesBox: React.FC<ServicesBoxProps> = ({
 
   return (
     <Paper elevation={0}>
-      <Grid container>
+      <Grid container className={classes.gridRoot}>
         <Grid item xs={12} sm={3}>
           <Box className={classes.iconsWrapper}>{icon}</Box>
         </Grid>

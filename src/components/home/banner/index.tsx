@@ -11,12 +11,19 @@ const useStyles = makeStyles({
     backgroundRepeat: 'no-repeat',
     paddingBlock: '2rem !important',
     marginBlock: '1rem',
+    '@media (max-width: 600px)': {
+      backgroundImage: 'none',
+    },
   },
   gridItems: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     gap: '3rem',
+    '@media (max-width: 600px)': {
+      alignItems: 'normal',
+      gap: '2rem'
+    },
   },
   textContainer: {
     display: 'flex',
@@ -27,11 +34,21 @@ const useStyles = makeStyles({
     fontSize: '60px',
     fontWeight: '700',
     lineHeight: 1,
+    '@media (max-width: 600px)': {
+      textAlign: 'left',
+      fontSize: '2.5rem',
+      textTransform: 'Capitalize',
+      lineHeight: 'normal',
+    },
   },
   tagline: {
     fontSize: '30px',
     fontWeight: '400',
     lineHeight: 'normal',
+    '@media (max-width: 600px)': {
+      textAlign: 'left',
+      fontSize: '1.5rem',
+    },
   },
   btnClass: {
     fontSize: '12px',

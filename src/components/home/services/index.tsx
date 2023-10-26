@@ -11,12 +11,21 @@ const useStyles = makeStyles({
     fontWeight: '600',
     lineHeight: 1,
     textAlign: 'center',
+    '@media (max-width: 600px)': {
+      textAlign: 'center',
+      fontSize: '2rem',
+      textTransform: 'Capitalize',
+      lineHeight: 'normal',
+    },
   },
   container: {
     paddingBlock: '4rem',
   },
   gridContainer: {
     marginBlock: '2rem',
+    '@media (max-width: 600px)': {
+
+    },
   },
 });
 

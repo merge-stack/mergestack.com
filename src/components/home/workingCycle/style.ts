@@ -85,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     left: '105%',
     transform: 'translateX(-50%)',
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
   },
   
   arrowDown : {
@@ -92,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
     bottom: '7rem',
     left: '100%',
     transform: 'translateX(-50%)',
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
   }
 }));
 

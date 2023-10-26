@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     gap: '3rem',
     borderRadius: '15px',
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
   },
   stepContainer: {
     paddingBlock: '1rem',
