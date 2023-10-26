@@ -1,10 +1,21 @@
 import styled from '@emotion/styled';
 import { ListItem } from '@mui/material';
 
-export const NoPaddingListItem = styled(ListItem)(({ theme }) => ({
-  paddingLeft: 0,
-  alignItems: 'baseline',
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  listItem: {
+    paddingLeft: 0,
+    alignItems: 'baseline',
+  },
+  columnList: {
+    '@media (max-width: 1000px)': {
+      display: 'none'
+    },
+  },
 }));
+
+export default useStyles;
 
 export const ContainerStyle = {
   backgroundColor: '#106897',

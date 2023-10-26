@@ -6,11 +6,11 @@ import {
   Container,
   Box,
   List,
+  ListItem,
   ListItemIcon,
 } from '@mui/material';
 import LogoWhiteIcon from 'src/components/svg/Logo-white';
 import {
-  NoPaddingListItem,
   ContainerStyle,
   GridItemStyle,
   BoxTextStyle,
@@ -28,13 +28,15 @@ import { RatingStarsIcon } from 'src/components/svg/rating-stars-icon';
 import { PhoneIcon } from 'src/components/svg/phone-icon';
 import { LocationPinIcon } from 'src/components/svg/location-pin-icon';
 import { ClutchIcon } from 'src/components/svg/clutch-icon';
+import useStyles from 'public/assets/styles/footer-style';
 
 const Footer = () => {
+  const classes = useStyles();
   return (
     <Box component="div" style={ContainerStyle}>
       <Container maxWidth="lg">
         <Grid container columnSpacing={11}>
-          <Grid item xs={12} sm={3} sx={GridItemStyle}>
+          <Grid item xs={6} md={3} sx={GridItemStyle}>
             <LogoWhiteIcon />
             <Box sx={BoxTextStyle} component="p">
               Mergestack is a technology consulting organization that builds,
@@ -62,82 +64,82 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={6} md={3} className={classes.columnList}>
             <Typography variant="h6">Services</Typography>
             <List disablePadding>
-              <NoPaddingListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Web Development
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Mobile Development
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Product Design
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   UI/UX Design
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   DevOps
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Quality Assurance (QA)
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
 
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={6} md={3} className={classes.columnList}>
             <Typography variant="h6">Quick Links</Typography>
             <List disablePadding>
-              <NoPaddingListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   About
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Services
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Portfolio
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Careers
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Blog
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <Link href="#" sx={ListItemStyle}>
                   Contact Us
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
-          
-          <Grid item xs={12} sm={3}>
+
+          <Grid item xs={6} md={3}>
             <Typography variant="h6">Get In Touch</Typography>
             <List disablePadding>
-              <NoPaddingListItem>
+              <ListItem className={classes.listItem}>
                 <ListItemIcon sx={ListItemIcons}>
                   <PhoneIcon />
                 </ListItemIcon>
@@ -148,8 +150,8 @@ const Footer = () => {
                 >
                   +(323) 750-1234
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <ListItemIcon sx={ListItemIcons}>
                   <EmailIcon />
                 </ListItemIcon>
@@ -160,8 +162,8 @@ const Footer = () => {
                 >
                   info@mergestack.com
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
+              </ListItem>
+              <ListItem className={classes.listItem}>
                 <ListItemIcon sx={ListItemIcons}>
                   <LocationPinIcon />
                 </ListItemIcon>
@@ -173,7 +175,7 @@ const Footer = () => {
                   80-C, opposite to bank square market, Block C Model Town,
                   Lahore, 54700
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
         </Grid>
