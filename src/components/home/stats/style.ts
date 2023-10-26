@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   },
   stepContainer: {
     paddingBlock: '1rem',
+    '@media (min-width: 1001px)': {
+      justifyContent: 'space-between'
+    },
   },
   stepWrapper: {
     display: 'flex',
@@ -101,11 +104,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-end',
     justifyContent: 'center',
     marginBottom: '0.875rem',
+    
   },
   verticalLine: {
     width: '2px',
     height: '37px',
     background: '#9e9e9e',
+    '@media (max-width: 1000px)': {
+      display: 'none',
+    },
   },
 }));
 

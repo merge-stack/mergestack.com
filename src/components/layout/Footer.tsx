@@ -61,6 +61,7 @@ const Footer = () => {
               </Box>
             </Box>
           </Grid>
+
           <Grid item xs={12} sm={3}>
             <Typography variant="h6">Services</Typography>
             <List disablePadding>
@@ -96,6 +97,7 @@ const Footer = () => {
               </NoPaddingListItem>
             </List>
           </Grid>
+
           <Grid item xs={12} sm={3}>
             <Typography variant="h6">Quick Links</Typography>
             <List disablePadding>
@@ -131,6 +133,7 @@ const Footer = () => {
               </NoPaddingListItem>
             </List>
           </Grid>
+          
           <Grid item xs={12} sm={3}>
             <Typography variant="h6">Get In Touch</Typography>
             <List disablePadding>

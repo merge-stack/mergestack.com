@@ -85,7 +85,11 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     left: '105%',
     transform: 'translateX(-50%)',
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1080px)': {
+      top: '-10%',
+      left: '107%'
+    },
+    '@media (max-width: 1000px)': {
       display: 'none',
     },
   },
@@ -95,7 +99,11 @@ const useStyles = makeStyles((theme) => ({
     bottom: '7rem',
     left: '100%',
     transform: 'translateX(-50%)',
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1080px)': {
+      top: '-10%',
+      left: '107%'
+    },
+    '@media (max-width: 1000px)': {
       display: 'none',
     },
   }

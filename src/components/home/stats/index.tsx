@@ -23,7 +23,7 @@ const Stats = () => {
           <Grid container spacing={0} className={classes.stepContainer}>
             {data.map((item, index) => (
               <Fragment key={index}>
-                <Grid item xs={12} sm={6} md={2}>
+                <Grid item xs={12} sm={12} md={2}>
                   <Box component="div" className={classes.stepWrapper}>
                     {iconComponents[item.icon]}
 
