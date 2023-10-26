@@ -18,11 +18,11 @@ const LogoWhiteIcon = () => {
           fill="white"
         />
         <path d="M-345 -35H1575V319H-345V-35Z" fill="#106897" />
-        <rect width="185" height="36" fill="url(#pattern0)" />
+        <rect width="185" height="36" fill="url(#pattern9090)" />
       </g>
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern9090"
           patternContentUnits="objectBoundingBox"
           width="1"
           height="1"

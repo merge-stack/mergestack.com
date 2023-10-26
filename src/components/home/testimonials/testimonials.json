@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Excellent Service",
+    "text": "Excellent IT service provider. The team contacted me quickly and dealt with my issue promptly & professionally. I can highly recommend this company.",
+    "author": "Karen Lynn",
+    "designation": "Founder @ Company",
+    "img": "/assets/images/team5.png"
+  },
+  {
+    "id": 2,
+    "title": "Totally reliable IT service",
+    "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
+    "author": "Dianne Russell",
+    "designation": "Marketing Expert",
+    "img": "/assets/images/team4.png"
+  },
+  {
+    "id": 3,
+    "title": "Best company ever",
+    "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+    "author": "Marvin McKinney",
+    "designation": "College Student",
+    "img": "/assets/images/team3.png"
+  },
+  {
+    "id": 4,
+    "title": "DEMO 1",
+    "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+    "author": "Marvin McKinney",
+    "designation": "College Student",
+    "img": "/assets/images/team3.png"
+  },
+  {
+    "id": 5,
+    "title": "TESTING 1",
+    "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
+    "author": "Dianne Russell",
+    "designation": "Marketing Expert",
+    "img": "/assets/images/team4.png"
+  },
+  {
+    "id": 6,
+    "title": "DEMO 998",
+    "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+    "author": "Marvin McKinney",
+    "designation": "College Student",
+    "img": "/assets/images/team3.png"
+  },
+  {
+    "id": 7,
+    "title": "DEMO 019",
+    "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
+    "author": "Marvin McKinney",
+    "designation": "College Student",
+    "img": "/assets/images/team3.png"
+  },
+  {
+    "id": 8,
+    "title": "HELLO 123",
+    "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
+    "author": "Dianne Russell",
+    "designation": "Marketing Expert",
+    "img": "/assets/images/team4.png"
+  }
+]
