@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Grid, Box, Paper, Typography, Container } from '@mui/material';
 import data from 'src/components/home/stats/stats.json';
 import { ReviewIcon } from 'src/components/svg/review-icon';
@@ -22,8 +22,8 @@ const Stats = () => {
         <Container maxWidth="lg">
           <Grid container spacing={0} className={classes.stepContainer}>
             {data.map((item, index) => (
-              <>
-                <Grid item xs={12} sm={6} md={2} key={item.id}>
+              <Fragment key={index}>
+                <Grid item xs={12} sm={6} md={2}>
                   <Box component="div" className={classes.stepWrapper}>
                     {iconComponents[item.icon]}
 
@@ -47,7 +47,7 @@ const Stats = () => {
                     <div className={classes.verticalLine}></div>
                   </Grid>
                 )}
-              </>
+              </Fragment>
             ))}
           </Grid>
         </Container>

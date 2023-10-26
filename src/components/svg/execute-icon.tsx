@@ -8,7 +8,7 @@ export const ExecuteIcon: React.FC = () => (
     viewBox="0 0 63 63"
     fill="none"
   >
-    <g clip-path="url(#clip0_46_74)">
+    <g clipPath="url(#clip0_46_74)">
       <mask
         id="mask0_46_74"
         // style="mask-type:luminance"
