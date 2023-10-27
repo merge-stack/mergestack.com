@@ -60,8 +60,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontWeight: 600,
 
-    '@media (max-width: 600px)': {
-      fontSize: 'x-large',
+    '@media (max-width: 1000px)': {
+      fontSize: 'xx-large',
     },
   },
   title: {

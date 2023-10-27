@@ -34,7 +34,7 @@ const useStyles = makeStyles({
     fontSize: '60px',
     fontWeight: '700',
     lineHeight: 1,
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1000px)': {
       textAlign: 'left',
       fontSize: '2.5rem',
       textTransform: 'Capitalize',
@@ -65,7 +65,7 @@ const HomepageBanner = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} className={classes.gridItems}>
           <Box className={classes.textContainer} component="div">
-            <Typography className={classes.heading}>
+            <Typography variant='h1' className={classes.heading}>
               We manage your IT, so you can manage your business.
             </Typography>
             <Typography className={classes.tagline}>

@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     fontWeight: '600',
     lineHeight: 1,
     textAlign: 'center',
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1000px)': {
       textAlign: 'center',
       fontSize: '2rem',
       textTransform: 'Capitalize',

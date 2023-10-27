@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
       fill: 'dodgerblue',
     },
 
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1000px)': {
       display: 'none',
     },
   },

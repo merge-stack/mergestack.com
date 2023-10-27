@@ -13,49 +13,56 @@ const useStyles = makeStyles((theme) => ({
       display: 'none'
     },
   },
+  columnHeading: {
+    fontWeight: 'bold'
+  },
+  ContainerStyle: {
+    backgroundColor: '#106897',
+    color: '#fff',
+    padding: '2rem 0 3rem',
+    position: 'relative'
+  },
+  GridItemStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.75rem',
+  },
+  BoxTextStyle: {
+    color: 'white',
+    fontSize: '1rem',
+    fontWeight: 400,
+    margin: 0,
+  },
+  SocialIconsStyle: {
+    display: 'flex',
+    gap: '1rem',
+  },
+  listRoot: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.875rem',
+    marginBlock: '1rem',
+    '& > li': {
+      padding: 0
+    }
+  },
+  LinkListStyle: {
+    textTransform: 'uppercase',
+    fontSize: '10px',
+    letterSpacing: '0.5px',
+    fontWeight: '600',
+  },
+  ListItemStyle: {
+    paddingLeft: 0,
+    alignItems: 'baseline',
+    textDecoration: 'none',
+    color: 'white',
+  },
+  ListItemIcons: {
+    paddingRight: '0.625rem',
+    minWidth: 'auto',
+  }
+
 }));
 
 export default useStyles;
-
-export const ContainerStyle = {
-  backgroundColor: '#106897',
-  color: '#fff',
-  paddingBlock: '4rem',
-};
-
-export const GridItemStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '0.75rem',
-};
-
-export const BoxTextStyle = {
-  color: 'white',
-  fontSize: '1rem',
-  fontWeight: 400,
-  margin: 0,
-};
-
-export const SocialIconsStyle = {
-  display: 'flex',
-  gap: '1rem',
-};
-
-export const LinkListStyle = {
-  textTransform: 'uppercase',
-  fontSize: '10px',
-  letterSpacing: '0.5px',
-  fontWeight: '600',
-};
-
-export const ListItemStyle = {
-  paddingLeft: 0,
-  alignItems: 'baseline',
-  textDecoration: 'none',
-  color: 'white',
-};
-
-export const ListItemIcons = {
-  paddingRight: '0.625rem',
-  minWidth: 'auto',
-};
