@@ -6,19 +6,10 @@ import {
   Container,
   Box,
   List,
+  ListItem,
   ListItemIcon,
 } from '@mui/material';
 import LogoWhiteIcon from 'src/components/svg/Logo-white';
-import {
-  NoPaddingListItem,
-  ContainerStyle,
-  GridItemStyle,
-  BoxTextStyle,
-  SocialIconsStyle,
-  LinkListStyle,
-  ListItemStyle,
-  ListItemIcons,
-} from 'public/assets/styles/footer-style';
 import { FbFooterIcon } from 'src/components/svg/fb-icon';
 import { InstagramFooterIcon } from 'src/components/svg/instagram-icon';
 import { LinkedInFooterIcon } from 'src/components/svg/linkedin-icon';
@@ -28,20 +19,24 @@ import { RatingStarsIcon } from 'src/components/svg/rating-stars-icon';
 import { PhoneIcon } from 'src/components/svg/phone-icon';
 import { LocationPinIcon } from 'src/components/svg/location-pin-icon';
 import { ClutchIcon } from 'src/components/svg/clutch-icon';
+import useStyles from 'public/assets/styles/footer-style';
+import Copyright from 'src/Copyright';
 
 const Footer = () => {
+  const classes = useStyles();
+  
   return (
-    <Box component="div" style={ContainerStyle}>
+    <Box component="div" className={classes.footerContainerStyle}>
       <Container maxWidth="lg">
         <Grid container columnSpacing={11}>
-          <Grid item xs={12} sm={3} sx={GridItemStyle}>
+          <Grid item xs={12} sm={6} md={3} className={classes.footerGridItem}>
             <LogoWhiteIcon />
-            <Box sx={BoxTextStyle} component="p">
+            <Box className={classes.footerAboutText} component="p">
               Mergestack is a technology consulting organization that builds,
               designs, and delivers top services to enterprises along with
               in-house 1300+ developers.
             </Box>
-            <Box sx={SocialIconsStyle}>
+            <Box className={classes.footerSocialIcons}>
               <FbFooterIcon />
               <InstagramFooterIcon />
               <TwitterFooterIcon />
@@ -51,7 +46,7 @@ const Footer = () => {
               display="flex"
               flexWrap="wrap"
               columnGap="1rem"
-              sx={LinkListStyle}
+              className={classes.footerReview}
             >
               Reviewed on
               <RatingStarsIcon />
@@ -61,120 +56,130 @@ const Footer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6">Services</Typography>
-            <List disablePadding>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+
+          <Grid item xs={12} sm={6} md={3} className={classes.footerMidColumns}>
+            <Typography className={classes.footerColumnHeading} variant="h6">
+              Services
+            </Typography>
+            <List disablePadding className={classes.footerList}>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Web Development
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Mobile Development
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Product Design
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   UI/UX Design
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   DevOps
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Quality Assurance (QA)
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6">Quick Links</Typography>
-            <List disablePadding>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+
+          <Grid item xs={6} md={3} className={classes.footerMidColumns}>
+            <Typography variant="h6" className={classes.footerColumnHeading}>
+              Quick Links
+            </Typography>
+            <List disablePadding className={classes.footerList}>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   About
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Services
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Portfolio
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Careers
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Blog
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <Link href="#" sx={ListItemStyle}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <Link href="#" className={classes.footerListLink}>
                   Contact Us
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6">Get In Touch</Typography>
-            <List disablePadding>
-              <NoPaddingListItem>
-                <ListItemIcon sx={ListItemIcons}>
+
+          <Grid item xs={6} md={3}>
+            <Typography variant="h6" className={classes.footerColumnHeading}>
+              Get In Touch
+            </Typography>
+            <List disablePadding className={classes.footerList}>
+              <ListItem className={classes.footerListItem}>
+                <ListItemIcon className={classes.footerListIcon}>
                   <PhoneIcon />
                 </ListItemIcon>
                 <Link
                   target="_blank"
                   href="tel:+(323) 750-1234"
-                  sx={ListItemStyle}
+                  className={classes.footerListLink}
                 >
                   +(323) 750-1234
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <ListItemIcon sx={ListItemIcons}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <ListItemIcon className={classes.footerListIcon}>
                   <EmailIcon />
                 </ListItemIcon>
                 <Link
                   target="_blank"
                   href="mailto:info@mergestack.com"
-                  sx={ListItemStyle}
+                  className={classes.footerListLink}
                 >
                   info@mergestack.com
                 </Link>
-              </NoPaddingListItem>
-              <NoPaddingListItem>
-                <ListItemIcon sx={ListItemIcons}>
+              </ListItem>
+              <ListItem className={classes.footerListItem}>
+                <ListItemIcon className={classes.footerListIcon}>
                   <LocationPinIcon />
                 </ListItemIcon>
                 <Link
                   target="_blank"
                   href="https://maps.app.goo.gl/M3W3BDjLCZmX29gn7"
-                  sx={ListItemStyle}
+                  className={classes.footerListLink}
                 >
                   80-C, opposite to bank square market, Block C Model Town,
                   Lahore, 54700
                 </Link>
-              </NoPaddingListItem>
+              </ListItem>
             </List>
           </Grid>
         </Grid>
       </Container>
+      <Copyright />
     </Box>
   );
 };

@@ -13,18 +13,18 @@ import { makeStyles } from '@mui/styles';
 import testimonialsData from 'src/components/home/testimonials/testimonials.json';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  testimonialRoot: {
     paddingBlock: '4rem',
     backgroundColor: '#f7f7f7',
     width: '98.5vw',
   },
-  containers: {
+  testimonialContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '1rem',
   },
-  title: {
+  testimonialTitle: {
     textAlign: 'center',
     fontWeight: 600,
 
@@ -46,22 +46,13 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
     },
   },
-  testimonialContainer: {
+  slideContainer: {
     display: 'flex',
     gap: '2rem',
     '@media (max-width: 600px)': {
       flexDirection: 'column',
       flexWrap: 'nowrap',
     },
-  },
-  authorImage: {
-    width: '100%',
-    borderRadius: '50%',
-  },
-  navigationButtons: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginTop: 16,
   },
   circleIcon: {
     fontSize: '1rem',
@@ -89,15 +80,15 @@ const TestimonialSection: React.FC = () => {
   };
 
   return (
-    <Box className={classes.root}>
-      <Container className={classes.containers} maxWidth="lg">
-        <Typography variant="h2" className={classes.title}>
+    <Box className={classes.testimonialRoot}>
+      <Container className={classes.testimonialContainer} maxWidth="lg">
+        <Typography variant="h2" className={classes.testimonialTitle}>
           See what people
           <br />
           are saying about us
         </Typography>
 
-        <Box className={classes.testimonialContainer}>
+        <Box className={classes.slideContainer}>
           {getVisibleTestimonials().map((testimonialsData) => (
             <Paper
               className={classes.testimonialWrapper}
@@ -138,11 +129,11 @@ const TestimonialSection: React.FC = () => {
             {Array.from({ length: totalCircles }, (_, index) => (
               <IconButton
                 key={index}
-                onClick={() => setActiveSlide(index)} // Set the active slide on circle click
+                onClick={() => setActiveSlide(index)} 
               >
                 <CircleIcon
                   fontSize="large"
-                  color={index === activeSlide ? 'primary' : 'disabled'} // Set color based on the active slide
+                  color={index === activeSlide ? 'primary' : 'disabled'} 
                   className={`${classes.circleIcon} ${
                     index === activeSlide ? 'active' : ''
                   }`}

@@ -4,36 +4,53 @@ import { makeStyles } from '@mui/styles';
 import HomeBanner from 'public/assets/images/homeBanner.png';
 
 const useStyles = makeStyles({
-  backgroundContainer: {
+  bannerContainer: {
     backgroundImage: `url(${HomeBanner.src})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     paddingBlock: '2rem !important',
     marginBlock: '1rem',
+    '@media (max-width: 600px)': {
+      backgroundImage: 'none',
+    },
   },
-  gridItems: {
+  bannerGrid: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     gap: '3rem',
+    '@media (max-width: 600px)': {
+      alignItems: 'normal',
+      gap: '2rem'
+    },
   },
-  textContainer: {
+  bannerTextContainer: {
     display: 'flex',
     flexDirection: 'column',
     gap: '1.25rem',
   },
-  heading: {
+  bannerHeading: {
     fontSize: '60px',
     fontWeight: '700',
     lineHeight: 1,
+    '@media (max-width: 1000px)': {
+      textAlign: 'left',
+      fontSize: '2.5rem',
+      textTransform: 'Capitalize',
+      lineHeight: 'normal',
+    },
   },
-  tagline: {
+  bannerTagline: {
     fontSize: '30px',
     fontWeight: '400',
     lineHeight: 'normal',
+    '@media (max-width: 600px)': {
+      textAlign: 'left',
+      fontSize: '1.5rem',
+    },
   },
-  btnClass: {
+  bannerBtn: {
     fontSize: '12px',
     fontWeight: '600',
     borderRadius: '44px !important',
@@ -43,20 +60,21 @@ const useStyles = makeStyles({
 
 const HomepageBanner = () => {
   const classes = useStyles();
+  
   return (
-    <Paper elevation={0} className={classes.backgroundContainer}>
+    <Paper elevation={0} className={classes.bannerContainer}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} className={classes.gridItems}>
-          <Box className={classes.textContainer} component="div">
-            <Typography className={classes.heading}>
+        <Grid item xs={12} sm={6} className={classes.bannerGrid}>
+          <Box className={classes.bannerTextContainer} component="div">
+            <Typography variant='h1' className={classes.bannerHeading}>
               We manage your IT, so you can manage your business.
             </Typography>
-            <Typography className={classes.tagline}>
+            <Typography className={classes.bannerTagline}>
               Take charge of your business continuity with innovative IT
               solutions
             </Typography>
           </Box>
-          <Button variant="contained" className={classes.btnClass}>
+          <Button variant="contained" className={classes.bannerBtn}>
             Schedule a Free Consultation
           </Button>
         </Grid>
