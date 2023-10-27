@@ -5,21 +5,20 @@ import {
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
-  TimelineDot,
   TimelineOppositeContent,
 } from '@mui/lab';
-import { Container, Box, Paper, Typography } from '@mui/material';
+import { Container, Typography, Box, Paper } from '@mui/material';
 import timelineData from 'src/components/about/timeline/timeline.json';
 import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
 import TripOriginTwoToneIcon from '@mui/icons-material/TripOriginTwoTone';
 import { useStyles } from 'src/components/about/timeline/style';
-
+import TextBadge from 'src/components/layout/TextBadge';
 
 export default function AboutTimeline() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" className={classes.root}>
       <Container maxWidth="md" className={classes.headingWrapper}>
         <Typography className={classes.heading} variant="h2">
           Dedicated to delivering excellence
@@ -29,9 +28,12 @@ export default function AboutTimeline() {
         </Typography>
       </Container>
 
-      <Timeline position="alternate-reverse" className={classes.timelineContainer}>
+      <Timeline
+        position="alternate-reverse"
+        className={classes.timelineContainer}
+      >
         <TimelineItem className={classes.timelineItem}>
-            <TimelineOppositeContent></TimelineOppositeContent>
+          <TimelineOppositeContent></TimelineOppositeContent>
           <TimelineSeparator>
             <TripOriginTwoToneIcon className={classes.largeRadioIcon} />
             <TimelineConnector />
@@ -41,11 +43,18 @@ export default function AboutTimeline() {
         {timelineData.map((event, index) => (
           <TimelineItem className={classes.timelineItem} key={index}>
             <TimelineOppositeContent color="text.secondary">
-              {event.img}
+              <Box
+                component="img"
+                alt="Author"
+                src={event.img}
+                className={classes.timelineImg}
+              />
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector className={classes.indicatorWrapper}>
-                <RadioButtonCheckedOutlinedIcon className={classes.largeRadioIcon}/>
+                <RadioButtonCheckedOutlinedIcon
+                  className={classes.largeRadioIcon}
+                />
               </TimelineConnector>
             </TimelineSeparator>
             <TimelineContent className={classes.contentWrapper}>
@@ -59,6 +68,16 @@ export default function AboutTimeline() {
           </TimelineItem>
         ))}
       </Timeline>
+      <Container maxWidth='lg'>
+        <TextBadge text="WHY US" size="large" />
+        <Typography variant='h6'>
+          We understand that business can be chaotic.That’s where we come in.
+          We’re focused on adding some much-needed balance to the mix. We
+          accomplish that by forging real partnerships with our clients. When you
+          work with us, you’re working with a teamwho understands your pain points
+          and your goals. We’ll help you find order in the midst of the chaos.
+        </Typography>
+      </Container>
     </Container>
   );
 }

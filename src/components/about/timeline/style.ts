@@ -1,10 +1,12 @@
 import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingBottom: '4rem'
+  },
   headingWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '0.75rem',
   },
   heading: {
     textAlign: 'center',
@@ -17,6 +19,7 @@ export const useStyles = makeStyles((theme) => ({
   timelineContainer: {
     maxWidth: '85%',
     margin: 'auto',
+    paddingBlock: '2rem'
   },
   contentWrapper: {
     display: 'flex',
@@ -45,5 +48,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   timelineItem: {
     gap: '5rem'
+  },
+  timelineImg: {
+    width: 'auto !important',
+    height: '255px !important',
+    marginBlock: '1.5rem'
   },
 }));
