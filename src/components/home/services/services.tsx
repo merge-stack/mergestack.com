@@ -3,7 +3,7 @@ import { Grid, Typography, Paper, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-  gridRoot: {
+  servicesGridRoot: {
     '@media (max-width: 1000px)': {
       gap: '1rem',
       boxShadow: '0 0 2px #ccc',
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  textWrapper: {
+  servicesTextWrapper: {
     display: 'flex',
     flexDirection: 'column',
     gap: '1.25rem',
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
       alignItems: 'center',
     },
   },
-  heading: {
+  servicesHeading: {
     fontSize: '20px',
     fontWeight: '700',
     lineHeight: 1,
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
       textAlign: 'center',
     },
   },
-  tagline: {
+  servicesTagline: {
     fontSize: '16px',
     color: '#6D6D6D',
     '@media (max-width: 1000px)': {
@@ -56,15 +56,15 @@ const ServicesBox: React.FC<ServicesBoxProps> = ({
 
   return (
     <Paper elevation={0}>
-      <Grid container className={classes.gridRoot}>
+      <Grid container className={classes.servicesGridRoot}>
         <Grid item xs={12} sm={12} md={3}>
           <Box className={classes.iconsWrapper}>{icon}</Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={9} className={classes.textWrapper}>
-          <Typography className={classes.heading} variant="h6">
+        <Grid item xs={12} sm={12} md={9} className={classes.servicesTextWrapper}>
+          <Typography className={classes.servicesHeading} variant="h6">
             {heading}
           </Typography>
-          <Typography className={classes.tagline} variant="body1">
+          <Typography className={classes.servicesTagline} variant="body1">
             {content}
           </Typography>
         </Grid>

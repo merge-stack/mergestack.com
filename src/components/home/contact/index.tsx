@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
 
 const useStyles = makeStyles({
-  paperWrapper: {
+  contactBannerWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -15,28 +15,28 @@ const useStyles = makeStyles({
     marginBlock: '4rem',
     width: '100%',
   },
-  titleWrapper: {
+  contactTitleWrapper: {
     display: 'flex',
     gap: '1rem',
     alignItems: 'center',
   },
-  title: {
+  contactTitle: {
     fontSize: '14px',
     fontWeight: 600,
     textTransfor: 'uppercase',
   },
-  heading: {
+  contactHeading: {
     fontWeight: 600,
     width: '50%',
     textAlign: 'center',
     lineHeight: 1,
   },
-  icons: {
+  contactIcon: {
     fill: '#4FB0E3',
     width: '12px',
     height: '12px',
   },
-  btnClass: {
+  contactBtnClass: {
     fontWeight: '600',
     borderRadius: '20px !important',
     backgroundColor: '#4FB0E3 !important',
@@ -44,13 +44,13 @@ const useStyles = makeStyles({
   },
 
   '@media (max-width: 600px)': {
-    paperWrapper: {
+    contactBannerWrapper: {
       paddingBlock: '1.5rem',
     },
-    title: {
+    contactTitle: {
       fontSize: '12px',
     },
-    heading: {
+    contactHeading: {
       width: '100%',
       fontSize: 'xx-large',
     },
@@ -60,16 +60,16 @@ const useStyles = makeStyles({
 const ContactSection = () => {
   const classes = useStyles();
   return (
-    <Paper elevation={0} className={classes.paperWrapper}>
-      <Box className={classes.titleWrapper}>
-        <SquareRoundedIcon className={classes.icons} />
-        <Typography className={classes.title}>Have Any Question?</Typography>
+    <Paper elevation={0} className={classes.contactBannerWrapper}>
+      <Box className={classes.contactTitleWrapper}>
+        <SquareRoundedIcon className={classes.contactIcon} />
+        <Typography className={classes.contactTitle}>Have Any Question?</Typography>
       </Box>
-      <Typography component="h1" variant="h3" className={classes.heading}>
+      <Typography component="h1" variant="h3" className={classes.contactHeading}>
         Let’s Discuss About Something
       </Typography>
 
-      <Button variant="contained" className={classes.btnClass}>
+      <Button variant="contained" className={classes.contactBtnClass}>
         Contact Us
       </Button>
     </Paper>
