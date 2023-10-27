@@ -1,61 +1,55 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  listItem: {
-    paddingLeft: 0,
-    alignItems: 'baseline',
-  },
-  columnList: {
+  footerMidColumns: {
     '@media (max-width: 1000px)': {
       display: 'none'
     },
   },
-  columnHeading: {
+  footerColumnHeading: {
     fontWeight: 'bold'
   },
-  ContainerStyle: {
+  footerContainerStyle: {
     backgroundColor: '#106897',
     color: '#fff',
     padding: '2rem 0 3rem',
     position: 'relative'
   },
-  GridItemStyle: {
+  footerGridItem: {
     display: 'flex',
     flexDirection: 'column',
     gap: '0.75rem',
   },
-  BoxTextStyle: {
+  footerAboutText: {
     color: 'white',
     fontSize: '1rem',
     fontWeight: 400,
     margin: 0,
   },
-  SocialIconsStyle: {
+  footerSocialIcons: {
     display: 'flex',
     gap: '1rem',
   },
-  listRoot: {
+  footerList: {
     display: 'flex',
     flexDirection: 'column',
     gap: '0.875rem',
     marginBlock: '1rem',
-    '& > li': {
-      padding: 0
-    }
   },
-  LinkListStyle: {
+  footerReview: {
     textTransform: 'uppercase',
     fontSize: '10px',
     letterSpacing: '0.5px',
     fontWeight: '600',
   },
-  ListItemStyle: {
-    paddingLeft: 0,
+  footerListItem: {
     alignItems: 'baseline',
-    textDecoration: 'none',
+    padding: 0,
+  },
+  footerListLink: {
     color: 'white',
   },
-  ListItemIcons: {
+  footerListIcon: {
     paddingRight: '0.625rem',
     minWidth: 'auto',
   }

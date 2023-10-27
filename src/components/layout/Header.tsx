@@ -15,7 +15,7 @@ import { makeStyles } from '@mui/styles';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const useStyles = makeStyles((theme) => ({
-  gridContainer: {
+  menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
-  linkWrapper: {
+ menuLinkWrapper: {
     display: 'flex',
     alignItems: 'center',
     gap: '2rem',
@@ -91,12 +91,12 @@ const Header = () => {
   return (
     <AppBar>
       <Container maxWidth="lg">
-        <Box component="div" className={classes.gridContainer}>
+        <Box component="div" className={classes.menuContainer}>
           <Box className={classes.logoWrapper}>
             <Logo />
           </Box>
 
-          <Box className={classes.linkWrapper}>
+          <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
               <Link href="#">About</Link>
               <Link href="#">Services</Link>
