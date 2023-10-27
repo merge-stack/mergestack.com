@@ -60,6 +60,7 @@ const useStyles = makeStyles({
 
 const HomepageBanner = () => {
   const classes = useStyles();
+  
   return (
     <Paper elevation={0} className={classes.backgroundContainer}>
       <Grid container spacing={2}>

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
       gap: '1rem',
       boxShadow: '0 0 2px #ccc',
       borderRadius: '10px',
-      padding: '1rem'
+      padding: '1rem',
     },
   },
   iconsWrapper: {

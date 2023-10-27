@@ -138,11 +138,11 @@ const TestimonialSection: React.FC = () => {
             {Array.from({ length: totalCircles }, (_, index) => (
               <IconButton
                 key={index}
-                onClick={() => setActiveSlide(index)} // Set the active slide on circle click
+                onClick={() => setActiveSlide(index)} 
               >
                 <CircleIcon
                   fontSize="large"
-                  color={index === activeSlide ? 'primary' : 'disabled'} // Set color based on the active slide
+                  color={index === activeSlide ? 'primary' : 'disabled'} 
                   className={`${classes.circleIcon} ${
                     index === activeSlide ? 'active' : ''
                   }`}

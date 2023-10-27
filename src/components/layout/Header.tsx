@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '1rem',
-    height: '60%'
+    height: '60%',
   },
   hamburger: {
     '@media (max-width: 600px)': {
@@ -71,8 +71,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerWidth: {
     '& > :nth-child(3)': {
-      width: '100%'
-    }
+      width: '100%',
+    },
   },
 }));
 
@@ -87,6 +87,7 @@ const Header = () => {
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
   };
+  
   return (
     <AppBar>
       <Container maxWidth="lg">
@@ -108,7 +109,12 @@ const Header = () => {
                 Contact Us
               </Button>
 
-              <IconButton className={classes.hamburger} color="default" edge="end" onClick={handleDrawerOpen}>
+              <IconButton
+                className={classes.hamburger}
+                color="default"
+                edge="end"
+                onClick={handleDrawerOpen}
+              >
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -122,10 +128,7 @@ const Header = () => {
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton
-            edge="end"
-            onClick={handleDrawerClose}
-          >
+          <IconButton edge="end" onClick={handleDrawerClose}>
             <CloseOutlinedIcon />
           </IconButton>
           <Link href="#">About</Link>

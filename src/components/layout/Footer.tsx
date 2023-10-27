@@ -24,6 +24,7 @@ import Copyright from 'src/Copyright';
 
 const Footer = () => {
   const classes = useStyles();
+  
   return (
     <Box component="div" className={classes.ContainerStyle}>
       <Container maxWidth="lg">

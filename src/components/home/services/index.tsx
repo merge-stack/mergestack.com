@@ -23,14 +23,13 @@ const useStyles = makeStyles({
   },
   gridContainer: {
     marginBlock: '2rem',
-    '@media (max-width: 600px)': {
-
-    },
+    '@media (max-width: 600px)': {},
   },
 });
 
 const Services = () => {
   const classes = useStyles();
+  
   return (
     <Box className={classes.container}>
       <Typography className={classes.heading} variant="h2" component="h1">

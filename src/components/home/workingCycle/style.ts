@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     gap: '1rem',
-    position: 'relative'
+    position: 'relative',
   },
   iconWrapper: {
     position: 'relative',
@@ -80,33 +80,33 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'large',
     },
   },
-  arrowUp : {
+  arrowUp: {
     position: 'absolute',
     top: '0',
     left: '105%',
     transform: 'translateX(-50%)',
     '@media (max-width: 1080px)': {
       top: '-10%',
-      left: '107%'
+      left: '107%',
     },
     '@media (max-width: 1000px)': {
       display: 'none',
     },
   },
-  
-  arrowDown : {
+
+  arrowDown: {
     position: 'absolute',
     bottom: '7rem',
     left: '100%',
     transform: 'translateX(-50%)',
     '@media (max-width: 1080px)': {
       top: '-10%',
-      left: '107%'
+      left: '107%',
     },
     '@media (max-width: 1000px)': {
       display: 'none',
     },
-  }
+  },
 }));
 
 export default useStyles;

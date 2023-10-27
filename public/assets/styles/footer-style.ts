@@ -1,6 +1,3 @@
-import styled from '@emotion/styled';
-import { ListItem } from '@mui/material';
-
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
