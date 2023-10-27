@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  workingCycleRoot: {
     paddingTop: '4rem',
     paddingBottom: '6rem',
     width: '98dvw',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       height: 63,
     },
   },
-  number: {
+  stepNumber: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#4FB0E3',
     border: '5px solid #fff',
   },
-  heading: {
+  workingCycleTitle: {
     textAlign: 'center',
     fontWeight: 600,
 
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'xx-large',
     },
   },
-  title: {
+  stepHeading: {
     fontSize: '20px !important',
     textAlign: 'center',
     fontWeight: 600,
@@ -73,14 +73,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'x-large',
     },
   },
-  tagline: {
+  stepTagline: {
     textAlign: 'center',
 
     '@media (max-width: 600px)': {
       fontSize: 'large',
     },
   },
-  arrowUp: {
+  stepArrowUp: {
     position: 'absolute',
     top: '0',
     left: '105%',
@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  arrowDown: {
+  stepArrowDown: {
     position: 'absolute',
     bottom: '7rem',
     left: '100%',

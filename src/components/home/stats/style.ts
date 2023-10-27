@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  statsContainerroot: {
     width: '100%',
     marginTop: '-4rem',
     paddingBlock: '0.5rem',
@@ -15,66 +15,29 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-  stepContainer: {
+  statsContainer: {
     paddingBlock: '1rem',
     '@media (min-width: 1001px)': {
       justifyContent: 'space-between'
     },
   },
-  stepWrapper: {
+  statsWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: '1rem',
   },
-  iconWrapper: {
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '2rem',
-    borderRadius: '100px',
-
-    '& > svg': {
-      width: 63,
-      height: 63,
-    },
-  },
-  number: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    fontSize: '14px',
-    color: '#fff',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    width: 40,
-    height: 40,
-    borderRadius: '100px',
-    background: '#4FB0E3',
-    border: '5px solid #fff',
-  },
-  heading: {
-    textAlign: 'center',
-    fontWeight: 600,
-
-    '@media (max-width: 600px)': {
-      fontSize: 'x-large',
-    },
-  },
-  textWrapper: {
+  statsTextWrapper: {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
   },
-  titleWrapper: {
+  statsTitleWrapper: {
     display: 'flex',
     alignItems: 'baseline',
     gap: '0.25rem',
   },
-  title: {
+  statsTitle: {
     fontSize: '28px !important',
     textAlign: 'center',
     fontWeight: 600,
@@ -83,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'x-large',
     },
   },
-  subtitle: {
+  statSubtitle: {
     fontSize: '18px !important',
     textAlign: 'center',
     fontWeight: 600,
@@ -92,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'large',
     },
   },
-  tagline: {
+  statsTagline: {
     textAlign: 'center',
 
     '@media (max-width: 600px)': {
