@@ -2,12 +2,18 @@ import * as React from 'react';
 import { Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
+enum BadgeSize {
+  SMALL='small',
+  MEDIUM='medium',
+  LARGE='large'
+}
+
 interface TextBadgeProps {
-  size: 'small' | 'medium' | 'large';
+  size: BadgeSize.SMALL | BadgeSize.MEDIUM | BadgeSize.LARGE;
   text: string;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: (props: TextBadgeProps) => ({
     width: 'auto',
     backgroundColor: '#F5F5F5',
@@ -25,29 +31,29 @@ const useStyles = makeStyles((theme) => ({
 
 const getSize = (size: TextBadgeProps['size']) => {
   switch (size) {
-    case 'small':
+    case BadgeSize.SMALL:
       return '9px';
-    case 'medium':
+    case BadgeSize.MEDIUM:
       return '14px';
-    case 'large':
+    case BadgeSize.LARGE:
       return '18px';
     default:
       return '1rem'; // Default padding
   }
 };
 
-const alignObject = (size: TextBadgeProps['size']) => {
-  switch (size) {
-    case 'small':
-      return '9px';
-    case 'medium':
-      return '14px';
-    case 'large':
-      return '18px';
-    default:
-      return '1rem'; // Default padding
-  }
-};
+// const alignObject = (size: TextBadgeProps['size']) => {
+//   switch (size) {
+//     case 'small':
+//       return '9px';
+//     case 'medium':
+//       return '14px';
+//     case 'large':
+//       return '18px';
+//     default:
+//       return '1rem'; // Default padding
+//   }
+// };
 
 const TextBadge: React.FC<TextBadgeProps> = ({ size, text }) => {
   const classes = useStyles({ size, text });
