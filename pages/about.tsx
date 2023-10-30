@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import AboutTimeline from 'src/components/about/timeline/timline';
-import TextBadge from 'src/components/layout/TextBadge';
+import TextBadge from 'src/components/common/TextBadge';
 import LayoutHoc from 'src/layoutHoc';
 
 function About() {
