@@ -19,7 +19,7 @@ function CoreValues() {
   const classes = useStyles();
 
   return (
-    <>
+    <Box>
       <Box component="div" className={classes.valuesRoot}>
         <Container maxWidth="lg" className={classes.valuesBannerContainer}>
           <Box className={classes.valuesTitleWrapper}>
@@ -48,7 +48,7 @@ function CoreValues() {
           ))}
         </Grid>
       </Container>
-    </>
+    </Box>
   );
 }
 

@@ -15,33 +15,33 @@ export const useStyles = makeStyles({
     paddingBlock: '3rem !important',
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem'
+    gap: '1rem',
   },
   valuesTitleWrapper: {
     display: 'flex',
     gap: '1rem',
     alignItems: 'center',
     '@media (max-width: 600px)': {
-       justifyContent: 'center',
-    }
+      justifyContent: 'center',
+    },
   },
   valuesTitle: {
     fontSize: '14px',
     fontWeight: 600,
     textTransform: 'uppercase',
     '@media (max-width: 600px)': {
-        fontSize: '0.75rem'
-    }
+      fontSize: '0.75rem',
+    },
   },
   valuesHeading: {
     fontWeight: 600,
     width: '65%',
     '@media (max-width: 600px)': {
-        width: '100%',
-        fontSize: '1.5rem',
-        textAlign: 'center',
-        paddingInline: '1rem'
-    }
+      width: '100%',
+      fontSize: '1.5rem',
+      textAlign: 'center',
+      paddingInline: '1rem',
+    },
   },
   valuesIcon: {
     fill: '#4FB0E3',
@@ -49,7 +49,7 @@ export const useStyles = makeStyles({
     height: '12px',
   },
   valuesIconBoxContainer: {
-    paddingBlock: '3rem'
+    paddingBlock: '3rem',
   },
   valuesIconBox: {
     display: 'flex',
@@ -61,20 +61,20 @@ export const useStyles = makeStyles({
       boxShadow: '0 0 5px #ccc',
       padding: '1rem',
       borderRadius: '10px',
-      alignItems: 'center'
-  }
+      alignItems: 'center',
+    },
   },
   IconBoxHeading: {
     fontWeight: 600,
     '@media (max-width: 600px)': {
-      textAlign: 'center'
-  }
+      textAlign: 'center',
+    },
   },
   IconBoxTagline: {
     color: '#00000099',
     '@media (max-width: 600px)': {
-      textAlign: 'center'
-  }
+      textAlign: 'center',
+    },
   },
   icon: {
     fontSize: 48,
