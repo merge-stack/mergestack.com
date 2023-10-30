@@ -41,8 +41,12 @@ function CoreValues() {
             <Grid item xs={12} sm={6} md={3} key={item.id}>
               <Box className={classes.valuesIconBox}>
                 {iconComponents[item.icon]}
-                <Typography variant="h6" className={classes.IconBoxHeading}>{item.title}</Typography>
-                <Typography variant="body2" className={classes.IconBoxTagline}>{item.text}</Typography>
+                <Typography variant="h6" className={classes.IconBoxHeading}>
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" className={classes.IconBoxTagline}>
+                  {item.text}
+                </Typography>
               </Box>
             </Grid>
           ))}
