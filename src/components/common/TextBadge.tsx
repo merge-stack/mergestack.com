@@ -38,22 +38,9 @@ const getSize = (size: TextBadgeProps['size']) => {
     case BadgeSize.LARGE:
       return '18px';
     default:
-      return '1rem'; // Default padding
+      return '1rem';
   }
 };
-
-// const alignObject = (size: TextBadgeProps['size']) => {
-//   switch (size) {
-//     case 'small':
-//       return '9px';
-//     case 'medium':
-//       return '14px';
-//     case 'large':
-//       return '18px';
-//     default:
-//       return '1rem'; // Default padding
-//   }
-// };
 
 const TextBadge: React.FC<TextBadgeProps> = ({ size, text }) => {
   const classes = useStyles({ size, text });
