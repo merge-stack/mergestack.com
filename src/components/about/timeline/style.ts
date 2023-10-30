@@ -4,8 +4,8 @@ export const useStyles = makeStyles((theme) => ({
     paddingBottom: '4rem',
     maxWidth: '1200px',
     display: 'flex',
-    flexDirection : 'column',
-    gap: '4rem'
+    flexDirection: 'column',
+    gap: '4rem',
   },
   timlineHeadingWrapper: {
     display: 'flex',
@@ -16,21 +16,21 @@ export const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontWeight: 600,
     '@media (max-width: 600px)': {
-      fontSize: '3rem'
+      fontSize: '3rem',
     },
   },
   timlineTagline: {
     textAlign: 'center',
     fontSize: '20px',
     '@media (max-width: 600px)': {
-      fontSize: '1rem'
+      fontSize: '1rem',
     },
   },
   timelineContainer: {
     margin: 'auto',
     paddingTop: '2rem',
     '@media (max-width: 600px)': {
-      paddingTop: '0rem'
+      paddingTop: '0rem',
     },
   },
   timlineTextWrapper: {
@@ -38,13 +38,13 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'start',
     gap: '1rem',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   timelineItemTitle: {
     fontWeight: 600,
     fontSize: '25px',
     '@media (max-width: 600px)': {
-      fontSize: '1.375rem'
+      fontSize: '1.375rem',
     },
   },
   timelineTagline: {
@@ -63,18 +63,18 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   largeRadioIcon: {
-    fill: '#4FB0E3'
+    fill: '#4FB0E3',
   },
   timelineItem: {
     gap: '5rem',
     '@media (max-width: 600px)': {
-      gap: '0'
+      gap: '0',
     },
   },
   timelineImg: {
     width: '100% !important',
     height: 'auto !important',
-    marginBlock: '1.5rem'
+    marginBlock: '1.5rem',
   },
   aboutTextBlock: {
     display: 'flex',
@@ -89,8 +89,8 @@ export const useStyles = makeStyles((theme) => ({
       color: '#00000099',
       '@media (max-width: 600px)': {
         fontSize: '1rem',
-        textAlign: 'justify'
+        textAlign: 'justify',
       },
-    }
+    },
   },
 }));

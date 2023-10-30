@@ -68,15 +68,16 @@ export default function AboutTimeline() {
           </TimelineItem>
         ))}
       </Timeline>
-      
-      <Container maxWidth='lg' className={classes.aboutTextBlock}>
+
+      <Container maxWidth="lg" className={classes.aboutTextBlock}>
         <TextBadge text="WHY US" size="large" />
-        <Typography variant='body1' component='p' >
+        <Typography variant="body1" component="p">
           We understand that business can be chaotic.That’s where we come in.
           We’re focused on adding some much-needed balance to the mix. We
-          accomplish that by forging real partnerships with our clients. When you
-          work with us, you’re working with a teamwho understands your pain points
-          and your goals. We’ll help you find order in the midst of the chaos.
+          accomplish that by forging real partnerships with our clients. When
+          you work with us, you’re working with a teamwho understands your pain
+          points and your goals. We’ll help you find order in the midst of the
+          chaos.
         </Typography>
       </Container>
     </Container>
