@@ -1,35 +1,20 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Link from 'src/Link';
-import ProTip from 'src/ProTip';
-import Copyright from 'src/Copyright';
+import { Box } from '@mui/material';
+import AboutTimeline from 'src/components/about/timeline/timline';
+import TextBadge from 'src/components/common/TextBadge';
+import LayoutHoc from 'src/layoutHoc';
+import CoreValues from 'src/components/about/core-values';
 
-export default function About() {
+function About() {
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Typography variant="h4" component="h1" gutterBottom>
-          Material UI - Next.js example in TypeScript
-        </Typography>
-        <Box sx={{ maxWidth: 'sm' }}>
-          <Button variant="contained" component={Link} noLinkStyle href="/">
-            Go to the home page
-          </Button>
-        </Box>
-        <ProTip />
-        <Copyright />
+    <Box component="div">
+      <Box component="div" textAlign="center" paddingTop="3rem">
+        <TextBadge text="ABOUT" size="small" />
       </Box>
-    </Container>
+      <AboutTimeline />
+      <CoreValues/>
+    </Box>
   );
 }
+
+export default LayoutHoc(About);
