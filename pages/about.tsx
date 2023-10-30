@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import AboutTimeline from 'src/components/about/timeline/timline';
 import TextBadge from 'src/components/layout/TextBadge';
 import LayoutHoc from 'src/layoutHoc';
+import CoreValues from 'src/components/about/core-values';
 
 function About() {
   return (
@@ -11,6 +12,7 @@ function About() {
         <TextBadge text="ABOUT" size="small" />
       </Box>
       <AboutTimeline />
+      <CoreValues/>
     </Box>
   );
 }

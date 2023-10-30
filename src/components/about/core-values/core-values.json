@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "icon": "passionate-icon",
+      "title": "Passionate",
+      "text": "We are intensely enthusiastic about providing a superior experience."
+    },
+    {
+      "id": 2,
+      "icon": "respectful-icon",
+      "title": "Respectful",
+      "text": "We are polite and kind to one another, even when it gets tough."
+    },
+    {
+      "id": 3,
+      "icon": "ownership-icon",
+      "title": "Ownership",
+      "text": "We are empowered to do our jobs and work towards a common goal."
+    },
+    {
+      "id": 4,
+      "icon": "unified-icon",
+      "title": "Unified",
+      "text": "We work as a team and trust each other to create a seamless experience."
+    }
+  ]
+  
