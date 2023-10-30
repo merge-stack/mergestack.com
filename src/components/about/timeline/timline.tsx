@@ -12,7 +12,7 @@ import timelineData from 'src/components/about/timeline/timeline.json';
 import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
 import TripOriginTwoToneIcon from '@mui/icons-material/TripOriginTwoTone';
 import { useStyles } from 'src/components/about/timeline/style';
-import TextBadge from 'src/components/layout/TextBadge';
+import TextBadge from 'src/components/common/TextBadge';
 
 export default function AboutTimeline() {
   const classes = useStyles();

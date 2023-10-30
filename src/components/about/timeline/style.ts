@@ -1,4 +1,5 @@
 import { makeStyles } from '@mui/styles';
+
 export const useStyles = makeStyles((theme) => ({
   aboutRoot: {
     paddingBottom: '4rem',

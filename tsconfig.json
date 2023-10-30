@@ -25,7 +25,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    // "node_modules/@mui"
   ],
   "exclude": [
     "node_modules"
