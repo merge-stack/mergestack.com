@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mat Zalman",
+    "designation": "CEO",
+    "imageUrl": "assets/images/Ceo.png"
+  },
+  {
+    "name": "John Salivan",
+    "designation": "Founder and Co-President",
+    "imageUrl": "assets/images/Founder.png"
+  },
+  {
+    "name": "Megan Palms",
+    "designation": "Marketing Director",
+    "imageUrl": "assets/images/MarketingDirector.png"
+  },
+  {
+    "name": "Caran Hamilton",
+    "designation": "Chief Marketing Officer",
+    "imageUrl": "assets/images/Cmo.png"
+  }
+]
