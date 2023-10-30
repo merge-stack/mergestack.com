@@ -18,12 +18,12 @@ export default function AboutTimeline() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
-      <Container maxWidth="md" className={classes.headingWrapper}>
-        <Typography className={classes.heading} variant="h2">
+    <Container maxWidth="lg" className={classes.aboutRoot}>
+      <Container maxWidth="md" className={classes.timlineHeadingWrapper}>
+        <Typography className={classes.timlineHeading} variant="h2">
           Dedicated to delivering excellence
         </Typography>
-        <Typography className={classes.tagline} component="p">
+        <Typography className={classes.timlineTagline} component="p">
           Everyone has a story. Here is ours.
         </Typography>
       </Container>
@@ -57,8 +57,8 @@ export default function AboutTimeline() {
                 />
               </TimelineConnector>
             </TimelineSeparator>
-            <TimelineContent className={classes.contentWrapper}>
-              <Typography className={classes.timelineHeading} component="h6">
+            <TimelineContent className={classes.timlineTextWrapper}>
+              <Typography className={classes.timelineItemTitle} component="h6">
                 {event.title}
               </Typography>
               <Typography className={classes.timelineTagline} component="p">
@@ -68,9 +68,10 @@ export default function AboutTimeline() {
           </TimelineItem>
         ))}
       </Timeline>
-      <Container maxWidth='lg'>
+      
+      <Container maxWidth='lg' className={classes.aboutTextBlock}>
         <TextBadge text="WHY US" size="large" />
-        <Typography variant='h6'>
+        <Typography variant='body1' component='p' >
           We understand that business can be chaotic.That’s where we come in.
           We’re focused on adding some much-needed balance to the mix. We
           accomplish that by forging real partnerships with our clients. When you

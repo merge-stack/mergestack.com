@@ -2,14 +2,19 @@ import * as React from 'react';
 import { Container, Box } from '@mui/material';
 import AboutTimeline from 'src/components/about/timeline/timline';
 import TextBadge from 'src/components/layout/TextBadge';
+import LayoutHoc from 'src/layoutHoc';
 
-export default function About() {
+
+function About() {
   return (
-    <Container maxWidth="lg">
-      <Box component='div' textAlign='center'>
+    <Box component='div'>
+      <Box component='div' textAlign='center' paddingTop='3rem'>
         <TextBadge text='ABOUT' size='small' />
       </Box>
       <AboutTimeline/>
-    </Container>
+    </Box>
   );
 }
+
+export default LayoutHoc(About);
+
