@@ -6,31 +6,39 @@ import { WebDevIcon } from 'src/components/svg/webDevIcon';
 import servicesData from 'src/components/home/services/services.json';
 
 const useStyles = makeStyles({
-  heading: {
+  servicesTitle: {
     fontSize: '60px',
     fontWeight: '600',
     lineHeight: 1,
     textAlign: 'center',
+    '@media (max-width: 1000px)': {
+      textAlign: 'center',
+      fontSize: '2rem',
+      textTransform: 'Capitalize',
+      lineHeight: 'normal',
+    },
   },
-  container: {
+  servicesContainer: {
     paddingBlock: '4rem',
   },
-  gridContainer: {
+  servicesGridContainer: {
     marginBlock: '2rem',
+    '@media (max-width: 600px)': {},
   },
 });
 
 const Services = () => {
   const classes = useStyles();
+  
   return (
-    <Box className={classes.container}>
-      <Typography className={classes.heading} variant="h2" component="h1">
+    <Box className={classes.servicesContainer}>
+      <Typography className={classes.servicesTitle} variant="h2" component="h1">
         We Offer a Wide
         <br />
         Variety of IT Services
       </Typography>
       <Grid
-        className={classes.gridContainer}
+        className={classes.servicesGridContainer}
         container
         columnSpacing={2}
         rowSpacing={6}

@@ -15,7 +15,7 @@ import { makeStyles } from '@mui/styles';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const useStyles = makeStyles((theme) => ({
-  gridContainer: {
+  menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
-  linkWrapper: {
+ menuLinkWrapper: {
     display: 'flex',
     alignItems: 'center',
     gap: '2rem',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
       fill: 'dodgerblue',
     },
 
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1000px)': {
       display: 'none',
     },
   },
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '1rem',
-    height: '60%'
+    height: '60%',
   },
   hamburger: {
     '@media (max-width: 600px)': {
@@ -71,8 +71,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerWidth: {
     '& > :nth-child(3)': {
-      width: '100%'
-    }
+      width: '100%',
+    },
   },
 }));
 
@@ -87,15 +87,16 @@ const Header = () => {
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
   };
+  
   return (
     <AppBar>
       <Container maxWidth="lg">
-        <Box component="div" className={classes.gridContainer}>
+        <Box component="div" className={classes.menuContainer}>
           <Box className={classes.logoWrapper}>
             <Logo />
           </Box>
 
-          <Box className={classes.linkWrapper}>
+          <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
               <Link href="#">About</Link>
               <Link href="#">Services</Link>
@@ -108,7 +109,12 @@ const Header = () => {
                 Contact Us
               </Button>
 
-              <IconButton className={classes.hamburger} color="default" edge="end" onClick={handleDrawerOpen}>
+              <IconButton
+                className={classes.hamburger}
+                color="default"
+                edge="end"
+                onClick={handleDrawerOpen}
+              >
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -122,10 +128,7 @@ const Header = () => {
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton
-            edge="end"
-            onClick={handleDrawerClose}
-          >
+          <IconButton edge="end" onClick={handleDrawerClose}>
             <CloseOutlinedIcon />
           </IconButton>
           <Link href="#">About</Link>

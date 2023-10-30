@@ -8,7 +8,7 @@ export const BulbIcon: React.FC = () => (
     viewBox="0 0 63 63"
     fill="none"
   >
-    <g clip-path="url(#clip0_46_52)">
+    <g clipPath="url(#clip0_46_52)">
       <mask
         id="mask0_46_52"
         maskUnits="userSpaceOnUse"

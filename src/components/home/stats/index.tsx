@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Grid, Box, Paper, Typography, Container } from '@mui/material';
 import data from 'src/components/home/stats/stats.json';
 import { ReviewIcon } from 'src/components/svg/review-icon';
@@ -18,25 +18,25 @@ const Stats = () => {
   const classes = useStyles();
   return (
     <>
-      <Paper elevation={2} className={classes.root}>
+      <Paper elevation={2} className={classes.statsContainerroot}>
         <Container maxWidth="lg">
-          <Grid container spacing={0} className={classes.stepContainer}>
+          <Grid container spacing={0} className={classes.statsContainer}>
             {data.map((item, index) => (
-              <>
-                <Grid item xs={12} sm={6} md={2} key={item.id}>
-                  <Box component="div" className={classes.stepWrapper}>
+              <Fragment key={index}>
+                <Grid item xs={12} sm={12} md={2}>
+                  <Box component="div" className={classes.statsWrapper}>
                     {iconComponents[item.icon]}
 
-                    <Box className={classes.textWrapper}>
-                      <Box component="div" className={classes.titleWrapper}>
-                        <Typography className={classes.title} variant="h4">
+                    <Box className={classes.statsTextWrapper}>
+                      <Box component="div" className={classes.statsTitleWrapper}>
+                        <Typography className={classes.statsTitle} variant="h4">
                           {item.title}
                         </Typography>
-                        <Typography className={classes.subtitle} variant="h6">
+                        <Typography className={classes.statSubtitle} variant="h6">
                           {item.subtitle}
                         </Typography>
                       </Box>
-                      <Typography className={classes.tagline} variant="body1">
+                      <Typography className={classes.statsTagline} variant="body1">
                         {item.text}
                       </Typography>
                     </Box>
@@ -47,7 +47,7 @@ const Stats = () => {
                     <div className={classes.verticalLine}></div>
                   </Grid>
                 )}
-              </>
+              </Fragment>
             ))}
           </Grid>
         </Container>
