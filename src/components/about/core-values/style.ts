@@ -44,7 +44,7 @@ export const useStyles = makeStyles({
     },
   },
   valuesIcon: {
-    fill: '#4FB0E3',
+    fill: 'primary',
     width: '12px',
     height: '12px',
   },

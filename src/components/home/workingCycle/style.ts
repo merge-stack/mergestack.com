@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     width: 40,
     height: 40,
     borderRadius: '100px',
-    background: '#4FB0E3',
+    background: 'primary',
     border: '5px solid #fff',
   },
   workingCycleTitle: {
