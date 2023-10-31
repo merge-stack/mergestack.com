@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menubtn: {
-    backgroundColor: '#4FB0E3',
+    backgroundColor: 'primary',
     borderRadius: '25px',
     boxShadow: 'none',
     color: '#fff',

@@ -12,7 +12,7 @@ export const EllipseIcon: React.FC = () => (
       cx="25.9981"
       cy="26.3001"
       r="22.8831"
-      fill="#4FB0E3"
+      fill="primary"
       stroke="white"
       stroke-width="5"
     />

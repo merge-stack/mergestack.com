@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
 
     '& > h2': {
       fontWeight: 600,
+
+      '@media (max-width: 600px)': {
+        textAlign: 'center',
+        fontSize: '3rem',
+      },
     },
 
     '& > p': {
@@ -30,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '20px',
       textAlign: 'center',
       width: '95%',
+
+      '@media (max-width: 600px)': {
+        width: '100%',
+      },
     },
   },
   servicesDescription: {
@@ -37,6 +46,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20px',
     width: '71%',
     color: '#242627',
+
+    '@media (max-width: 600px)': {
+      width: '90%',
+      fontSize: '1rem',
+      textAlign: 'justify',
+    },
   },
 }));
 
@@ -55,7 +70,7 @@ export function ServicesBanner() {
           </Typography>
         </Box>
 
-        <Box component="img" src={`${BannerImage.src}`} />
+        <Box component="img" src={`${BannerImage.src}`} maxWidth="100%" />
         <Typography variant="body1" className={classes.servicesDescription}>
           Mergestack is your trusted partner for IT management, data security,
           and cloud technology with one goal in mind: to transform the way your

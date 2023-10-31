@@ -54,7 +54,7 @@ const useStyles = makeStyles({
     fontSize: '12px',
     fontWeight: '600',
     borderRadius: '44px !important',
-    backgroundColor: '#4FB0E3 !important',
+    backgroundColor: 'primary !important',
   },
 });
 

@@ -9,7 +9,7 @@ enum BadgeSize {
 }
 
 interface TextBadgeProps {
-  size: BadgeSize.SMALL | BadgeSize.MEDIUM | BadgeSize.LARGE;
+  size: string;
   text: string;
 }
 

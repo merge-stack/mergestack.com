@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   largeRadioIcon: {
-    fill: '#4FB0E3',
+    fill: 'primary',
   },
   timelineItem: {
     gap: '5rem',

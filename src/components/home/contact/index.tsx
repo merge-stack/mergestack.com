@@ -32,14 +32,14 @@ const useStyles = makeStyles({
     lineHeight: 1,
   },
   contactIcon: {
-    fill: '#4FB0E3',
+    fill: 'primary',
     width: '12px',
     height: '12px',
   },
   contactBtnClass: {
     fontWeight: '600',
     borderRadius: '20px !important',
-    backgroundColor: '#4FB0E3 !important',
+    backgroundColor: 'primary !important',
     marginTop: '1rem',
   },
 
