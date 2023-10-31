@@ -3,7 +3,7 @@ import { Grid, Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import ServicesBox from 'src/components/common/services/services';
 import { WebDevIcon } from 'src/components/svg/webDevIcon';
-import servicesData from 'src/components/home/services/services.json';
+import servicesData from 'src/components/common/services/services.json';
 
 const useStyles = makeStyles({
   servicesTitle: {
