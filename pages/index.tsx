@@ -3,11 +3,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import LayoutHoc from 'src/layoutHoc';
 import HomepageBanner from 'src/components/home/banner';
-import Services from 'src/components/home/services';
+import Services from 'src/components/common/services';
 import WorkingCycle from 'src/components/home/workingCycle';
 import Stats from 'src/components/home/stats';
 import TestimonialSection from 'src/components/home/testimonials';
-import ContactSection from 'src/components/home/contact';
+import ContactSection from 'src/components/common/contact';
 
 function Home() {
   return (
