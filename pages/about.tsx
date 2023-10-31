@@ -4,6 +4,7 @@ import AboutTimeline from 'src/components/about/timeline/timline';
 import TextBadge from 'src/components/common/TextBadge';
 import LayoutHoc from 'src/layoutHoc';
 import CoreValues from 'src/components/about/core-values';
+import TeamSection from 'src/components/about/team';
 
 function About() {
   return (
@@ -13,6 +14,7 @@ function About() {
       </Box>
       <AboutTimeline />
       <CoreValues/>
+      <TeamSection/>
     </Box>
   );
 }
