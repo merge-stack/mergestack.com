@@ -59,7 +59,7 @@ const useStyles = makeStyles({
       },
     },
   },
-  servicesBtn: {
+  readMoreBtn: {
     padding: 0,
     backgroundColor: 'transparent',
     boxShadow: 'none',
@@ -95,7 +95,7 @@ export function BlogBanner() {
               continues, Indian startups are cutting their spends on an integral
               part of tech businesses.
             </Typography>
-            <Button variant="contained" className={classes.servicesBtn}>
+            <Button variant="contained" className={classes.readMoreBtn}>
               Read Full Story
             </Button>
           </Grid>
