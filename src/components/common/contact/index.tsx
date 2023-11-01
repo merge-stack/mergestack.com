@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Button, Paper, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
+import theme from 'src/theme';
 
 const useStyles = makeStyles({
   contactBannerWrapper: {
@@ -32,14 +33,15 @@ const useStyles = makeStyles({
     lineHeight: 1,
   },
   contactIcon: {
-    fill: 'primary',
+    fill: theme.palette.primary.main,
     width: '12px',
     height: '12px',
   },
   contactBtnClass: {
     fontWeight: '600',
     borderRadius: '20px !important',
-    backgroundColor: 'primary !important',
+    backgroundColor: theme.palette.primary.main,
+    color: '#fff',
     marginTop: '1rem',
   },
 

@@ -7,7 +7,7 @@ import BannerImage from 'public/assets/images/ServicesBanner.png';
 
 const useStyles = makeStyles((theme) => ({
   servicesRoot: {
-    paddingBlock: '3rem',
+    padding: '3rem 0 1rem',
   },
   servicesBannerContainer: {
     display: 'flex',

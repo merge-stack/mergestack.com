@@ -1,5 +1,7 @@
 import { makeStyles } from '@mui/styles';
+
 import LogoWaterMark from 'public/assets/images/Logo-WaterMark.png';
+import theme from 'src/theme';
 
 export const useStyles = makeStyles({
   valuesRoot: {
@@ -44,7 +46,7 @@ export const useStyles = makeStyles({
     },
   },
   valuesIcon: {
-    fill: 'primary',
+    fill: theme.palette.primary.main,
     width: '12px',
     height: '12px',
   },

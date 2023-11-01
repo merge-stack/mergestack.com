@@ -1,7 +1,9 @@
 import React from 'react';
 import { Grid, Typography, Button, Paper, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
 import HomeBanner from 'public/assets/images/homeBanner.png';
+import theme from 'src/theme';
 
 const useStyles = makeStyles({
   bannerContainer: {
@@ -54,7 +56,9 @@ const useStyles = makeStyles({
     fontSize: '12px',
     fontWeight: '600',
     borderRadius: '44px !important',
-    backgroundColor: 'primary !important',
+    paddingInline: '2rem',
+    color: '#fff',
+    backgroundColor: theme.palette.primary.main,
   },
 });
 

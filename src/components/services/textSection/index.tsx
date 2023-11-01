@@ -3,8 +3,9 @@ import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import ServicesIntroBanner from 'public/assets/images/servicesIntroBanner.png';
+import theme from 'src/theme';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   servicesTextRoot: {
     paddingBlock: '4rem',
     backgroundColor: '#f7f7f9',
@@ -38,12 +39,12 @@ const useStyles = makeStyles((theme) => ({
   },
   servicesBtn: {
     borderRadius: '20px',
-    backgroundColor: 'primary',
+    backgroundColor: theme.palette.primary.main,
     boxShadow: 'none',
     color: '#fff',
     fontSize: '1rem',
   },
-}));
+});
 
 export function ServicesTextSection() {
   const classes = useStyles();

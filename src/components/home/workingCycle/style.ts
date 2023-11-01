@@ -1,6 +1,8 @@
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
+import theme from 'src/theme';
+
+const useStyles = makeStyles({
   workingCycleRoot: {
     paddingTop: '4rem',
     paddingBottom: '6rem',
@@ -53,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     width: 40,
     height: 40,
     borderRadius: '100px',
-    background: 'primary',
+    background: theme.palette.primary.main,
     border: '5px solid #fff',
   },
   workingCycleTitle: {
@@ -107,6 +109,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-}));
+});
 
 export default useStyles;

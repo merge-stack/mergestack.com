@@ -10,11 +10,13 @@ import {
   Drawer,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from 'src/components/svg/Logo';
 import { makeStyles } from '@mui/styles';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
-const useStyles = makeStyles((theme) => ({
+import Logo from 'src/components/svg/Logo';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import theme from 'src/theme';
+
+const useStyles = makeStyles({
   menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -24,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
- menuLinkWrapper: {
+  menuLinkWrapper: {
     display: 'flex',
     alignItems: 'center',
     gap: '2rem',
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menubtn: {
-    backgroundColor: 'primary',
+    backgroundColor: theme.palette.primary.main,
     borderRadius: '25px',
     boxShadow: 'none',
     color: '#fff',
@@ -74,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
     },
   },
-}));
+});
 
 const Header = () => {
   const classes = useStyles();
@@ -87,13 +89,15 @@ const Header = () => {
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
   };
-  
+
   return (
     <AppBar>
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
-          <Box className={classes.logoWrapper}>
-            <Logo />
+          <Box component="div" className={classes.logoWrapper}>
+            <Link href="#">
+              <Logo />
+            </Link>
           </Box>
 
           <Box className={classes.menuLinkWrapper}>
