@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
+import theme from 'src/theme';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   footerMidColumns: {
     '@media (max-width: 1000px)': {
       display: 'none'
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold'
   },
   footerContainerStyle: {
-    backgroundColor: '#106897',
+    backgroundColor: theme.palette.secondary.main,
     color: '#fff',
     padding: '2rem 0 3rem',
     position: 'relative'
@@ -54,6 +55,6 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 'auto',
   }
 
-}));
+});
 
 export default useStyles;
