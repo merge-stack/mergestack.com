@@ -39,10 +39,15 @@ const useStyles = makeStyles((theme : Theme) => ({
   },
   contactBtnClass: {
     fontWeight: '600',
+    border: `1px solid ${theme.palette.primary.main}`,
     borderRadius: '20px !important',
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.background.default,
     marginTop: '1rem',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.main,
+    },
   },
 
   '@media (max-width: 600px)': {
@@ -71,7 +76,7 @@ const ContactSection = () => {
         Let’s Discuss About Something
       </Typography>
 
-      <Button variant="contained" className={classes.contactBtnClass}>
+      <Button variant="contained" disableElevation className={classes.contactBtnClass}>
         Contact Us
       </Button>
     </Paper>

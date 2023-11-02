@@ -56,9 +56,15 @@ const useStyles = makeStyles((theme : Theme) => ({
     fontSize: '12px',
     fontWeight: '600',
     borderRadius: '44px !important',
+    border: `1px solid ${theme.palette.primary.main}`,
     paddingInline: '2rem',
     color: theme.palette.background.default,
     backgroundColor: theme.palette.primary.main,
+    '&:hover': {
+      backgroundColor: 'white',
+      color: theme.palette.primary.main,
+      boxShadow: 'none',
+    },
   },
 }));
 
@@ -78,7 +84,7 @@ const HomepageBanner = () => {
               solutions
             </Typography>
           </Box>
-          <Button variant="contained" className={classes.bannerBtn}>
+          <Button variant="contained" disableElevation className={classes.bannerBtn}>
             Schedule a Free Consultation
           </Button>
         </Grid>
