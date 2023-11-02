@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import LayoutHoc from 'src/layoutHoc';
 import { BlogBanner } from 'src/components/blog/banner';
 
-const Blog: React.FC = () => {
+const Blog: React.FC = (): React.ReactNode => {
   return (
     <Box component="div">
       <BlogBanner />

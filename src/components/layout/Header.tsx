@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   AppBar,
   Button,
@@ -23,6 +24,9 @@ const useStyles = makeStyles(() => ({
   logoWrapper: {
     display: 'flex',
     alignItems: 'center',
+    '& :hover': {
+      cursor: 'pointer',
+    },
   },
   menuLinkWrapper: {
     display: 'flex',
@@ -77,6 +81,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const classes = useStyles();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -92,7 +97,7 @@ const Header: React.FC = () => {
     <AppBar>
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
-          <Box className={classes.logoWrapper}>
+          <Box className={classes.logoWrapper} onClick={() => router.push('/')}>
             <Logo />
           </Box>
 
