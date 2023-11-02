@@ -6,21 +6,63 @@
         "content": "Cybersecurity drama strikes again human error leads to China’s biggest data breach and perhaps the most significant hack of personal information in history."
     },
     {
-        "img": "/assets/images/blog1.png",
+        "img": "/assets/images/blog2.png",
         "category": "Cybersecurity",
         "title": "Top 5 Tips for Solving the Email Security Problem",
         "content": "Ever review your email in the morning and wonder why there is so much spam coming through? It takes time to differentiate between the emails"
     },
     {
-        "img": "/assets/images/blog1.png",
+        "img": "/assets/images/blog3.png",
         "category": "Cybersecurity",
         "title": "What You Shouldn’t Be Doing with Your Cybersecurity in 2023",
         "content": "Most people believe cybersecurity is highly complicated, ever-changing, and technical. They’re not wrong."
     },
     {
-        "img": "/assets/images/blog1.png",
-        "category": "Cybersecurity",
-        "title": "4 Cybersecurity Takeaways from China’s Largest Data Breach",
-        "content": "Cybersecurity drama strikes again human error leads to China’s biggest data breach and perhaps the most significant hack of personal information in history."
+        "img": "/assets/images/blog4.png",
+        "category": "Development",
+        "title": "Heavy Equipment Manufacturer Finds Concrete Solutions",
+        "content": "The award-winning extrusion equipment manufacturer, Power Curbers Companies, has been helping contractors construct barrier walls, sidewalks, curbs and The award-winning extrusion equipment manufacturer,"
+    },
+    {
+        "img": "/assets/images/blog5.png",
+        "category": "IT",
+        "title": "5 Impactful Elements That Promote IT and Business Alignment",
+        "content": "Running a business takes a lot of moving pieces and parts. Getting all these elements to work in tandem is what helps – or hinders – your objectives."
+    },
+    {
+        "img": "/assets/images/blog6.png",
+        "category": "Development",
+        "title": "Healthy Supply Chain Management Positions UniWell for Growth",
+        "content": "UniWell Laboratories, a contract manufacturing and packaging facility in Texas, is a leader in the development of nutraceuticals"
+    },
+    {
+        "img": "/assets/images/blog7.png",
+        "category": "Development",
+        "title": "Simplifying and Securing Attachments in Sage X3",
+        "content": "Files can be attached to any standard Sage X3 object-based function such as Sales Orders, Customers, Invoices, etc. through theAttachments button."
+    },
+    {
+        "img": "/assets/images/blog8.png",
+        "category": "IT",
+        "title": "Next Generation ERP Brings Transformational Change to Dental Insurer",
+        "content": "Since 1962, the nonprofit Hawaii Dental Service (HDS) has provided quality dental care to the community, growing to"
+    },
+    {
+        "img": "/assets/images/blog9.png",
+        "category": "Financials",
+        "title": "Financials Face-off: Sage 100 ERP vs. Cloud",
+        "content": "Why now could be right time to graduate to the cloud Is your Sage 100 on-premise ERP software helping you grow and compete—or is it holding you back?"
+    },
+    {
+        "img": "/assets/images/blog8.png",
+        "category": "IT",
+        "title": "Next Generation ERP Brings Transformational Change to Dental Insurer",
+        "content": "Since 1962, the nonprofit Hawaii Dental Service (HDS) has provided quality dental care to the community, growing to"
+    },
+    {
+        "img": "/assets/images/blog9.png",
+        "category": "Financials",
+        "title": "Financials Face-off: Sage 100 ERP vs. Cloud",
+        "content": "Why now could be right time to graduate to the cloud Is your Sage 100 on-premise ERP software helping you grow and compete—or is it holding you back?"
     }
 ]

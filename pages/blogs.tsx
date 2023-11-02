@@ -5,13 +5,13 @@ import LayoutHoc from 'src/layoutHoc';
 import { BlogBanner } from 'src/components/blog/banner';
 import { BlogList } from 'src/components/blog/blogs';
 
-function Blog() {
+const Blogs: React.FC = () => {
   return (
     <Box component="div">
       <BlogBanner/>
       <BlogList/>
     </Box>
   );
-}
+};
 
-export default LayoutHoc(Blog);
+export default LayoutHoc(Blogs);
