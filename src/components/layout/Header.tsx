@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import {
   AppBar,
-  Grid,
   Button,
   IconButton,
   Box,
-  Link,
   Container,
   Drawer,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from 'src/components/svg/Logo';
 import { makeStyles } from '@mui/styles';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
-const useStyles = makeStyles((theme) => ({
+import Logo from 'src/components/svg/Logo';
+import MuiLink from 'src/Link';
+
+const useStyles = makeStyles(() => ({
   menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
- menuLinkWrapper: {
+  menuLinkWrapper: {
     display: 'flex',
     alignItems: 'center',
     gap: '2rem',
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header: React.FC = () => {
   const classes = useStyles();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -87,7 +87,7 @@ const Header = () => {
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
   };
-  
+
   return (
     <AppBar>
       <Container maxWidth="lg">
@@ -98,11 +98,11 @@ const Header = () => {
 
           <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
-              <Link href="#">About</Link>
-              <Link href="#">Services</Link>
-              <Link href="#">Portfolio</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Blogs</Link>
+              <MuiLink href="/about">About</MuiLink>
+              <MuiLink href="/services">Services</MuiLink>
+              <MuiLink href="/portfolio">Portfolio</MuiLink>
+              <MuiLink href="/career">Careers</MuiLink>
+              <MuiLink href="/blogs">Blogs</MuiLink>
             </Box>
             <Box className={classes.menuItems}>
               <Button variant="contained" className={classes.menubtn}>
@@ -131,11 +131,11 @@ const Header = () => {
           <IconButton edge="end" onClick={handleDrawerClose}>
             <CloseOutlinedIcon />
           </IconButton>
-          <Link href="#">About</Link>
-          <Link href="#">Services</Link>
-          <Link href="#">Portfolio</Link>
-          <Link href="#">Careers</Link>
-          <Link href="#">Blogs</Link>
+          <MuiLink href="/about">About</MuiLink>
+          <MuiLink href="/services">Services</MuiLink>
+          <MuiLink href="/portfolio">Portfolio</MuiLink>
+          <MuiLink href="/career">Careers</MuiLink>
+          <MuiLink href="/blogs">Blogs</MuiLink>
         </Box>
       </Drawer>
     </AppBar>
