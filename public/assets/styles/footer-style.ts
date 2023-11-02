@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme : Theme) => ({
     gap: '0.75rem',
   },
   footerAboutText: {
-    color: 'white',
+    color: theme.palette.background.default,
     fontSize: '1rem',
     fontWeight: 400,
     margin: 0,

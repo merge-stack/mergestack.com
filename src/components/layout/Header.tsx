@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme : Theme) => ({
     boxShadow: 'none',
     color: theme.palette.background.default,
     '&:hover': {
-      backgroundColor: 'white',
+      backgroundColor: theme.palette.background.default,
       color: theme.palette.primary.main,
       boxShadow: 'none',
     },

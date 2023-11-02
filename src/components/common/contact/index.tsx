@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme : Theme) => ({
     alignItems: 'center',
     gap: '1rem',
     borderRadius: '20px',
-    backgroundColor: '#F7F7F9',
+    backgroundColor: theme.palette.custom.main,
     paddingBlock: '2.5rem',
     marginBlock: '4rem',
     width: '100%',

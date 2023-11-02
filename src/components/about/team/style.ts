@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme : Theme) => ({
   teamRoot: {
     paddingBlock: '3rem',
-    backgroundColor: '#f7f7f9',
+    backgroundColor: theme.palette.custom.main,
   },
   teamContainer: {
     display: 'flex',

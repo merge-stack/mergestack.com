@@ -1,11 +1,11 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import LogoWaterMark from 'public/assets/images/Logo-WaterMark.png';
-import theme from 'src/theme';
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles((theme : Theme) => ({
   valuesRoot: {
-    backgroundColor: '#f7f7f9',
+    backgroundColor: theme.palette.custom.main,
     paddingTop: '1rem',
   },
   valuesBannerContainer: {
@@ -13,7 +13,7 @@ export const useStyles = makeStyles({
     backgroundSize: 'contain',
     backgroundPosition: 'right',
     backgroundRepeat: 'no-repeat',
-    backgroundColor: '#F7F7F9',
+    backgroundColor: theme.palette.custom.main,
     paddingBlock: '3rem !important',
     display: 'flex',
     flexDirection: 'column',
@@ -81,4 +81,4 @@ export const useStyles = makeStyles({
   icon: {
     fontSize: 48,
   },
-});
+}));

@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme : Theme) => ({
     paddingTop: '4rem',
     paddingBottom: '6rem',
     width: '98dvw',
-    backgroundColor: '#f7f7f7',
+    backgroundColor: theme.palette.custom.main,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
