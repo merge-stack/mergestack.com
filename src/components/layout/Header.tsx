@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   AppBar,
-  Grid,
   Button,
   IconButton,
   Box,
-  Link,
   Container,
   Drawer,
+  Link,
 } from '@mui/material';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 import Logo from 'src/components/svg/Logo';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import MuiLink from 'src/Link';
 import theme from 'src/theme';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(() => ({
   menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -25,6 +26,9 @@ const useStyles = makeStyles({
   logoWrapper: {
     display: 'flex',
     alignItems: 'center',
+    '& :hover': {
+      cursor: 'pointer',
+    },
   },
   menuLinkWrapper: {
     display: 'flex',
@@ -76,9 +80,10 @@ const useStyles = makeStyles({
       width: '100%',
     },
   },
-});
+}));
 
-const Header = () => {
+const Header: React.FC = () => {
+  const router = useRouter();
   const classes = useStyles();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -94,19 +99,19 @@ const Header = () => {
     <AppBar>
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
-          <Box component="div" className={classes.logoWrapper}>
-            <Link href="#">
+          <Box className={classes.logoWrapper}>
+            <MuiLink href="/">
               <Logo />
-            </Link>
+            </MuiLink>
           </Box>
 
           <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
-              <Link href="#">About</Link>
-              <Link href="#">Services</Link>
-              <Link href="#">Portfolio</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Blogs</Link>
+              <MuiLink href="/about">About</MuiLink>
+              <MuiLink href="/services">Services</MuiLink>
+              <MuiLink href="/portfolio">Portfolio</MuiLink>
+              <MuiLink href="/career">Careers</MuiLink>
+              <MuiLink href="/blogs">Blogs</MuiLink>
             </Box>
             <Box className={classes.menuItems}>
               <Button variant="contained" className={classes.menubtn}>
@@ -133,13 +138,13 @@ const Header = () => {
       >
         <Box className={classes.menuLinks}>
           <IconButton edge="end" onClick={handleDrawerClose}>
-            <CloseOutlinedIcon />
+            <CancelOutlinedIcon />
           </IconButton>
-          <Link href="#">About</Link>
-          <Link href="#">Services</Link>
-          <Link href="#">Portfolio</Link>
-          <Link href="#">Careers</Link>
-          <Link href="#">Blogs</Link>
+          <MuiLink href="/about">About</MuiLink>
+          <MuiLink href="/services">Services</MuiLink>
+          <MuiLink href="/portfolio">Portfolio</MuiLink>
+          <MuiLink href="/career">Careers</MuiLink>
+          <MuiLink href="/blogs">Blogs</MuiLink>
         </Box>
       </Drawer>
     </AppBar>
