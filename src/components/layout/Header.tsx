@@ -7,6 +7,7 @@ import {
   Box,
   Container,
   Drawer,
+  Link,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
@@ -97,8 +98,10 @@ const Header: React.FC = () => {
     <AppBar>
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
-          <Box className={classes.logoWrapper} onClick={() => router.push('/')}>
-            <Logo />
+          <Box className={classes.logoWrapper}>
+            <MuiLink href="/">
+              <Logo />
+            </MuiLink>
           </Box>
 
           <Box className={classes.menuLinkWrapper}>
