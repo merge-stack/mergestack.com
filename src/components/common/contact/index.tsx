@@ -1,10 +1,10 @@
 import React from 'react';
-import { Typography, Button, Paper, Box } from '@mui/material';
+import { Typography, Button, Paper, Box, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
-import theme from 'src/theme';
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme : Theme) => ({
   contactBannerWrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     fontWeight: '600',
     borderRadius: '20px !important',
     backgroundColor: theme.palette.primary.main,
-    color: '#fff',
+    color: theme.palette.background.default,
     marginTop: '1rem',
   },
 
@@ -57,7 +57,7 @@ const useStyles = makeStyles({
       fontSize: 'xx-large',
     },
   },
-});
+}));
 
 const ContactSection = () => {
   const classes = useStyles();
