@@ -3,9 +3,9 @@ import { Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 enum BadgeSize {
-  SMALL='small',
-  MEDIUM='medium',
-  LARGE='large'
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
 }
 
 interface TextBadgeProps {
@@ -13,7 +13,7 @@ interface TextBadgeProps {
   text: string;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: (props: TextBadgeProps) => ({
     width: 'auto',
     backgroundColor: '#F5F5F5',
