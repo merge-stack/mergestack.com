@@ -1,9 +1,15 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
 import ServicesBox from 'src/components/common/services/services';
-import { WebDevIcon } from 'src/components/svg/webDevIcon';
 import servicesData from 'src/components/common/services/services.json';
+import { WebDevIcon } from 'src/components/svg/webDevIcon';
+import { MobDevIcon } from 'src/components/svg/mob-dev-icon';
+import { InterfaceIcon } from 'src/components/svg/ui-ux-icon';
+import { TestingIcon } from 'src/components/svg/testing-icon';
+import { TeamIcon } from 'src/components/svg/team-icon';
+import { ConsultancyIcon } from 'src/components/svg/consultancy-icon';
 
 const useStyles = makeStyles({
   servicesTitle: {
@@ -27,6 +33,15 @@ const useStyles = makeStyles({
   },
 });
 
+const iconComponents: { [key: string]: React.ReactElement } = {
+  'webDev-icon': <WebDevIcon />,
+  'mobDev-icon': <MobDevIcon />,
+  'uiux-icon': <InterfaceIcon />,
+  'qa-icon': <TestingIcon />,
+  'it-icon': <ConsultancyIcon />,
+  'team-icon': <TeamIcon />,
+};
+
 const Services = () => {
   const classes = useStyles();
   
@@ -46,7 +61,7 @@ const Services = () => {
         {servicesData.map((service) => (
           <Grid item xs={12} sm={4} key={service.id}>
             <ServicesBox
-              icon={<WebDevIcon />}
+              icon={iconComponents[service.icon]}
               heading={service.heading}
               content={service.content}
             />

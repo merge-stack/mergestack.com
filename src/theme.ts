@@ -27,6 +27,7 @@ const theme = createTheme({
         root: {
           backgroundColor: 'white !important',
           position: 'relative',
+          paddingBlock: '1rem'
         },
       },
     },
