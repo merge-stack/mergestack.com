@@ -4,9 +4,9 @@ import { Box, Container, Typography, Link, Grid } from '@mui/material';
 import { useStyles } from 'src/components/career/style';
 import TextBadge from 'src/components/common/TextBadge';
 import JobsData from 'src/components/career/jobs/jobs.json';
-import { CalendarIcon } from 'src/components/svg/calendar-icon';
-import { TimeIcon } from 'src/components/svg/time-icon';
-import { LocationIcon } from 'src/components/svg/location-icon';
+import { CalendarIcon } from 'src/components/svg/CalendarIcon';
+import { TimeIcon } from 'src/components/svg/TimeIcon';
+import { LocationIcon } from 'src/components/svg/LocationIcon';
 
 export function ListedJobs() {
   const classes = useStyles();
