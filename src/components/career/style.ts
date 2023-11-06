@@ -30,8 +30,8 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: '20px',
       textAlign: 'center',
       '& > a': {
-        color: "#7141B1",
-        fontWeight: 400
+        color: '#7141B1',
+        fontWeight: 400,
       },
 
       '@media (max-width: 600px)': {
@@ -42,18 +42,28 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   jobItemContainer: {
+    height: '100%',
     paddingBlock: '2rem',
     paddingInline: '1.5rem',
     border: '1px solid #D1E0E5',
     borderRadius: '15px',
+    display: 'flex',
+    flexDirection: 'column',
+    '& > hr': {
+      width: '100%',
+    },
     '& > h6': {
-        paddingRight: '2rem',
-    }
+      paddingRight: '2rem',
+      flex: 1
+    },
+    '& p': {
+      color: '#6d6d6d'
+    },
   },
   additonalInfo: {
     '& > p': {
-        display: 'flex',
-    gap: '1.25rem',
-    }
+      display: 'flex',
+      gap: '1.25rem',
+    },
   },
 }));
