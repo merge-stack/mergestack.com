@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "icon": "track-icon",
+    "icon": "TrackIcon",
     "title": "20",
     "subtitle": "Years",
     "text": "Proven Track Record"
   },
   {
     "id": 2,
-    "icon": "review-icon",
+    "icon": "ReviewIcon",
     "title": "98",
     "subtitle": "%",
     "text": "Customer Satisfaction"
   },
   {
     "id": 3,
-    "icon": "completed-icon",
+    "icon": "CompletedIcon",
     "title": "15",
     "subtitle": "Projects",
     "text": "We Have Completed"
   },
   {
     "id": 4,
-    "icon": "customer-icon",
+    "icon": "CustomerIcon",
     "title": "3",
     "subtitle": "Mins",
     "text": "Average Answer Time"

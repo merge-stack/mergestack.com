@@ -8,10 +8,10 @@ import { CustomerService } from 'src/components/svg/CustomerServiceIcon';
 import useStyles from 'src/components/home/stats/style';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'track-icon': <TrackIcon />,
-  'review-icon': <ReviewIcon />,
-  'completed-icon': <CompletedIcon />,
-  'customer-icon': <CustomerService />,
+  'TrackIcon': <TrackIcon />,
+  'ReviewIcon': <ReviewIcon />,
+  'CompletedIcon': <CompletedIcon />,
+  'CustomerIcon': <CustomerService />,
 };
 
 const Stats = () => {

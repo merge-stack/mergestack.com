@@ -34,12 +34,12 @@ const useStyles = makeStyles({
 });
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'webDev-icon': <WebDevIcon />,
-  'mobDev-icon': <MobDevIcon />,
-  'uiux-icon': <InterfaceIcon />,
-  'qa-icon': <TestingIcon />,
-  'it-icon': <ConsultancyIcon />,
-  'team-icon': <TeamIcon />,
+  'WebDevIcon': <WebDevIcon />,
+  'MobDevIcon': <MobDevIcon />,
+  'UiuxIcon': <InterfaceIcon />,
+  'QaIcon': <TestingIcon />,
+  'ItIcon': <ConsultancyIcon />,
+  'TeamIcon': <TeamIcon />,
 };
 
 const Services = () => {

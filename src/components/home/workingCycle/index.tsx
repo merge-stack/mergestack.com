@@ -10,10 +10,10 @@ import { CurvedArrowDown } from 'src/components/svg/CurvedArrowDownIcon';
 import useStyles from 'src/components/home/workingCycle/style';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'bulb-icon': <BulbIcon />,
-  'testing-icon': <WorkerIcon />,
-  'execute-icon': <ExecuteIcon />,
-  'care-icon': <BuildingIcon />,
+  'BulbIcon': <BulbIcon />,
+  'TestingIcon': <WorkerIcon />,
+  'ExecuteIcon': <ExecuteIcon />,
+  'CareIcon': <BuildingIcon />,
 };
 
 const WorkingCycle = () => {

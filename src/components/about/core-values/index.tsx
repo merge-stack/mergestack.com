@@ -9,10 +9,10 @@ import { OwnershipIcon } from 'src/components/svg/OwnershipIcon';
 import { UnifiedIcon } from 'src/components/svg/UnifiedIcon';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'passionate-icon': <PassionateIcon />,
-  'respectful-icon': <RespectfulIcon />,
-  'ownership-icon': <OwnershipIcon />,
-  'unified-icon': <UnifiedIcon />,
+  'PassionateIcon': <PassionateIcon />,
+  'RespectfulIcon': <RespectfulIcon />,
+  'OwnershipIcon': <OwnershipIcon />,
+  'UnifiedIcon': <UnifiedIcon />,
 };
 
 function CoreValues() {
