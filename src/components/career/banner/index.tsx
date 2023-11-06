@@ -1,47 +1,10 @@
 import * as React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { useStyles } from 'src/components/career/style';
 
 import TextBadge from 'src/components/common/TextBadge';
 import CareersBannerImage from 'public/assets/images/CareersBannerImage.png'
 
-const useStyles = makeStyles((theme) => ({
-  careerRoot: {
-    paddingBlock: '3rem',
-  },
-  careerBannerContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '2rem',
-  },
-  careerTitleWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '0.25rem',
-
-    '& > h2': {
-      fontWeight: 600,
-
-      '@media (max-width: 600px)': {
-        textAlign: 'center',
-        fontSize: '2.5rem',
-      },
-    },
-
-    '& > p': {
-      color: '#00000099',
-      fontSize: '20px',
-      textAlign: 'center',
-
-      '@media (max-width: 600px)': {
-        width: '100%',
-        fontSize: '1rem',
-      },
-    },
-  },
-}));
 
 export function CareersBanner() {
   const classes = useStyles();
