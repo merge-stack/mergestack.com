@@ -4,12 +4,12 @@ import { makeStyles } from '@mui/styles';
 
 import ServicesBox from 'src/components/common/services/services';
 import servicesData from 'src/components/common/services/services.json';
-import { WebDevIcon } from 'src/components/svg/webDevIcon';
-import { MobDevIcon } from 'src/components/svg/mob-dev-icon';
-import { InterfaceIcon } from 'src/components/svg/ui-ux-icon';
-import { TestingIcon } from 'src/components/svg/testing-icon';
-import { TeamIcon } from 'src/components/svg/team-icon';
-import { ConsultancyIcon } from 'src/components/svg/consultancy-icon';
+import { MobDevIcon } from 'src/components/svg/MobDevIcon';
+import { InterfaceIcon } from 'src/components/svg/UiUXIcon';
+import { TestingIcon } from 'src/components/svg/TestingIcon';
+import { TeamIcon } from 'src/components/svg/TeamIcon';
+import { ConsultancyIcon } from 'src/components/svg/ConsultancyIcon';
+import { WebDevIcon } from 'src/components/svg/WebDevIcon';
 
 const useStyles = makeStyles({
   servicesTitle: {
