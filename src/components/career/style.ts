@@ -59,6 +59,9 @@ export const useStyles = makeStyles((theme) => ({
     '& p': {
       color: '#6d6d6d'
     },
+    '&:hover': {
+      backgroundColor: '#F0FAFF'
+    }
   },
   additonalInfo: {
     '& > p': {
