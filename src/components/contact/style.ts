@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     paddingTop: '3rem',
     display: 'flex',
     flexDirection: 'column',
-    gap: '4rem'
+    gap: '4rem',
   },
   contactContainer: {
     display: 'flex',
@@ -156,9 +156,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     gap: '1rem',
     '& > h3': {
-        fontSize: '40px',
-        fontWeight: 500
-    }
+      fontSize: '40px',
+      fontWeight: 500,
+    },
   },
   applyBtn: {
     borderRadius: '50px',

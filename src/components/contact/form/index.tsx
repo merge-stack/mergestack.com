@@ -16,14 +16,16 @@ export function ContactFormContainer() {
     <Box component="div" className={classes.contactRoot}>
       <Container maxWidth="lg">
         <Grid container>
-          <Grid item xs={12} sm={6} paddingRight='3rem'>
+          <Grid item xs={12} sm={6} paddingRight="3rem">
             <Box className={classes.sectionHeadingWrapper}>
               <SquareRoundedIcon className={classes.contactIcon} />
               <Typography paragraph className={classes.sectionHeading}>
                 Have Any Question?
               </Typography>
             </Box>
-            <Typography variant="h3" gutterBottom>Let’s Discuss About Something</Typography>
+            <Typography variant="h3" gutterBottom>
+              Let’s Discuss About Something
+            </Typography>
             <Typography variant="body1" paragraph>
               At our IT solution company, we are committed to providing
               exceptional customer service and support. If you are experiencing
@@ -83,7 +85,7 @@ export function ContactFormContainer() {
               >
                 What happens next?
               </Typography>
-              <Grid container  className={classes.stepWrapper}>
+              <Grid container className={classes.stepWrapper}>
                 <Grid item xs={4} className={classes.steps}>
                   <Typography variant="h6">1</Typography>
                   <Typography>
@@ -112,7 +114,7 @@ export function ContactFormContainer() {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <ContactForm/>
+            <ContactForm />
           </Grid>
         </Grid>
       </Container>
