@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box, Container, Typography, Link, Grid } from '@mui/material';
+import { useRouter } from 'next/router';
 
 import { useStyles } from 'src/components/career/style';
 import TextBadge from 'src/components/common/TextBadge';
@@ -10,6 +11,11 @@ import { LocationIcon } from 'src/components/svg/LocationIcon';
 
 export function ListedJobs() {
   const classes = useStyles();
+  const router = useRouter();
+
+  const handleJobClick = (jobId: string) => {
+    router.push(`/${jobId}`);
+  };
 
   return (
     <Box component="div" className={classes.careerRoot}>
@@ -27,29 +33,31 @@ export function ListedJobs() {
           <Grid container spacing={2}>
             {JobsData.map((job, index) => (
               <Grid item xs={6} sm={3} key={index}>
-                <Box className={classes.jobItemContainer}>
-                  <Typography variant="h6" gutterBottom>
-                    {job.title}
-                  </Typography>
-                  <hr />
-                  <Typography variant="body1" paragraph>
-                    {job.desc}
-                  </Typography>
-                  <Box className={classes.additonalInfo}>
-                    <Typography variant="body1" paragraph>
-                      <LocationIcon />
-                      {job.location}
+                <Link onClick={() => handleJobClick(job.id)}>
+                  <Box className={classes.jobItemContainer}>
+                    <Typography variant="h6" gutterBottom>
+                      {job.title}
                     </Typography>
+                    <hr />
                     <Typography variant="body1" paragraph>
-                      <TimeIcon />
-                      {job.status}
+                      {job.desc}
                     </Typography>
-                    <Typography variant="body1" paragraph>
-                      <CalendarIcon />
-                      {job.date}
-                    </Typography>
+                    <Box className={classes.additonalInfo}>
+                      <Typography variant="body1" paragraph>
+                        <LocationIcon />
+                        {job.location}
+                      </Typography>
+                      <Typography variant="body1" paragraph>
+                        <TimeIcon />
+                        {job.status}
+                      </Typography>
+                      <Typography variant="body1" paragraph>
+                        <CalendarIcon />
+                        {job.date}
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
+                </Link>
               </Grid>
             ))}
           </Grid>

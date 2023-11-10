@@ -69,4 +69,30 @@ export const useStyles = makeStyles((theme) => ({
       gap: '1.25rem',
     },
   },
+
+  jobDetailRoot: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '3rem',
+    paddingBlock: '3rem'
+  },
+
+  primaryInfo: {
+    //: '3rem'
+  },
+  companyDesc: {
+    '& > p': {
+      fontWeight: 500,
+      fontSize: '1rem',
+      color: '#6B7280',
+    }
+  },
+
+  jobDesc: {
+    '& > p': {
+      fontWeight: 500,
+      fontSize: '1rem',
+    }
+  },
 }));
