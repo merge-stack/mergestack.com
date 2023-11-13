@@ -19,7 +19,7 @@ import { RatingStarsIcon } from 'src/components/svg/rating-stars-icon';
 import { PhoneIcon } from 'src/components/svg/phone-icon';
 import { LocationPinIcon } from 'src/components/svg/location-pin-icon';
 import { ClutchIcon } from 'src/components/svg/clutch-icon';
-import useStyles from 'public/assets/styles/footer-style';
+import useStyles from 'public/assets/styles/FooterStyle';
 import Copyright from 'src/Copyright';
 
 const Footer = () => {

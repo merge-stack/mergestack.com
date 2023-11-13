@@ -1,11 +1,12 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   statsContainerroot: {
     width: '100%',
     marginTop: '-4rem',
     paddingBlock: '0.5rem',
-    backgroundColor: '#f7f7f7',
+    backgroundColor: theme.palette.custom.main,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

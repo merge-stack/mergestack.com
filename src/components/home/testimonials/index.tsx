@@ -6,16 +6,17 @@ import {
   Box,
   Rating,
   Container,
+  Theme,
 } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from 'src/components/home/testimonials/testimonials.json';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme : Theme) => ({
   testimonialRoot: {
     paddingBlock: '4rem',
-    backgroundColor: '#f7f7f7',
+    backgroundColor: theme.palette.custom.main,
     width: '98.5vw',
   },
   testimonialContainer: {

@@ -1,16 +1,23 @@
 import React from 'react';
-import { Typography, Button, Paper, Box } from '@mui/material';
+import {
+  Typography,
+  Button,
+  Paper,
+  Box,
+  Container,
+  Theme,
+} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   contactBannerWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: '1rem',
     borderRadius: '20px',
-    backgroundColor: '#F7F7F9',
+    backgroundColor: theme.palette.custom.main,
     paddingBlock: '2.5rem',
     marginBlock: '4rem',
     width: '100%',
@@ -32,15 +39,21 @@ const useStyles = makeStyles({
     lineHeight: 1,
   },
   contactIcon: {
-    fill: 'primary',
+    fill: theme.palette.primary.main,
     width: '12px',
     height: '12px',
   },
   contactBtnClass: {
     fontWeight: '600',
+    border: `1px solid ${theme.palette.primary.main}`,
     borderRadius: '20px !important',
-    backgroundColor: 'primary !important',
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.background.default,
     marginTop: '1rem',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.main,
+    },
   },
 
   '@media (max-width: 600px)': {
@@ -55,24 +68,36 @@ const useStyles = makeStyles({
       fontSize: 'xx-large',
     },
   },
-});
+}));
 
 const ContactSection = () => {
   const classes = useStyles();
   return (
-    <Paper elevation={0} className={classes.contactBannerWrapper}>
-      <Box className={classes.contactTitleWrapper}>
-        <SquareRoundedIcon className={classes.contactIcon} />
-        <Typography className={classes.contactTitle}>Have Any Question?</Typography>
-      </Box>
-      <Typography component="h1" variant="h3" className={classes.contactHeading}>
-        Let’s Discuss About Something
-      </Typography>
+    <Container>
+      <Paper elevation={0} className={classes.contactBannerWrapper}>
+        <Box className={classes.contactTitleWrapper}>
+          <SquareRoundedIcon className={classes.contactIcon} />
+          <Typography className={classes.contactTitle}>
+            Have Any Question?
+          </Typography>
+        </Box>
+        <Typography
+          component="h1"
+          variant="h3"
+          className={classes.contactHeading}
+        >
+          Let’s Discuss About Something
+        </Typography>
 
-      <Button variant="contained" className={classes.contactBtnClass}>
-        Contact Us
-      </Button>
-    </Paper>
+        <Button
+          variant="contained"
+          disableElevation
+          className={classes.contactBtnClass}
+        >
+          Contact Us
+        </Button>
+      </Paper>
+    </Container>
   );
 };
 
