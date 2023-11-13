@@ -9,11 +9,13 @@ import {
   List,
   ListItem,
   ListItemText,
+  Paper
 } from '@mui/material';
 
 import LayoutHoc from 'src/layoutHoc';
 import JobsData from 'src/components/career/jobs/jobs.json';
 import { useStyles } from 'src/components/career/style';
+import ApplyJobPaper from './ApplyJobBox';
 
 interface JobDetailProps {
   jobId: string;
@@ -41,25 +43,26 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
 
       <Grid container className={classes.primaryInfo}>
         <Grid item xs={8}>
-          <Box>
-            <Typography variant="h3" fontWeight="800">
-              {job.title}
-            </Typography>
-            <Typography variant="body1">{job.desc}</Typography>
-          </Box>
+          <Typography variant="h3" fontWeight="800">
+            {job.title}
+          </Typography>
+          {job.position ? (
+            <Paper elevation={0} className={classes.openPositions}>
+              <b>{job.position}</b> Positions
+            </Paper>
+          ) : (
+            <Paper elevation={0} className={classes.openPositions}>
+              <b>1</b> Positions
+            </Paper>
+          ) }
         </Grid>
         <Grid item xs={4}>
-          <Box>
-            <Typography variant="body1">
-              Location: {job.location}, Status: {job.status}, Date: {job.date}
-            </Typography>
-            {/* Add other details here */}
-          </Box>
+          <ApplyJobPaper/>
         </Grid>
       </Grid>
 
       <Box className={classes.companyDesc}>
-        <Typography variant="h5" fontWeight="600" gutterBottom>
+        <Typography variant="h5" fontWeight="800" gutterBottom>
           Company Description
         </Typography>
         <Typography variant="body1">
@@ -73,7 +76,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
       </Box>
 
       <Box className={classes.jobDesc}>
-        <Typography variant="h5" fontWeight="600" gutterBottom>
+        <Typography variant="h5" fontWeight="800" gutterBottom>
           Job Description
         </Typography>
         <Typography variant="body1" paragraph>
@@ -85,22 +88,43 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
           motivate product teams.
         </Typography>
 
-        <List>
+        <Box>
           {job.responsibilities ? (
             <>
-              <Typography variant="h5" fontWeight="600" gutterBottom>
+              <Typography variant="h6" fontWeight="800">
                 Responsibilities
               </Typography>
-              <List>
-                {job.responsibilities.map((responsibility, index) => (
-                  <ListItem key={index}>
-                    <ListItemText primary={responsibility} />
-                  </ListItem>
-                ))}
-              </List>
+              <Box paddingLeft='2rem'>
+                <List className={classes.listwrapper}>
+                  {job.responsibilities.map((responsibility, index) => (
+                    <ListItem key={index}>
+                      <ListItemText primary={responsibility} />
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
             </>
           ) : null}
-        </List>
+        </Box>
+
+        <Box>
+          {job.qualifications ? (
+            <>
+              <Typography variant="h6" fontWeight="800">
+                Qualifications
+              </Typography>
+              <Box paddingLeft='2rem'>
+                <List className={classes.listwrapper}>
+                  {job.qualifications.map((responsibility, index) => (
+                    <ListItem key={index}>
+                      <ListItemText primary={responsibility} />
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            </>
+          ) : null}
+        </Box>
       </Box>
     </Container>
   );

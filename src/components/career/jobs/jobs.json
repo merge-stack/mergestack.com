@@ -6,6 +6,7 @@
     "location": "New York",
     "status": "Full Time",
     "date": "March 12, 2023",
+    "position": 2,
     "responsibilities": [
       "Collaborating with prospective users and clients to understand and anticipate their needs and translate them into product requirements",
       "Overseeing all stages of product creation including design and development",
@@ -21,7 +22,17 @@
       "Follow the progress of work and address production issues during sprints",
       "Analyze preferences and requests of end users, Liaising with the product team and end users to deliver updates",
       "Refine our agile methodology based on results and client feedback"
-    ]
+    ],
+    "qualifications": [
+        "2-5 years experience of working on a Product Management and relevant fields",
+        "Significant experience in establishing, organizing, and leading a team. You must know the typical product development life cycle and be able to select the right development methodology for the product and the target market",
+        "Excellent communication and interpersonal skills",
+        "Excellent documentation skills",
+        "Good understanding of software development and web technologies",
+        "Strong problem-solving skills and high responsibility",
+        "Strong ability to work effectively with cross-functional teams in a matrix organization",
+        "MS or BS degree in Computer Science, Engineering, or other relevant area"
+      ]
   },
   {
     "id": "2",
