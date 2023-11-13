@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
 import { Grid, Box, Paper, Typography, Container } from '@mui/material';
 import data from 'src/components/home/stats/stats.json';
-import { ReviewIcon } from 'src/components/svg/review-icon';
-import { CompletedIcon } from 'src/components/svg/completed-icon';
-import { TrackIcon } from 'src/components/svg/track-icon';
-import { CustomerService } from 'src/components/svg/customer-service-icon';
+import { ReviewIcon } from 'src/components/svg/ReviewIcon';
+import { CompletedIcon } from 'src/components/svg/CompletedIcon';
+import { TrackIcon } from 'src/components/svg/TrackIcon';
+import { CustomerService } from 'src/components/svg/CustomerServiceIcon';
 import useStyles from 'src/components/home/stats/style';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'track-icon': <TrackIcon />,
-  'review-icon': <ReviewIcon />,
-  'completed-icon': <CompletedIcon />,
-  'customer-icon': <CustomerService />,
+  'TrackIcon': <TrackIcon />,
+  'ReviewIcon': <ReviewIcon />,
+  'CompletedIcon': <CompletedIcon />,
+  'CustomerIcon': <CustomerService />,
 };
 
 const Stats = () => {

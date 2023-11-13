@@ -1,9 +1,15 @@
 import React from 'react';
 import { Grid, Typography, Box, Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
 import ServicesBox from 'src/components/common/services/services';
-import { WebDevIcon } from 'src/components/svg/webDevIcon';
 import servicesData from 'src/components/common/services/services.json';
+import { MobDevIcon } from 'src/components/svg/MobDevIcon';
+import { InterfaceIcon } from 'src/components/svg/UiUXIcon';
+import { TestingIcon } from 'src/components/svg/TestingIcon';
+import { TeamIcon } from 'src/components/svg/TeamIcon';
+import { ConsultancyIcon } from 'src/components/svg/ConsultancyIcon';
+import { WebDevIcon } from 'src/components/svg/WebDevIcon';
 
 const useStyles = makeStyles({
   servicesTitle: {
@@ -26,6 +32,15 @@ const useStyles = makeStyles({
     '@media (max-width: 600px)': {},
   },
 });
+
+const iconComponents: { [key: string]: React.ReactElement } = {
+  'WebDevIcon': <WebDevIcon />,
+  'MobDevIcon': <MobDevIcon />,
+  'UiuxIcon': <InterfaceIcon />,
+  'QaIcon': <TestingIcon />,
+  'ItIcon': <ConsultancyIcon />,
+  'TeamIcon': <TeamIcon />,
+};
 
 const Services = () => {
   const classes = useStyles();

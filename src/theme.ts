@@ -34,6 +34,7 @@ const theme : DefaultTheme = createTheme({
         root: {
           backgroundColor: 'white !important',
           position: 'relative',
+          paddingBlock: '1rem'
         },
       },
     },
