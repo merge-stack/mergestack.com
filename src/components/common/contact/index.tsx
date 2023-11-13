@@ -1,10 +1,16 @@
 import React from 'react';
-import { Typography, Button, Paper, Box, Theme } from '@mui/material';
+import {
+  Typography,
+  Button,
+  Paper,
+  Box,
+  Container,
+  Theme,
+} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
 
-
-const useStyles = makeStyles((theme : Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   contactBannerWrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -67,19 +73,31 @@ const useStyles = makeStyles((theme : Theme) => ({
 const ContactSection = () => {
   const classes = useStyles();
   return (
-    <Paper elevation={0} className={classes.contactBannerWrapper}>
-      <Box className={classes.contactTitleWrapper}>
-        <SquareRoundedIcon className={classes.contactIcon} />
-        <Typography className={classes.contactTitle}>Have Any Question?</Typography>
-      </Box>
-      <Typography component="h1" variant="h3" className={classes.contactHeading}>
-        Let’s Discuss About Something
-      </Typography>
+    <Container>
+      <Paper elevation={0} className={classes.contactBannerWrapper}>
+        <Box className={classes.contactTitleWrapper}>
+          <SquareRoundedIcon className={classes.contactIcon} />
+          <Typography className={classes.contactTitle}>
+            Have Any Question?
+          </Typography>
+        </Box>
+        <Typography
+          component="h1"
+          variant="h3"
+          className={classes.contactHeading}
+        >
+          Let’s Discuss About Something
+        </Typography>
 
-      <Button variant="contained" disableElevation className={classes.contactBtnClass}>
-        Contact Us
-      </Button>
-    </Paper>
+        <Button
+          variant="contained"
+          disableElevation
+          className={classes.contactBtnClass}
+        >
+          Contact Us
+        </Button>
+      </Paper>
+    </Container>
   );
 };
 
