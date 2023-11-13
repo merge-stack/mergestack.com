@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import LayoutHoc from 'src/layoutHoc';
 import { ContactUs } from 'src/components/contact';
 
-const Blog: React.FC = (): React.ReactNode => {
+const ContactPage: React.FC = (): React.ReactNode => {
   return (
     <Box component="div">
       <ContactUs/>
@@ -12,4 +12,4 @@ const Blog: React.FC = (): React.ReactNode => {
   );
 };
 
-export default LayoutHoc(Blog);
+export default LayoutHoc(ContactPage);
