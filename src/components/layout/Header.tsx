@@ -118,7 +118,7 @@ const Header: React.FC = () => {
               <MuiLink href="/blogs">Blogs</MuiLink>
             </Box>
             <Box className={classes.menuItems}>
-              <Button variant="contained" className={classes.menubtn}>
+              <Button href="/contact" variant="contained" className={classes.menubtn}>
                 Contact Us
               </Button>
 
