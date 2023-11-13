@@ -1,9 +1,11 @@
 import React from 'react';
-import { Grid, Typography, Button, Paper, Box } from '@mui/material';
+import { Grid, Typography, Button, Paper, Box, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
 import HomeBanner from 'public/assets/images/homeBanner.png';
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme : Theme) => ({
   bannerContainer: {
     backgroundImage: `url(${HomeBanner.src})`,
     backgroundSize: 'cover',
@@ -54,9 +56,17 @@ const useStyles = makeStyles({
     fontSize: '12px',
     fontWeight: '600',
     borderRadius: '44px !important',
-    backgroundColor: 'primary !important',
+    border: `1px solid ${theme.palette.primary.main}`,
+    paddingInline: '2rem',
+    color: theme.palette.background.default,
+    backgroundColor: theme.palette.primary.main,
+    '&:hover': {
+      backgroundColor: theme.palette.background.default,
+      color: theme.palette.primary.main,
+      boxShadow: 'none',
+    },
   },
-});
+}));
 
 const HomepageBanner = () => {
   const classes = useStyles();
@@ -74,7 +84,7 @@ const HomepageBanner = () => {
               solutions
             </Typography>
           </Box>
-          <Button variant="contained" className={classes.bannerBtn}>
+          <Button variant="contained" disableElevation className={classes.bannerBtn}>
             Schedule a Free Consultation
           </Button>
         </Grid>

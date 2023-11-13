@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import ServicesBox from 'src/components/common/services/services';
 import { WebDevIcon } from 'src/components/svg/webDevIcon';
@@ -29,31 +29,37 @@ const useStyles = makeStyles({
 
 const Services = () => {
   const classes = useStyles();
-  
+
   return (
-    <Box className={classes.servicesContainer}>
-      <Typography className={classes.servicesTitle} variant="h2" component="h1">
-        We Offer a Wide
-        <br />
-        Variety of IT Services
-      </Typography>
-      <Grid
-        className={classes.servicesGridContainer}
-        container
-        columnSpacing={2}
-        rowSpacing={6}
-      >
-        {servicesData.map((service) => (
-          <Grid item xs={12} sm={4} key={service.id}>
-            <ServicesBox
-              icon={<WebDevIcon />}
-              heading={service.heading}
-              content={service.content}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+    <Container>
+      <Box className={classes.servicesContainer}>
+        <Typography
+          className={classes.servicesTitle}
+          variant="h2"
+          component="h1"
+        >
+          We Offer a Wide
+          <br />
+          Variety of IT Services
+        </Typography>
+        <Grid
+          className={classes.servicesGridContainer}
+          container
+          columnSpacing={2}
+          rowSpacing={6}
+        >
+          {servicesData.map((service) => (
+            <Grid item xs={12} sm={4} key={service.id}>
+              <ServicesBox
+                icon={<WebDevIcon />}
+                heading={service.heading}
+                content={service.content}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </Container>
   );
 };
 

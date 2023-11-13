@@ -8,15 +8,17 @@ import {
   Container,
   Drawer,
   Link,
+  Theme,
 } from '@mui/material';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 import Logo from 'src/components/svg/Logo';
 import MuiLink from 'src/Link';
 
-const useStyles = makeStyles(() => ({
+
+const useStyles = makeStyles((theme : Theme) => ({
   menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -25,7 +27,7 @@ const useStyles = makeStyles(() => ({
   logoWrapper: {
     display: 'flex',
     alignItems: 'center',
-    '& :hover': {
+    '&:hover': {
       cursor: 'pointer',
     },
   },
@@ -46,12 +48,15 @@ const useStyles = makeStyles(() => ({
     },
   },
   menubtn: {
-    backgroundColor: 'primary',
+    backgroundColor: theme.palette.primary.main,
+    border: `1px solid ${theme.palette.primary.main}`,
     borderRadius: '25px',
     boxShadow: 'none',
-    color: '#fff',
-    '& > hover': {
-      fill: 'dodgerblue',
+    color: theme.palette.background.default,
+    '&:hover': {
+      backgroundColor: theme.palette.background.default,
+      color: theme.palette.primary.main,
+      boxShadow: 'none',
     },
 
     '@media (max-width: 1000px)': {
@@ -137,7 +142,7 @@ const Header: React.FC = () => {
       >
         <Box className={classes.menuLinks}>
           <IconButton edge="end" onClick={handleDrawerClose}>
-            <CloseOutlinedIcon />
+            <CancelOutlinedIcon />
           </IconButton>
           <MuiLink href="/about">About</MuiLink>
           <MuiLink href="/services">Services</MuiLink>
