@@ -1,7 +1,6 @@
 import { Roboto } from 'next/font/google';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, Theme } from '@mui/material/styles';
 import { DefaultTheme } from '@mui/styles';
-
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -9,32 +8,36 @@ export const roboto = Roboto({
   display: 'swap',
 });
 
+declare module '@mui/system' {
+  interface DefaultTheme extends Theme {}
+}
+
 // Create a theme instance.
-const theme : DefaultTheme = createTheme({
-    palette: {
-      primary: {
-        main: '#4FB0E3',
-      },
-      secondary: {
-        main: '#106897',
-      },
-      background: {
-        default: '#ffffff',
-      },
-      custom: {
-        main: '#f7f7f9',
-      }
+const theme: DefaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#4FB0E3',
     },
-    typography: {
-      fontFamily: roboto.style.fontFamily,
+    secondary: {
+      main: '#106897',
     },
+    background: {
+      default: '#ffffff',
+    },
+    custom: {
+      main: '#f7f7f9',
+    },
+  },
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
           backgroundColor: 'white !important',
           position: 'relative',
-          paddingBlock: '1rem'
+          paddingBlock: '1rem',
         },
       },
     },
