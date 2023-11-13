@@ -11,13 +11,9 @@ function Services() {
   return (
     <Box component="div">
       <ServicesBanner />
-      <Container maxWidth="lg">
-        <ServicesSection />
-      </Container>
+      <ServicesSection />
       <ServicesTextSection />
-      <Container maxWidth="lg">
-        <ContactSection />
-      </Container>
+      <ContactSection />
     </Box>
   );
 }
