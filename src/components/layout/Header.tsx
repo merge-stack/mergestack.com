@@ -15,10 +15,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 import Logo from 'src/components/svg/Logo';
-import MuiLink from 'src/Link';
 
-
-const useStyles = makeStyles((theme : Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -104,21 +102,25 @@ const Header: React.FC = () => {
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
           <Box className={classes.logoWrapper}>
-            <MuiLink href="/">
+            <Link href="/">
               <Logo />
-            </MuiLink>
+            </Link>
           </Box>
 
           <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
-              <MuiLink href="/about">About</MuiLink>
-              <MuiLink href="/services">Services</MuiLink>
-              <MuiLink href="/portfolio">Portfolio</MuiLink>
-              <MuiLink href="/career">Careers</MuiLink>
-              <MuiLink href="/blogs">Blogs</MuiLink>
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/career">Careers</Link>
+              <Link href="/blogs">Blogs</Link>
             </Box>
             <Box className={classes.menuItems}>
-              <Button href="/contact" variant="contained" className={classes.menubtn}>
+              <Button
+                href="/contact"
+                variant="contained"
+                className={classes.menubtn}
+              >
                 Contact Us
               </Button>
 
@@ -144,11 +146,11 @@ const Header: React.FC = () => {
           <IconButton edge="end" onClick={handleDrawerClose}>
             <CancelOutlinedIcon />
           </IconButton>
-          <MuiLink href="/about">About</MuiLink>
-          <MuiLink href="/services">Services</MuiLink>
-          <MuiLink href="/portfolio">Portfolio</MuiLink>
-          <MuiLink href="/career">Careers</MuiLink>
-          <MuiLink href="/blogs">Blogs</MuiLink>
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/career">Careers</Link>
+          <Link href="/blogs">Blogs</Link>
         </Box>
       </Drawer>
     </AppBar>
