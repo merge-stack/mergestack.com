@@ -23,7 +23,7 @@ const ContactForm: React.FC = () => {
           </Typography>
         </Box>
 
-        <Grid container rowGap="2.1rem" spacing={2}>
+        <Grid container rowGap="1rem" spacing={2}>
           <Grid item xs={6}>
             <TextField
               placeholder="First Name *"
