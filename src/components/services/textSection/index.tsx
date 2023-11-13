@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { Box, Container, Typography, Grid, Button } from '@mui/material';
+import { Box, Container, Typography, Grid, Button, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import ServicesIntroBanner from 'public/assets/images/servicesIntroBanner.png';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme : Theme) => ({
   servicesTextRoot: {
     paddingBlock: '4rem',
-    backgroundColor: '#f7f7f9',
+    backgroundColor: theme.palette.custom.main,
   },
   LeftTextColumn: {
     display: 'flex',
@@ -38,9 +38,9 @@ const useStyles = makeStyles((theme) => ({
   },
   servicesBtn: {
     borderRadius: '20px',
-    backgroundColor: 'primary',
+    backgroundColor: theme.palette.primary.main,
     boxShadow: 'none',
-    color: '#fff',
+    color: theme.palette.background.default,
     fontSize: '1rem',
   },
 }));

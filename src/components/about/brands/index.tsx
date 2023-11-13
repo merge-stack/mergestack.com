@@ -6,14 +6,15 @@ import {
   Typography,
   ImageList,
   ImageListItem,
+  Theme,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import images from 'src/components/about/brands/images.json';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   brandsRoot: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.background.default,
     padding: '3rem 0 0',
   },
   brandsContainer: {

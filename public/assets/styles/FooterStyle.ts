@@ -1,6 +1,7 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme : Theme) => ({
   footerMidColumns: {
     '@media (max-width: 1000px)': {
       display: 'none'
@@ -10,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold'
   },
   footerContainerStyle: {
-    backgroundColor: '#106897',
-    color: '#fff',
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.background.default,
     padding: '2rem 0 3rem',
     position: 'relative'
   },
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     gap: '0.75rem',
   },
   footerAboutText: {
-    color: 'white',
+    color: theme.palette.background.default,
     fontSize: '1rem',
     fontWeight: 400,
     margin: 0,

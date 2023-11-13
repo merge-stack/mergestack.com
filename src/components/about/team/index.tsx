@@ -19,7 +19,8 @@ const TeamSection: React.FC = () => {
           {TeamData.map((member, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Box component="div" className={classes.teamImageWrapper}>
-                <img
+                <Box
+                  component='img'
                   className={classes.teamImage}
                   src={member.imageUrl}
                   alt={member.name}

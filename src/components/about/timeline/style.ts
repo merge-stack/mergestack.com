@@ -1,6 +1,8 @@
 import { makeStyles } from '@mui/styles';
 
-export const useStyles = makeStyles((theme) => ({
+import theme from 'src/theme';
+
+export const useStyles = makeStyles({
   aboutRoot: {
     paddingBottom: '4rem',
     maxWidth: '1200px',
@@ -64,7 +66,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   largeRadioIcon: {
-    fill: 'primary',
+    fill: theme.palette.primary.main,
   },
   timelineItem: {
     gap: '5rem',
@@ -94,4 +96,4 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
-}));
+});

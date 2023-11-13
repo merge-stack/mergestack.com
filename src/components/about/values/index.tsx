@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box, Typography, Container, Grid, Paper } from '@mui/material';
-import { useStyles } from 'src/components/about/core-values/style';
+import { useStyles } from 'src/components/about/values/style';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
-import data from 'src/components/about/core-values/core-values.json';
+import data from 'src/components/about/values/CoreValues.json';
 import { PassionateIcon } from 'src/components/svg/PassionateIcon';
 import { RespectfulIcon } from 'src/components/svg/RespectfulIcon';
 import { OwnershipIcon } from 'src/components/svg/OwnershipIcon';
