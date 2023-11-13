@@ -1,6 +1,7 @@
 import { Roboto, Inter } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
-// import { red } from '@mui/material/colors';
+import { DefaultTheme } from '@mui/styles';
+
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -14,7 +15,7 @@ export const inter = Inter({
 });
 
 // Create a theme instance.
-const theme = createTheme({
+const theme : DefaultTheme = createTheme({
     palette: {
       primary: {
         main: '#4FB0E3',
@@ -22,6 +23,12 @@ const theme = createTheme({
       secondary: {
         main: '#106897',
       },
+      background: {
+        default: '#ffffff',
+      },
+      custom: {
+        main: '#f7f7f9',
+      }
     },
     typography: {
       fontFamily: inter.style.fontFamily,
@@ -32,6 +39,7 @@ const theme = createTheme({
         root: {
           backgroundColor: 'white !important',
           position: 'relative',
+          paddingBlock: '1rem'
         },
       },
     },

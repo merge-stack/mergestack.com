@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { Box, Typography, Container, Grid, Paper } from '@mui/material';
-import { useStyles } from 'src/components/about/core-values/style';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
-import data from 'src/components/about/core-values/core-values.json';
-import { PassionateIcon } from 'src/components/svg/passionate-icon';
-import { RespectfulIcon } from 'src/components/svg/respectful-icon';
-import { OwnershipIcon } from 'src/components/svg/ownership-icon';
-import { UnifiedIcon } from 'src/components/svg/unified-icon';
+
+import { useStyles } from 'src/components/about/values/style';
+import { PassionateIcon } from 'src/components/svg/PassionateIcon';
+import { RespectfulIcon } from 'src/components/svg/RespectfulIcon';
+import { OwnershipIcon } from 'src/components/svg/OwnershipIcon';
+import { UnifiedIcon } from 'src/components/svg/UnifiedIcon';
+
+import data from 'src/components/about/values/CoreValues.json';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
-  'passionate-icon': <PassionateIcon />,
-  'respectful-icon': <RespectfulIcon />,
-  'ownership-icon': <OwnershipIcon />,
-  'unified-icon': <UnifiedIcon />,
+  PassionateIcon: <PassionateIcon />,
+  RespectfulIcon: <RespectfulIcon />,
+  OwnershipIcon: <OwnershipIcon />,
+  UnifiedIcon: <UnifiedIcon />,
 };
 
 function CoreValues() {

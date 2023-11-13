@@ -9,17 +9,17 @@ import {
   ListItem,
   ListItemIcon,
 } from '@mui/material';
-import LogoWhiteIcon from 'src/components/svg/Logo-white';
-import { FbFooterIcon } from 'src/components/svg/fb-icon';
-import { InstagramFooterIcon } from 'src/components/svg/instagram-icon';
-import { LinkedInFooterIcon } from 'src/components/svg/linkedin-icon';
-import { EmailIcon } from 'src/components/svg/email-icon';
-import { TwitterFooterIcon } from 'src/components/svg/twitter-icon';
-import { RatingStarsIcon } from 'src/components/svg/rating-stars-icon';
-import { PhoneIcon } from 'src/components/svg/phone-icon';
-import { LocationPinIcon } from 'src/components/svg/location-pin-icon';
-import { ClutchIcon } from 'src/components/svg/clutch-icon';
-import useStyles from 'public/assets/styles/footer-style';
+import LogoWhiteIcon from 'src/components/svg/LogoWhite';
+import { FbFooterIcon } from 'src/components/svg/FbIcon';
+import { InstagramFooterIcon } from 'src/components/svg/InstagramIcon';
+import { LinkedInFooterIcon } from 'src/components/svg/LinkedinIcon';
+import { EmailIcon } from 'src/components/svg/EmailIcon';
+import { TwitterFooterIcon } from 'src/components/svg/TwitterIcon';
+import { RatingStarsIcon } from 'src/components/svg/RatingStarsIcon';
+import { PhoneIcon } from 'src/components/svg/PhoneIcon';
+import { LocationPinIcon } from 'src/components/svg/LocationPinIcon';
+import { ClutchIcon } from 'src/components/svg/ClutchIcon';
+import useStyles from 'public/assets/styles/FooterStyle';
 import Copyright from 'src/Copyright';
 
 const Footer = () => {

@@ -1,9 +1,10 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme : Theme) => ({
   teamRoot: {
     paddingBlock: '3rem',
-    backgroundColor: '#f7f7f9',
+    backgroundColor: theme.palette.custom.main,
   },
   teamContainer: {
     display: 'flex',
@@ -18,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
   teamImageWrapper: {
     borderRadius: '15px',
     padding: '0.5rem 0.5rem 1rem',
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.background.default,
     textAlign: 'center',
   },
   teamImage: {
