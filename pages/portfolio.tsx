@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 
 import LayoutHoc from 'src/layoutHoc';
 import { Portfolio } from 'src/components/portfolio';
@@ -9,9 +9,7 @@ const Blog: React.FC = (): React.ReactNode => {
   return (
     <Box component="div">
       <Portfolio />
-      <Container>
-        <ContactSection />
-      </Container>
+      <ContactSection />
     </Box>
   );
 };
