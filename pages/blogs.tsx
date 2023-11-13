@@ -11,9 +11,7 @@ const Blog: React.FC = (): React.ReactNode => {
     <Box component="div">
       <BlogBanner/>
       <BlogList/>
-      <Container maxWidth='lg'>
-        <ContactSection/>
-      </Container>
+      <ContactSection/>
     </Box>
   );
 };
