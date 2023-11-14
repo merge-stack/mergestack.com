@@ -1,8 +1,7 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import theme from 'src/theme';
-
-export const useStyles = makeStyles({
+export const useStyles = makeStyles((theme: Theme) => ({
   aboutRoot: {
     paddingBottom: '4rem',
     maxWidth: '1200px',
@@ -11,6 +10,7 @@ export const useStyles = makeStyles({
     gap: '4rem',
   },
   timlineHeadingWrapper: {
+    marginTop: '3rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -96,4 +96,4 @@ export const useStyles = makeStyles({
       },
     },
   },
-});
+}));
