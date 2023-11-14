@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ExperienceIcon: React.FC = () => (
+export const EmploymentIcon: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="42"

@@ -9,19 +9,20 @@ import {
   List,
   ListItem,
   ListItemText,
-  Paper
+  Paper,
 } from '@mui/material';
 
 import LayoutHoc from 'src/layoutHoc';
 import JobsData from 'src/components/career/jobs/jobs.json';
 import { useStyles } from 'src/components/career/style';
-import ApplyJobPaper from './ApplyJobBox';
+import ApplyJobBox from './ApplyJobBox';
+import InformationCard from './InformationCard';
 
-interface JobDetailProps {
+interface IJobDetailProps {
   jobId: string;
 }
 
-const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
+const JobDetail: React.FC<IJobDetailProps> = ({ jobId }) => {
   const classes = useStyles();
   const job = JobsData.find((job) => job.id === jobId);
 
@@ -41,23 +42,26 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
         Open Positions
       </Typography>
 
-      <Grid container className={classes.primaryInfo}>
-        <Grid item xs={8}>
-          <Typography variant="h3" fontWeight="800">
-            {job.title}
-          </Typography>
-          {job.position ? (
-            <Paper elevation={0} className={classes.openPositions}>
-              <b>{job.position}</b> Positions
-            </Paper>
-          ) : (
-            <Paper elevation={0} className={classes.openPositions}>
-              <b>1</b> Positions
-            </Paper>
-          ) }
+      <Grid container spacing={5} className={classes.primaryInfo}>
+        <Grid item xs={8} className={classes.cardsWrapper}>
+          <Box>
+            <Typography variant="h3" fontWeight="800" gutterBottom>
+              {job.title}
+            </Typography>
+            {job.position ? (
+              <Paper elevation={0} className={classes.openPositions}>
+                <b>{job.position}</b> Positions
+              </Paper>
+            ) : (
+              <Paper elevation={0} className={classes.openPositions}>
+                <b>1</b> Positions
+              </Paper>
+            )}
+          </Box>
+          <InformationCard jobId={jobId} />
         </Grid>
         <Grid item xs={4}>
-          <ApplyJobPaper/>
+          <ApplyJobBox />
         </Grid>
       </Grid>
 
@@ -94,7 +98,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
               <Typography variant="h6" fontWeight="800">
                 Responsibilities
               </Typography>
-              <Box paddingLeft='2rem'>
+              <Box paddingLeft="2rem">
                 <List className={classes.listwrapper}>
                   {job.responsibilities.map((responsibility, index) => (
                     <ListItem key={index}>
@@ -113,7 +117,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ jobId }) => {
               <Typography variant="h6" fontWeight="800">
                 Qualifications
               </Typography>
-              <Box paddingLeft='2rem'>
+              <Box paddingLeft="2rem">
                 <List className={classes.listwrapper}>
                   {job.qualifications.map((responsibility, index) => (
                     <ListItem key={index}>

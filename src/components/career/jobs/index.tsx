@@ -3,7 +3,6 @@ import { Box, Container, Typography, Link, Grid } from '@mui/material';
 import { useRouter } from 'next/router';
 
 import { useStyles } from 'src/components/career/style';
-import TextBadge from 'src/components/common/TextBadge';
 import JobsData from 'src/components/career/jobs/jobs.json';
 import { CalendarIcon } from 'src/components/svg/CalendarIcon';
 import { TimeIcon } from 'src/components/svg/TimeIcon';
@@ -21,7 +20,6 @@ export function ListedJobs() {
     <Box component="div" className={classes.careerRoot}>
       <Container maxWidth="lg" className={classes.careerBannerContainer}>
         <Box component="div" className={classes.careerTitleWrapper}>
-          <TextBadge text="career" size="small" />
           <Typography variant="h2">Your Career Starts Here</Typography>
           <Typography variant="body1" width="75%">
             Can’t find the job you want? Send your resume to{' '}

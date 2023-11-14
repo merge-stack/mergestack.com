@@ -2,7 +2,6 @@ import { Roboto, Inter } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 import { DefaultTheme } from '@mui/styles';
 
-
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
@@ -13,6 +12,10 @@ export const inter = Inter({
   weight: ['300', '400', '500', '700', '800'],
   subsets: ['latin'],
 });
+
+declare module '@mui/system' {
+  interface DefaultTheme extends Theme {}
+}
 
 // Create a theme instance.
 const theme : DefaultTheme = createTheme({
@@ -39,7 +42,7 @@ const theme : DefaultTheme = createTheme({
         root: {
           backgroundColor: 'white !important',
           position: 'relative',
-          paddingBlock: '1rem'
+          paddingBlock: '1rem',
         },
       },
     },
