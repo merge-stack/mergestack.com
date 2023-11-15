@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: '25px',
     boxShadow: 'none',
     color: theme.palette.background.default,
+    textTransform: 'capitalize',
     '&:hover': {
       backgroundColor: theme.palette.background.default,
       color: theme.palette.primary.main,
@@ -80,6 +81,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   InfoDrawerBtn: {
     backgroundColor: '#EFF1F5',
+    '&:hover':{
+      backgroundColor: theme.palette.primary.main,
+      '& > svg': {
+        fill: '#EFF1F5'
+      },
+    },
     '& > svg': {
       fill: theme.palette.primary.main
     },

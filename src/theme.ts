@@ -42,6 +42,13 @@ const theme: DefaultTheme = createTheme({
         },
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize'
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {
