@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 import Logo from 'src/components/svg/Logo';
+import InfoDrawerBox from './Header/InfoDrawerBox';
 
 const useStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '1rem',
     height: '60%',
   },
-  hamburger: {
+  mobileMenuBtn: {
     '@media (max-width: 600px)': {
       display: 'inine-block',
     },
@@ -77,6 +78,25 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'none',
     },
   },
+  InfoDrawerBtn: {
+    backgroundColor: '#EFF1F5',
+    '& > svg': {
+      fill: theme.palette.primary.main
+    },
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
+    '@media (min-width: 601px)': {
+      display: 'inline-flex',
+    },
+  },
+  
+  InfoDrawerWidth: {
+    '& > :nth-child(3)': {
+      width: '360px',
+    },
+  },
+
   drawerWidth: {
     '& > :nth-child(3)': {
       width: '100%',
@@ -88,13 +108,22 @@ const Header: React.FC = () => {
   const router = useRouter();
   const classes = useStyles();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isInfoDrawerOpen, setIsInfoDrawerOpen] = useState(false);
 
-  const handleDrawerOpen = () => {
+  const mobileMenuOpen = () => {
     setIsDrawerOpen(true);
+  };
+
+  const infoDrawerOpen = () => {
+    setIsInfoDrawerOpen(true);
   };
 
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
+  };
+
+  const handleInfoDrawerClose = () => {
+    setIsInfoDrawerOpen(false);
   };
 
   return (
@@ -123,12 +152,20 @@ const Header: React.FC = () => {
               >
                 Contact Us
               </Button>
-
               <IconButton
-                className={classes.hamburger}
+                className={classes.InfoDrawerBtn}
                 color="default"
                 edge="end"
-                onClick={handleDrawerOpen}
+                onClick={infoDrawerOpen}
+              >
+                <MenuIcon />
+              </IconButton>
+
+              <IconButton
+                className={classes.mobileMenuBtn}
+                color="default"
+                edge="end"
+                onClick={mobileMenuOpen}
               >
                 <MenuIcon />
               </IconButton>
@@ -136,6 +173,7 @@ const Header: React.FC = () => {
           </Box>
         </Box>
       </Container>
+      {/* MOBILE MENU DRAWER */}
       <Drawer
         anchor="right"
         open={isDrawerOpen}
@@ -152,6 +190,16 @@ const Header: React.FC = () => {
           <Link href="/career">Careers</Link>
           <Link href="/blogs">Blogs</Link>
         </Box>
+      </Drawer>
+      
+      {/* INFORMATION DRAWER  */}
+      <Drawer
+        anchor="right"
+        open={isInfoDrawerOpen}
+        onClose={handleInfoDrawerClose}
+        className={classes.InfoDrawerWidth}
+      >
+        <InfoDrawerBox onClose={handleInfoDrawerClose} />
       </Drawer>
     </AppBar>
   );

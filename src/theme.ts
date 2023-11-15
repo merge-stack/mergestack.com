@@ -38,6 +38,7 @@ const theme: DefaultTheme = createTheme({
           backgroundColor: 'white !important',
           position: 'relative',
           paddingBlock: '1rem',
+          paddingRight: '0 !important'
         },
       },
     },
