@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Timeline,
   TimelineItem,
@@ -7,7 +7,7 @@ import {
   TimelineContent,
   TimelineOppositeContent,
 } from '@mui/lab';
-import { Container, Typography, Box, Paper } from '@mui/material';
+import { Container, Typography, Box, Paper, Grow } from '@mui/material';
 import timelineData from 'src/components/about/timeline/timeline.json';
 import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
 import TripOriginTwoToneIcon from '@mui/icons-material/TripOriginTwoTone';
@@ -16,6 +16,55 @@ import TextBadge from 'src/components/common/TextBadge';
 
 export default function AboutTimeline() {
   const classes = useStyles();
+  const timelineRefs = useRef<Array<HTMLElement | null>>([]);
+  const [visibleItems, setVisibleItems] = useState<number[]>([]);
+
+  useEffect(() => {
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      const visibleIndices = entries
+        .filter(
+          (entry) => entry.isIntersecting && entry.intersectionRatio === 1,
+        )
+        .map((entry) =>
+          parseInt(entry.target.getAttribute('data-index') || '0', 10),
+        );
+
+        setVisibleItems((currentVisibleItems) => {
+          const newVisibleItems = [...currentVisibleItems];
+          visibleIndices.forEach((index) => {
+            if (!newVisibleItems.includes(index)) {
+              newVisibleItems.push(index);
+            }
+          });
+          return newVisibleItems;
+        });
+      };
+
+    const timelineItems = timelineRefs.current;
+
+    if (timelineItems.length) {
+      const observer = new IntersectionObserver(
+        handleIntersection,
+        observerOptions,
+      );
+
+      timelineItems.forEach((item) => {
+        if (item instanceof Element) {
+          observer.observe(item);
+        }
+      });
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
 
   return (
     <Container maxWidth="lg" className={classes.aboutRoot}>
@@ -41,16 +90,29 @@ export default function AboutTimeline() {
           <TimelineContent></TimelineContent>
         </TimelineItem>
         {timelineData.map((event, index) => (
-          <TimelineItem className={classes.timelineItem} key={index}>
+          <TimelineItem
+            className={classes.timelineItem}
+            ref={(el) => {
+              timelineRefs.current[index] = el as HTMLElement;
+            }}
+            key={index}
+            data-index={index}
+          >
             <TimelineOppositeContent color="text.secondary">
-              <Box
-                component="img"
-                alt="Author"
-                src={event.img}
-                className={classes.timelineImg}
-              />
+              <Grow in={visibleItems.includes(index)}>
+                <Box>
+                  <Box
+                    component="img"
+                    alt="Author"
+                    src={event.img}
+                    className={classes.timelineImg}
+                  />
+                </Box>
+              </Grow>
             </TimelineOppositeContent>
-            <TimelineSeparator>
+            <TimelineSeparator ref={(el) => {
+              timelineRefs.current[index] = el as HTMLElement;
+            }}>
               <TimelineConnector className={classes.indicatorWrapper}>
                 <RadioButtonCheckedOutlinedIcon
                   className={classes.largeRadioIcon}
@@ -58,12 +120,19 @@ export default function AboutTimeline() {
               </TimelineConnector>
             </TimelineSeparator>
             <TimelineContent className={classes.timlineTextWrapper}>
-              <Typography className={classes.timelineItemTitle} component="h6">
-                {event.title}
-              </Typography>
-              <Typography className={classes.timelineTagline} component="p">
-                {event.content}
-              </Typography>
+              <Grow in={visibleItems.includes(index)}>
+                <Box>
+                  <Typography
+                    className={classes.timelineItemTitle}
+                    component="h6"
+                  >
+                    {event.title}
+                  </Typography>
+                  <Typography className={classes.timelineTagline} component="p">
+                    {event.content}
+                  </Typography>
+                </Box>
+              </Grow>
             </TimelineContent>
           </TimelineItem>
         ))}

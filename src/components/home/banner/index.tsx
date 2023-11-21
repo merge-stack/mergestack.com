@@ -1,8 +1,9 @@
 import React from 'react';
-import { Grid, Typography, Button, Paper, Box, Theme } from '@mui/material';
+import { Grid, Typography, Button, Paper, Box, Theme, Grow } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import HomeBanner from 'public/assets/images/homeBanner.png';
+import { useInView } from 'react-intersection-observer';
 
 
 const useStyles = makeStyles((theme : Theme) => ({
@@ -69,13 +70,17 @@ const useStyles = makeStyles((theme : Theme) => ({
 }));
 
 const HomepageBanner = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   const classes = useStyles();
   
   return (
     <Paper elevation={0} className={classes.bannerContainer}>
-      <Grid container spacing={2}>
+      <Grow in={inView} timeout={500}>
+      <Grid ref={ref} container spacing={2}>
         <Grid item xs={12} sm={6} className={classes.bannerGrid}>
-          <Box className={classes.bannerTextContainer} component="div">
+          <Box ref={ref} className={classes.bannerTextContainer} component="div">
             <Typography variant='h1' className={classes.bannerHeading}>
               We manage your IT, so you can manage your business.
             </Typography>
@@ -89,6 +94,7 @@ const HomepageBanner = () => {
           </Button>
         </Grid>
       </Grid>
+      </Grow>
     </Paper>
   );
 };

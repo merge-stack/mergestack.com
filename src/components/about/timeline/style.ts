@@ -46,6 +46,7 @@ export const useStyles = makeStyles({
   timelineItemTitle: {
     fontWeight: 600,
     fontSize: '25px',
+    textAlign: 'left',
     '@media (max-width: 600px)': {
       fontSize: '1.375rem',
     },
