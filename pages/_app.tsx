@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from 'src/theme';
 import createEmotionCache from 'src/createEmotionCache';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -15,7 +16,14 @@ export interface MyAppProps extends AppProps {
 }
 
 export default function MyApp(props: MyAppProps) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const {
+    Component,
+    emotionCache = clientSideEmotionCache,
+    pageProps,
+    router,
+  } = props;
+  const isGoingBack = router.route.length < router.asPath.length;
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -24,7 +32,21 @@ export default function MyApp(props: MyAppProps) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait" >
+          <motion.div
+            key={router.route}
+            initial={isGoingBack ? { x: -300, opacity: 0 } : { x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={isGoingBack ? { x: 300, opacity: 0 } : { x: -300, opacity: 0 }}
+            transition={{
+              type: 'spring',
+              stiffness: 160,
+              damping: 10,
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
       </ThemeProvider>
     </CacheProvider>
   );
