@@ -22,7 +22,6 @@ export default function MyApp(props: MyAppProps) {
     pageProps,
     router,
   } = props;
-  const isGoingBack = router.route.length < router.asPath.length;
 
   return (
     <CacheProvider value={emotionCache}>
@@ -35,12 +34,12 @@ export default function MyApp(props: MyAppProps) {
         <AnimatePresence mode="wait" >
           <motion.div
             key={router.route}
-            initial={isGoingBack ? { x: -300, opacity: 0 } : { x: 300, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={isGoingBack ? { x: 300, opacity: 0 } : { x: -300, opacity: 0 }}
+            exit={{ x: 300, opacity: 0 }}
             transition={{
               type: 'spring',
-              stiffness: 160,
+              stiffness: 250,
               damping: 10,
             }}
           >
