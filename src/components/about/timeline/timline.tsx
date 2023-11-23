@@ -35,16 +35,16 @@ export default function AboutTimeline() {
           parseInt(entry.target.getAttribute('data-index') || '0', 10),
         );
 
-        setVisibleItems((currentVisibleItems) => {
-          const newVisibleItems = [...currentVisibleItems];
-          visibleIndices.forEach((index) => {
-            if (!newVisibleItems.includes(index)) {
-              newVisibleItems.push(index);
-            }
-          });
-          return newVisibleItems;
+      setVisibleItems((currentVisibleItems) => {
+        const newVisibleItems = [...currentVisibleItems];
+        visibleIndices.forEach((index) => {
+          if (!newVisibleItems.includes(index)) {
+            newVisibleItems.push(index);
+          }
         });
-      };
+        return newVisibleItems;
+      });
+    };
 
     const timelineItems = timelineRefs.current;
 
@@ -76,68 +76,73 @@ export default function AboutTimeline() {
           Everyone has a story. Here is ours.
         </Typography>
       </Container>
-
-      <Timeline
-        position="alternate-reverse"
-        className={classes.timelineContainer}
-      >
-        <TimelineItem className={classes.timelineItem}>
-          <TimelineOppositeContent></TimelineOppositeContent>
-          <TimelineSeparator>
-            <TripOriginTwoToneIcon className={classes.largeRadioIcon} />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent></TimelineContent>
-        </TimelineItem>
-        {timelineData.map((event, index) => (
-          <TimelineItem
-            className={classes.timelineItem}
-            ref={(el) => {
-              timelineRefs.current[index] = el as HTMLElement;
-            }}
-            key={index}
-            data-index={index}
-          >
-            <TimelineOppositeContent color="text.secondary">
-              <Grow in={visibleItems.includes(index)}>
-                <Box>
-                  <Box
-                    component="img"
-                    alt="Author"
-                    src={event.img}
-                    className={classes.timelineImg}
-                  />
-                </Box>
-              </Grow>
-            </TimelineOppositeContent>
-            <TimelineSeparator ref={(el) => {
-              timelineRefs.current[index] = el as HTMLElement;
-            }}>
-              <TimelineConnector className={classes.indicatorWrapper}>
-                <RadioButtonCheckedOutlinedIcon
-                  className={classes.largeRadioIcon}
-                />
-              </TimelineConnector>
+      <Grow in timeout={3000}>
+        <Timeline
+          position="alternate-reverse"
+          className={classes.timelineContainer}
+        >
+          <TimelineItem className={classes.timelineItem}>
+            <TimelineOppositeContent></TimelineOppositeContent>
+            <TimelineSeparator>
+              <TripOriginTwoToneIcon className={classes.largeRadioIcon} />
+              <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent className={classes.timlineTextWrapper}>
-              <Grow in={visibleItems.includes(index)}>
-                <Box>
-                  <Typography
-                    className={classes.timelineItemTitle}
-                    component="h6"
-                  >
-                    {event.title}
-                  </Typography>
-                  <Typography className={classes.timelineTagline} component="p">
-                    {event.content}
-                  </Typography>
-                </Box>
-              </Grow>
-            </TimelineContent>
+            <TimelineContent></TimelineContent>
           </TimelineItem>
-        ))}
-      </Timeline>
-
+          {timelineData.map((event, index) => (
+            <TimelineItem
+              className={classes.timelineItem}
+              ref={(el) => {
+                timelineRefs.current[index] = el as HTMLElement;
+              }}
+              key={index}
+              data-index={index}
+            >
+              <TimelineOppositeContent color="text.secondary">
+                <Grow in={visibleItems.includes(index)}>
+                  <Box>
+                    <Box
+                      component="img"
+                      alt="Author"
+                      src={event.img}
+                      className={classes.timelineImg}
+                    />
+                  </Box>
+                </Grow>
+              </TimelineOppositeContent>
+              <TimelineSeparator
+                ref={(el) => {
+                  timelineRefs.current[index] = el as HTMLElement;
+                }}
+              >
+                <TimelineConnector className={classes.indicatorWrapper}>
+                  <RadioButtonCheckedOutlinedIcon
+                    className={classes.largeRadioIcon}
+                  />
+                </TimelineConnector>
+              </TimelineSeparator>
+              <TimelineContent className={classes.timlineTextWrapper}>
+                <Grow in={visibleItems.includes(index)}>
+                  <Box>
+                    <Typography
+                      className={classes.timelineItemTitle}
+                      component="h6"
+                    >
+                      {event.title}
+                    </Typography>
+                    <Typography
+                      className={classes.timelineTagline}
+                      component="p"
+                    >
+                      {event.content}
+                    </Typography>
+                  </Box>
+                </Grow>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </Grow>
       <Container maxWidth="lg" className={classes.aboutTextBlock}>
         <TextBadge text="WHY US" size="large" />
         <Typography variant="body1" component="p">
