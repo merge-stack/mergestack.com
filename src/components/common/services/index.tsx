@@ -66,7 +66,7 @@ const Services = () => {
           {servicesData.map((service) => (
             <Grid item xs={12} sm={4} key={service.id}>
               <ServicesBox
-                icon={<WebDevIcon />}
+                icon={iconComponents[service.icon]}
                 heading={service.heading}
                 content={service.content}
               />
