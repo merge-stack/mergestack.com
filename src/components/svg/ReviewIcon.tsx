@@ -57,8 +57,8 @@ export const ReviewIcon: React.FC = () => (
         y2="48.9999"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_512_414"
@@ -68,8 +68,8 @@ export const ReviewIcon: React.FC = () => (
         y2="48.9999"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_512_414"
@@ -79,8 +79,8 @@ export const ReviewIcon: React.FC = () => (
         y2="49.0001"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_512_414"
@@ -90,8 +90,8 @@ export const ReviewIcon: React.FC = () => (
         y2="49.0001"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_512_414"
@@ -101,8 +101,8 @@ export const ReviewIcon: React.FC = () => (
         y2="49.0002"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
     </defs>
   </svg>
