@@ -119,7 +119,7 @@ const Header: React.FC = () => {
     setIsInfoDrawerOpen(true);
   };
 
-  const handleDrawerClose = () => {
+  const handleMobileMenurClose = () => {
     setIsDrawerOpen(false);
   };
 
@@ -178,11 +178,11 @@ const Header: React.FC = () => {
       <Drawer
         anchor="right"
         open={isDrawerOpen}
-        onClose={handleDrawerClose}
+        onClose={handleMobileMenurClose}
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton edge="end" onClick={handleDrawerClose}>
+          <IconButton edge="end" onClick={handleMobileMenurClose}>
             <CancelOutlinedIcon />
           </IconButton>
           <Link href="/about">About</Link>
