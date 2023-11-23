@@ -33,8 +33,8 @@ export const TrackIcon: React.FC = () => (
         y2="48.9999"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_512_406"
@@ -44,8 +44,8 @@ export const TrackIcon: React.FC = () => (
         y2="48.9999"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
     </defs>
   </svg>

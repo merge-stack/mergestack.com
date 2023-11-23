@@ -23,8 +23,8 @@ export const TeamIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.365283" stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop offset="0.365283" stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <clipPath id="clip0_506_277">
         <rect width="52.5" height="52.5" fill="white" />

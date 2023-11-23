@@ -73,8 +73,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_506_280"
@@ -84,8 +84,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.2499"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_506_280"
@@ -95,8 +95,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.2501"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_506_280"
@@ -106,8 +106,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_506_280"
@@ -117,8 +117,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_506_280"
@@ -128,8 +128,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.2501"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_506_280"
@@ -139,8 +139,8 @@ export const ConsultancyIcon: React.FC = () => (
         y2="26.2499"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
     </defs>
   </svg>

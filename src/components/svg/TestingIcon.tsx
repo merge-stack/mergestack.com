@@ -67,8 +67,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_506_258"
@@ -78,8 +78,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_506_258"
@@ -89,8 +89,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_506_258"
@@ -100,8 +100,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_506_258"
@@ -111,8 +111,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_506_258"
@@ -122,8 +122,8 @@ export const TestingIcon: React.FC = () => (
         y2="26.25"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#35BAFF" />
-        <stop offset="1" stop-color="#4096E6" />
+        <stop stopColor="#35BAFF" />
+        <stop offset="1" stopColor="#4096E6" />
       </linearGradient>
       <clipPath id="clip0_506_258">
         <rect width="52.5" height="52.5" fill="white" />
