@@ -11,6 +11,7 @@ import {
 import { makeStyles } from '@mui/styles';
 
 import images from 'src/components/about/brands/images.json';
+import ImageCarousel from 'src/components/common/carousel';
 
 const useStyles = makeStyles((theme: Theme) => ({
   brandsRoot: {
@@ -62,13 +63,7 @@ export function Brands() {
         <Typography variant="h2" fontWeight="600" textAlign="center">
           Brands We Work With
         </Typography>
-        <ImageList cols={4} className={classes.imageList}>
-          {images.map((item) => (
-            <ImageListItem key={item.img} className={classes.imageListitems}>
-              <img src={item.img} alt={item.alt} loading="lazy" />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <ImageCarousel images={images}/>
       </Container>
     </Box>
   );
