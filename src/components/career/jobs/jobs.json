@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "title": "Senior PHP Developer",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "March 12, 2023",
+    "experience": "3 years",
+    "position": 2,
+    "responsibilities": [
+      "Collaborating with prospective users and clients to understand and anticipate their needs and translate them into product requirements",
+      "Overseeing all stages of product creation including design and development",
+      "Identify and fill product gaps and generate new ideas that grow market share, improve customer experience, and drive growth",
+      "Develop buy-in for the product vision both internally and with key external partners",
+      "Organize product launches including working with the public relations team, executives, and other product management team members",
+      "Drive product launches and communication with customers and key stakeholders",
+      "Translate product ideas into tangible assets by creating wireframes, 3D renderings, prototypes, and minimum viable products (MVPs) to test assumptions and validate customer interests",
+      "Incorporate feature requests into the product roadmap",
+      "Groom and prioritize backlog keeping track of industry trends",
+      "Develop user stories and define acceptance criteria",
+      "Set sprint goals, plan releases and upgrades",
+      "Follow the progress of work and address production issues during sprints",
+      "Analyze preferences and requests of end users, Liaising with the product team and end users to deliver updates",
+      "Refine our agile methodology based on results and client feedback"
+    ],
+    "qualifications": [
+        "2-5 years experience of working on a Product Management and relevant fields",
+        "Significant experience in establishing, organizing, and leading a team. You must know the typical product development life cycle and be able to select the right development methodology for the product and the target market",
+        "Excellent communication and interpersonal skills",
+        "Excellent documentation skills",
+        "Good understanding of software development and web technologies",
+        "Strong problem-solving skills and high responsibility",
+        "Strong ability to work effectively with cross-functional teams in a matrix organization",
+        "MS or BS degree in Computer Science, Engineering, or other relevant area"
+      ]
+  },
+  {
+    "id": "2",
+    "title": "Middle WordPress CMS Developer",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "March 12, 2023"
+  },
+  {
+    "id": "3",
+    "title": "Senior Project Manager",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "April 15, 2023"
+  },
+  {
+    "id": "4",
+    "title": "Junior HTML Coder",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "June 10, 2023"
+  },
+  {
+    "id": "5",
+    "title": "Team-lead 1C-Bitrix",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "February 20, 2023"
+  },
+  {
+    "id": "6",
+    "title": "UX Analysts / UX Researcher",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "May 12, 2023"
+  },
+  {
+    "id": "7",
+    "title": "UX/ UI Mobile Designer",
+    "desc": "We don’t have core values, because values mean nothing without action. So these are our core behaviors.",
+    "location": "New York",
+    "status": "Full Time",
+    "date": "August 18, 2023"
+  }
+]

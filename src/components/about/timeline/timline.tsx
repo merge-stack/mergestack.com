@@ -20,6 +20,7 @@ export default function AboutTimeline() {
   return (
     <Container maxWidth="lg" className={classes.aboutRoot}>
       <Container maxWidth="md" className={classes.timlineHeadingWrapper}>
+      <TextBadge text="ABOUT" size="small" />
         <Typography className={classes.timlineHeading} variant="h2">
           Dedicated to delivering excellence
         </Typography>

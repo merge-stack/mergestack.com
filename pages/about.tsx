@@ -12,16 +12,11 @@ import { Brands } from 'src/components/about/brands';
 function About() {
   return (
     <Box component="div">
-      <Box component="div" textAlign="center" paddingTop="3rem">
-        <TextBadge text="ABOUT" size="small" />
-      </Box>
       <AboutTimeline />
       <CoreValues />
       <TeamSection />
       <Brands />
-      <Container maxWidth="lg">
-        <ContactSection />
-      </Container>
+      <ContactSection />
     </Box>
   );
 }
