@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import TextBadge from 'src/components/common/TextBadge';
-import BannerImage from 'public/assets/images/ServicesBanner.png';
+import BannerImage from 'public/assets/images/ServicesBanner.webp';
 
 const useStyles = makeStyles((theme) => ({
   servicesRoot: {
@@ -70,7 +70,7 @@ export function ServicesBanner() {
           </Typography>
         </Box>
 
-        <Box component="img" src={`${BannerImage.src}`} maxWidth="100%" />
+        <Box component="img" src={`${BannerImage.src}`} maxWidth="100%" borderRadius="15px" />
         <Typography variant="body1" className={classes.servicesDescription}>
           Mergestack is your trusted partner for IT management, data security,
           and cloud technology with one goal in mind: to transform the way your

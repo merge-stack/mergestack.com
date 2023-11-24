@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Container, Typography, Grid, Button, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import ServicesIntroBanner from 'public/assets/images/servicesIntroBanner.png';
+import ServicesIntroBanner from 'public/assets/images/servicesIntroBanner.webp';
 
 const useStyles = makeStyles((theme : Theme) => ({
   servicesTextRoot: {
@@ -73,7 +73,7 @@ export function ServicesTextSection() {
               component="img"
               src={`${ServicesIntroBanner.src}`}
               alt="Two Column Image"
-              style={{ width: '100%', maxWidth: '100%' }}
+              style={{ width: '100%', maxWidth: '100%', borderRadius: '15px'}}
             />
           </Grid>
         </Grid>

@@ -1,7 +1,7 @@
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import LogoWaterMark from 'public/assets/images/LogoWaterMark.png';
+import LogoWaterMark from 'public/assets/images/LogoWaterMark.webp';
 
 export const useStyles = makeStyles((theme : Theme) => ({
   valuesRoot: {

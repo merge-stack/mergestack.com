@@ -5,7 +5,7 @@
     "text": "Excellent IT service provider. The team contacted me quickly and dealt with my issue promptly & professionally. I can highly recommend this company.",
     "author": "Karen Lynn",
     "designation": "Founder @ Company",
-    "img": "/assets/images/team5.png"
+    "img": "/assets/images/team5.webp"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
     "author": "Dianne Russell",
     "designation": "Marketing Expert",
-    "img": "/assets/images/team4.png"
+    "img": "/assets/images/team4.webp"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
     "author": "Marvin McKinney",
     "designation": "College Student",
-    "img": "/assets/images/team3.png"
+    "img": "/assets/images/team3.webp"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
     "author": "Marvin McKinney",
     "designation": "College Student",
-    "img": "/assets/images/team3.png"
+    "img": "/assets/images/team3.webp"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
     "author": "Dianne Russell",
     "designation": "Marketing Expert",
-    "img": "/assets/images/team4.png"
+    "img": "/assets/images/team4.webp"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
     "author": "Marvin McKinney",
     "designation": "College Student",
-    "img": "/assets/images/team3.png"
+    "img": "/assets/images/team3.webp"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "text": "I have been looking for a good online PC support company for some time and found it paid for a one-hour remote session which cleaned.",
     "author": "Marvin McKinney",
     "designation": "College Student",
-    "img": "/assets/images/team3.png"
+    "img": "/assets/images/team3.webp"
   },
   {
     "id": 8,
@@ -61,6 +61,6 @@
     "text": "I signed up with IT solutions with some trepidation as I had previously been relying on an American-based company.",
     "author": "Dianne Russell",
     "designation": "Marketing Expert",
-    "img": "/assets/images/team4.png"
+    "img": "/assets/images/team4.webp"
   }
 ]

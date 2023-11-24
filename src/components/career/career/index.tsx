@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Container, Typography, Grid, Button, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import CareerSectionImage from 'public/assets/images/CareerSectionImage.png';
+import CareerSectionImage from 'public/assets/images/CareerSectionImage.webp';
 
 const useStyles = makeStyles((theme : Theme) => ({
   careerTextRoot: {
@@ -77,7 +77,7 @@ export function CareerTextSection() {
               component="img"
               src={`${CareerSectionImage.src}`}
               alt="Two Column Image"
-              style={{ width: '100%', maxWidth: '100%' }}
+              style={{ width: '100%', maxWidth: '100%', borderRadius: '15px' }}
             />
           </Grid>
         </Grid>

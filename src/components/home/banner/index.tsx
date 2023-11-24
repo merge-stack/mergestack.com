@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography, Button, Paper, Box, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import HomeBanner from 'public/assets/images/homeBanner.png';
+import HomeBanner from 'public/assets/images/homeBanner.webp';
 
 
 const useStyles = makeStyles((theme : Theme) => ({

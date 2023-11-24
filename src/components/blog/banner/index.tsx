@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import BlogBannerImage from 'public/assets/images/BlogBanner.png';
+import BlogBannerImage from 'public/assets/images/BlogBanner.webp';
 import TextBadge from 'src/components/common/TextBadge';
 
 const useStyles = makeStyles({
@@ -105,7 +105,7 @@ export function BlogBanner() {
               component="img"
               src={`${BlogBannerImage.src}`}
               alt="Two Column Image"
-              style={{ width: '100%', maxWidth: '100%' }}
+              style={{ width: '100%', maxWidth: '100%' , borderRadius: '15px'}}
             />
           </Grid>
         </Grid>
