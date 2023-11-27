@@ -3,7 +3,8 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "sst bind next dev",
+    "deploy": "sst dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -29,6 +30,9 @@
     "@types/react": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "sst": "^2.36.6",
+    "aws-cdk-lib": "2.110.1",
+    "constructs": "10.3.0"
   }
 }
