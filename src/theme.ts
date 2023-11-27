@@ -1,5 +1,5 @@
 import { Roboto, Inter } from 'next/font/google';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, Theme } from '@mui/material/styles';
 import { DefaultTheme } from '@mui/styles';
 
 export const roboto = Roboto({
@@ -18,24 +18,24 @@ declare module '@mui/system' {
 }
 
 // Create a theme instance.
-const theme : DefaultTheme = createTheme({
-    palette: {
-      primary: {
-        main: '#4FB0E3',
-      },
-      secondary: {
-        main: '#106897',
-      },
-      background: {
-        default: '#ffffff',
-      },
-      custom: {
-        main: '#f7f7f9',
-      }
+const theme: DefaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#4FB0E3',
     },
-    typography: {
-      fontFamily: inter.style.fontFamily,
+    secondary: {
+      main: '#106897',
     },
+    background: {
+      default: '#ffffff',
+    },
+    custom: {
+      main: '#f7f7f9',
+    },
+  },
+  typography: {
+    fontFamily: inter.style.fontFamily,
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {
