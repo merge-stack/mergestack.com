@@ -8,7 +8,7 @@ import {
   Box,
   Paper,
 } from '@mui/material';
-import { useStyles } from '../style';
+import { useStyles } from 'src/components/contact/style';
 
 const ContactForm: React.FC = () => {
   const classes = useStyles();

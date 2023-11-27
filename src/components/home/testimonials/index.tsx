@@ -12,7 +12,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from 'src/components/home/testimonials/testimonials.json';
-import TestimonialCarousel from './TestimonialCarousel';
+import TestimonialCarousel from 'src/components/home/testimonials/TestimonialCarousel';
 
 const useStyles = makeStyles((theme: Theme) => ({
   testimonialRoot: {

@@ -6,7 +6,7 @@ import Carousel from 'react-material-ui-carousel';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material/styles';
 
-import testimonialData from './testimonials.json';
+import testimonialData from 'src/components/home/testimonials/testimonials.json';
 
 interface ImageCarouselProps {
   className?: string;

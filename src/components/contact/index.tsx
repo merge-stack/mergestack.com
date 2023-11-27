@@ -4,7 +4,7 @@ import { Box, Container, Typography, Button } from '@mui/material';
 import TextBadge from 'src/components/common/TextBadge';
 import { useStyles } from 'src/components/contact/style';
 import { ChevronRightIcon } from 'src/components/svg/ChevronRightIcon';
-import { ContactFormContainer } from './form';
+import { ContactFormContainer } from 'src/components/contact/form';
 
 export function ContactUs() {
   const classes = useStyles();

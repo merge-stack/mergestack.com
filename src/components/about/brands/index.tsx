@@ -9,7 +9,7 @@ import {
 import { makeStyles } from '@mui/styles';
 
 import images from 'src/components/about/brands/images.json';
-import ImageCarousel from 'src/components/common/carousel';
+import ImageCarousel from 'src/components/about/brands/carousel';
 
 const useStyles = makeStyles((theme: Theme) => ({
   brandsRoot: {
