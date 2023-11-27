@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'flex',
       justifyContent: 'space-evenly',
     },
+    '& img': {
+      maxHeight: '33px'
+    },
   },
 }));
 
@@ -31,7 +34,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className, images }) => {
       className={`${classes.carouselRoot} ${className}`}
       autoPlay={true}
       height={50}
-      interval={4000}
+      interval={3000}
       duration={3000}
       animation="slide"
       indicators={false}
