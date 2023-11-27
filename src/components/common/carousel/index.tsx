@@ -29,12 +29,13 @@ const useStyles = makeStyles<Theme>((theme: Theme) => ({
   slideAnimation: {
     display: 'flex',
     transition: 'transform 1s ease-in-out',
+    maxHeight: '33px'
   },
   slideOut: {
     transform: 'translateX(-100vw)',
   },
   slideIn: {
-    transform: 'translateX(0%)',
+    transform: 'translateX(0)',
   },
 }));
 
@@ -52,7 +53,7 @@ const ImageCarousel: React.FC<ICarouselProps> = ({ images }) => {
       setTimeout(() => {
         setCurrentSetIndex((prevIndex) => (prevIndex + 1) % totalSets);
         setSlideOut(false);
-      }, 1000);
+      }, 600);
     }, 6000);
 
     return () => clearInterval(interval);

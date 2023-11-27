@@ -78,6 +78,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     width: '100% !important',
     height: 'auto !important',
     marginBlock: '1.5rem',
+    borderRadius: '15px'
   },
   aboutTextBlock: {
     display: 'flex',
