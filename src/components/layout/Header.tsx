@@ -111,7 +111,7 @@ const Header: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isInfoDrawerOpen, setIsInfoDrawerOpen] = useState(false);
 
-  const mobileMenuOpen = () => {
+  const handleMobileMenuOpen = () => {
     setIsDrawerOpen(true);
   };
 
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
     setIsInfoDrawerOpen(true);
   };
 
-  const handleMobileMenurClose = () => {
+  const handleMobileMenuClose = () => {
     setIsDrawerOpen(false);
   };
 
@@ -166,7 +166,7 @@ const Header: React.FC = () => {
                 className={classes.mobileMenuBtn}
                 color="default"
                 edge="end"
-                onClick={mobileMenuOpen}
+                onClick={handleMobileMenuOpen}
               >
                 <MenuIcon />
               </IconButton>
@@ -178,11 +178,11 @@ const Header: React.FC = () => {
       <Drawer
         anchor="right"
         open={isDrawerOpen}
-        onClose={handleMobileMenurClose}
+        onClose={handleMobileMenuClose}
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton edge="end" onClick={handleMobileMenurClose}>
+          <IconButton edge="end" onClick={handleMobileMenuClose}>
             <CancelOutlinedIcon />
           </IconButton>
           <Link href="/about">About</Link>
