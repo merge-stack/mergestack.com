@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { useStyles } from 'src/components/career/style';
 
 import TextBadge from 'src/components/common/TextBadge';
-import CareersBannerImage from 'public/assets/images/CareersBannerImage.png'
+import CareersBannerImage from 'public/assets/images/CareersBannerImage.webp'
 
 
 export function CareersBanner() {
@@ -20,7 +20,7 @@ export function CareersBanner() {
           </Typography>
         </Box>
 
-        <Box component="img" src={`${CareersBannerImage.src}`} maxWidth="100%" />
+        <Box component="img" src={`${CareersBannerImage.src}`} maxWidth="100%" borderRadius="15px" />
       </Container>
     </Box>
   );

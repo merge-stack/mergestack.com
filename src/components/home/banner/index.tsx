@@ -2,8 +2,8 @@ import React from 'react';
 import { Grid, Typography, Button, Paper, Box, Theme, Grow } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import HomeBanner from 'public/assets/images/homeBanner.png';
 import { useInView } from 'react-intersection-observer';
+import HomeBanner from 'public/assets/images/homeBanner.webp';
 
 
 const useStyles = makeStyles((theme : Theme) => ({

@@ -15,7 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 import Logo from 'src/components/svg/Logo';
-import InfoDrawerBox from './Header/InfoDrawerBox';
+import CompanyInfoDrawer from './Header/InfoDrawerBox';
 
 const useStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'none',
     },
   },
-  InfoDrawerBtn: {
+  desktopHamburger: {
     backgroundColor: '#EFF1F5',
     '&:hover':{
       backgroundColor: theme.palette.primary.main,
@@ -97,12 +97,6 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'inline-flex',
     },
   },
-  
-  InfoDrawerWidth: {
-    '& > :nth-child(3)': {
-      width: '360px',
-    },
-  },
 
   drawerWidth: {
     '& > :nth-child(3)': {
@@ -117,7 +111,7 @@ const Header: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isInfoDrawerOpen, setIsInfoDrawerOpen] = useState(false);
 
-  const mobileMenuOpen = () => {
+  const handleMobileMenuOpen = () => {
     setIsDrawerOpen(true);
   };
 
@@ -125,7 +119,7 @@ const Header: React.FC = () => {
     setIsInfoDrawerOpen(true);
   };
 
-  const handleDrawerClose = () => {
+  const handleMobileMenuClose = () => {
     setIsDrawerOpen(false);
   };
 
@@ -160,7 +154,7 @@ const Header: React.FC = () => {
                 Contact Us
               </Button>
               <IconButton
-                className={classes.InfoDrawerBtn}
+                className={classes.desktopHamburger}
                 color="default"
                 edge="end"
                 onClick={infoDrawerOpen}
@@ -172,7 +166,7 @@ const Header: React.FC = () => {
                 className={classes.mobileMenuBtn}
                 color="default"
                 edge="end"
-                onClick={mobileMenuOpen}
+                onClick={handleMobileMenuOpen}
               >
                 <MenuIcon />
               </IconButton>
@@ -184,11 +178,11 @@ const Header: React.FC = () => {
       <Drawer
         anchor="right"
         open={isDrawerOpen}
-        onClose={handleDrawerClose}
+        onClose={handleMobileMenuClose}
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton edge="end" onClick={handleDrawerClose}>
+          <IconButton edge="end" onClick={handleMobileMenuClose}>
             <CancelOutlinedIcon />
           </IconButton>
           <Link href="/about">About</Link>
@@ -200,14 +194,7 @@ const Header: React.FC = () => {
       </Drawer>
       
       {/* INFORMATION DRAWER  */}
-      <Drawer
-        anchor="right"
-        open={isInfoDrawerOpen}
-        onClose={handleInfoDrawerClose}
-        className={classes.InfoDrawerWidth}
-      >
-        <InfoDrawerBox onClose={handleInfoDrawerClose} />
-      </Drawer>
+      <CompanyInfoDrawer onClose={handleInfoDrawerClose} isOpen={isInfoDrawerOpen} />
     </AppBar>
   );
 };
