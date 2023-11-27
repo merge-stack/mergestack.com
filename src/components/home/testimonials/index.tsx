@@ -12,6 +12,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from 'src/components/home/testimonials/testimonials.json';
+import TestimonialCarousel from './TestimonialCarousel';
 
 const useStyles = makeStyles((theme : Theme) => ({
   testimonialRoot: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme : Theme) => ({
   },
   testimonialContainer: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexDirection: 'column',
     justifyContent: 'center',
     gap: '1rem',
   },
@@ -89,7 +90,7 @@ const TestimonialSection: React.FC = () => {
           are saying about us
         </Typography>
 
-        <Box className={classes.slideContainer}>
+        {/* <Box className={classes.slideContainer}>
           {getVisibleTestimonials().map((testimonialsData) => (
             <Paper
               className={classes.testimonialWrapper}
@@ -123,9 +124,11 @@ const TestimonialSection: React.FC = () => {
               </Box>
             </Paper>
           ))}
-        </Box>
+        </Box> */}
 
-        <div className={classes.circlesContainer}>
+        <TestimonialCarousel />
+
+        {/* <div className={classes.circlesContainer}>
           <>
             {Array.from({ length: totalCircles }, (_, index) => (
               <IconButton
@@ -142,7 +145,7 @@ const TestimonialSection: React.FC = () => {
               </IconButton>
             ))}
           </>
-        </div>
+        </div> */}
       </Container>
     </Box>
   );
