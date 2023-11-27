@@ -32,10 +32,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className, images }) => {
       autoPlay={true}
       height={50}
       interval={4000}
-      duration={500}
+      duration={3000}
       animation="slide"
-      indicators={true}
+      indicators={false}
       navButtonsAlwaysVisible={false}
+      navButtonsAlwaysInvisible={true}
       swipe={true}
       cycleNavigation={true}
     >

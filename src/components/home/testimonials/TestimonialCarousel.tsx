@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   activeIndicator: {
     color: theme.palette.primary.main,
   },
+  hoverIndicator: {
+    '&:hover': {
+        color: theme.palette.secondary.main,
+    }
+  },
 
   testimonialWrapper: {
     width: '33%',
@@ -66,6 +71,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
       swipe={true}
       activeIndicatorIconButtonProps={{
         className: classes.activeIndicator,
+      }}
+      indicatorIconButtonProps={{
+        className: classes.hoverIndicator
       }}
       cycleNavigation={true}
     >
