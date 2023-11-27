@@ -1,12 +1,19 @@
 import React from 'react';
-import { Grid, Typography, Button, Paper, Box, Theme, Grow } from '@mui/material';
+import {
+  Grid,
+  Typography,
+  Button,
+  Paper,
+  Box,
+  Theme,
+  Grow,
+} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import { useInView } from 'react-intersection-observer';
 import HomeBanner from 'public/assets/images/homeBanner.webp';
 
-
-const useStyles = makeStyles((theme : Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   bannerContainer: {
     backgroundImage: `url(${HomeBanner.src})`,
     backgroundSize: 'cover',
@@ -25,7 +32,7 @@ const useStyles = makeStyles((theme : Theme) => ({
     gap: '3rem',
     '@media (max-width: 600px)': {
       alignItems: 'normal',
-      gap: '2rem'
+      gap: '2rem',
     },
   },
   bannerTextContainer: {
@@ -74,26 +81,34 @@ const HomepageBanner = () => {
     triggerOnce: true,
   });
   const classes = useStyles();
-  
+
   return (
     <Paper elevation={0} className={classes.bannerContainer}>
       <Grow in={inView} timeout={500}>
-      <Grid ref={ref} container spacing={2}>
-        <Grid item xs={12} sm={6} className={classes.bannerGrid}>
-          <Box ref={ref} className={classes.bannerTextContainer} component="div">
-            <Typography variant='h1' className={classes.bannerHeading}>
-              We manage your IT, so you can manage your business.
-            </Typography>
-            <Typography className={classes.bannerTagline}>
-              Take charge of your business continuity with innovative IT
-              solutions
-            </Typography>
-          </Box>
-          <Button variant="contained" disableElevation className={classes.bannerBtn}>
-            Schedule a Free Consultation
-          </Button>
+        <Grid ref={ref} container spacing={2}>
+          <Grid item xs={12} sm={6} className={classes.bannerGrid}>
+            <Box
+              ref={ref}
+              className={classes.bannerTextContainer}
+              component="div"
+            >
+              <Typography variant="h1" className={classes.bannerHeading}>
+                We manage your IT, so you can manage your business.
+              </Typography>
+              <Typography className={classes.bannerTagline}>
+                Take charge of your business continuity with innovative IT
+                solutions
+              </Typography>
+            </Box>
+            <Button
+              variant="contained"
+              disableElevation
+              className={classes.bannerBtn}
+            >
+              Schedule a Free Consultation
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
       </Grow>
     </Paper>
   );

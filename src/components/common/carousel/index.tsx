@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   carouselRoot: {
     '& > div > div > div > div > div > div': {
       display: 'flex',
-      justifyContent: 'space-evenly'
+      justifyContent: 'space-evenly',
     },
   },
 }));
@@ -41,9 +41,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className, images }) => {
       cycleNavigation={true}
     >
       {groupedImages.map((imageGroup, index) => (
-        <Box component='div' key={index}>
+        <Box component="div" key={index}>
           {imageGroup.map((image, subIndex) => (
-            <Box component={'img'} key={subIndex} src={image} alt={`slide-${index}-${subIndex}`} />
+            <Box
+              component={'img'}
+              key={subIndex}
+              src={image}
+              alt={`slide-${index}-${subIndex}`}
+            />
           ))}
         </Box>
       ))}
