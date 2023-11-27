@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 import Logo from 'src/components/svg/Logo';
+import CompanyInfoDrawer from './Header/InfoDrawerBox';
 
 const useStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: '25px',
     boxShadow: 'none',
     color: theme.palette.background.default,
+    textTransform: 'capitalize',
     '&:hover': {
       backgroundColor: theme.palette.background.default,
       color: theme.palette.primary.main,
@@ -69,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '1rem',
     height: '60%',
   },
-  hamburger: {
+  mobileMenuBtn: {
     '@media (max-width: 600px)': {
       display: 'inine-block',
     },
@@ -77,6 +79,25 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'none',
     },
   },
+  desktopHamburger: {
+    backgroundColor: '#EFF1F5',
+    '&:hover':{
+      backgroundColor: theme.palette.primary.main,
+      '& > svg': {
+        fill: '#EFF1F5'
+      },
+    },
+    '& > svg': {
+      fill: theme.palette.primary.main
+    },
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
+    '@media (min-width: 601px)': {
+      display: 'inline-flex',
+    },
+  },
+
   drawerWidth: {
     '& > :nth-child(3)': {
       width: '100%',
@@ -88,13 +109,22 @@ const Header: React.FC = () => {
   const router = useRouter();
   const classes = useStyles();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isInfoDrawerOpen, setIsInfoDrawerOpen] = useState(false);
 
-  const handleDrawerOpen = () => {
+  const handleMobileMenuOpen = () => {
     setIsDrawerOpen(true);
   };
 
-  const handleDrawerClose = () => {
+  const infoDrawerOpen = () => {
+    setIsInfoDrawerOpen(true);
+  };
+
+  const handleMobileMenuClose = () => {
     setIsDrawerOpen(false);
+  };
+
+  const handleInfoDrawerClose = () => {
+    setIsInfoDrawerOpen(false);
   };
 
   return (
@@ -123,12 +153,20 @@ const Header: React.FC = () => {
               >
                 Contact Us
               </Button>
-
               <IconButton
-                className={classes.hamburger}
+                className={classes.desktopHamburger}
                 color="default"
                 edge="end"
-                onClick={handleDrawerOpen}
+                onClick={infoDrawerOpen}
+              >
+                <MenuIcon />
+              </IconButton>
+
+              <IconButton
+                className={classes.mobileMenuBtn}
+                color="default"
+                edge="end"
+                onClick={handleMobileMenuOpen}
               >
                 <MenuIcon />
               </IconButton>
@@ -136,14 +174,15 @@ const Header: React.FC = () => {
           </Box>
         </Box>
       </Container>
+      {/* MOBILE MENU DRAWER */}
       <Drawer
         anchor="right"
         open={isDrawerOpen}
-        onClose={handleDrawerClose}
+        onClose={handleMobileMenuClose}
         className={classes.drawerWidth}
       >
         <Box className={classes.menuLinks}>
-          <IconButton edge="end" onClick={handleDrawerClose}>
+          <IconButton edge="end" onClick={handleMobileMenuClose}>
             <CancelOutlinedIcon />
           </IconButton>
           <Link href="/about">About</Link>
@@ -153,6 +192,9 @@ const Header: React.FC = () => {
           <Link href="/blogs">Blogs</Link>
         </Box>
       </Drawer>
+      
+      {/* INFORMATION DRAWER  */}
+      <CompanyInfoDrawer onClose={handleInfoDrawerClose} isOpen={isInfoDrawerOpen} />
     </AppBar>
   );
 };
