@@ -40,11 +40,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className, images }) => {
       cycleNavigation={true}
     >
       {groupedImages.map((imageGroup, index) => (
-        <div key={index}>
+        <Box component='div' key={index}>
           {imageGroup.map((image, subIndex) => (
             <Box component={'img'} key={subIndex} src={image} alt={`slide-${index}-${subIndex}`} />
           ))}
-        </div>
+        </Box>
       ))}
     </Carousel>
   );
