@@ -52,7 +52,7 @@ function CoreValues() {
         <Grid container spacing={3} className={classes.valuesIconBoxContainer}>
           {data.map((item) => (
             <Grid item xs={12} sm={6} md={3} key={item.id}>
-              <Slide direction="right" in={isVisible} easing={'ease-in'} timeout={2000}>
+              <Slide direction="right" in={isVisible} easing={'ease-in'} timeout={1000}>
                 <Box className={classes.valuesIconBox}>
                   {iconComponents[item.icon]}
                   <Typography variant="h6" className={classes.IconBoxHeading}>

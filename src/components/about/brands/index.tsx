@@ -4,8 +4,6 @@ import {
   Box,
   Container,
   Typography,
-  ImageList,
-  ImageListItem,
   Theme,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -56,14 +54,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export function Brands() {
   const classes = useStyles();
-
+  const imageUrls = images.map(item => item.img);
   return (
     <Box component="div" className={classes.brandsRoot}>
       <Container maxWidth="lg" className={classes.brandsContainer}>
         <Typography variant="h2" fontWeight="600" textAlign="center">
           Brands We Work With
         </Typography>
-        <ImageCarousel images={images}/>
+        <ImageCarousel images={imageUrls}/>
       </Container>
     </Box>
   );
