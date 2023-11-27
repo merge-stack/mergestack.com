@@ -30,5 +30,37 @@
   {
     "img": "/assets/images/Brand8.png",
     "alt": "Yuhverse"
+  },
+  {
+    "img": "/assets/images/Brand1.png",
+    "alt": "Muast"
+  },
+  {
+    "img": "/assets/images/Brand2.png",
+    "alt": "Chatbot"
+  },
+  {
+    "img": "/assets/images/Brand3.png",
+    "alt": "wattse"
+  },
+  {
+    "img": "/assets/images/Brand4.png",
+    "alt": "Soluck"
+  },
+  {
+    "img": "/assets/images/Brand5.png",
+    "alt": "zentrade"
+  },
+  {
+    "img": "/assets/images/Brand6.png",
+    "alt": "linkify"
+  },
+  {
+    "img": "/assets/images/Brand7.png",
+    "alt": "Nextech"
+  },
+  {
+    "img": "/assets/images/Brand8.png",
+    "alt": "Yuhverse"
   }
 ]

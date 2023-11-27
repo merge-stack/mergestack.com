@@ -33,7 +33,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className, images }) => {
       height={50}
       interval={4000}
       duration={500}
-      animation="fade"
+      animation="slide"
       indicators={true}
       navButtonsAlwaysVisible={false}
       swipe={true}
