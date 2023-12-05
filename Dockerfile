@@ -1,19 +1,19 @@
-FROM node:16.15.0
+FROM node:18.17.0
 
 #Install some dependencies
 
 WORKDIR /usr/app
 
 COPY package.json ./
-COPY package-lock.json ./
+COPY yarn.lock ./
 
 COPY . .
 
-RUN npm install
+RUN yarn install
 
-RUN npm run build
+RUN yarn build
 
 EXPOSE 3000
 
 # Set up a default command
-CMD [ "npm","start" ]
+CMD [ "yarn","start" ]
