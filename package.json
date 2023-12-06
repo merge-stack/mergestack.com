@@ -2,11 +2,16 @@
   "name": "material-ui-nextjs-pages-router-ts",
   "version": "5.0.0",
   "private": true,
+  "engines": {
+    "node": "18.17.0"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "sst bind next dev",
+    "sst-dev": "sst dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "sst-deploy": "npx sst deploy",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
@@ -32,6 +37,9 @@
     "@types/react": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "sst": "^2.36.7",
+    "aws-cdk-lib": "2.110.1",
+    "constructs": "10.3.0"
   }
 }
