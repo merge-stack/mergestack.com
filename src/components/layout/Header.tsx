@@ -7,13 +7,13 @@ import {
   Box,
   Container,
   Drawer,
-  Link,
   Theme,
 } from '@mui/material';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
+import MuiLink from 'src/Link';
 import Logo from 'src/components/svg/Logo';
 import CompanyInfoDrawer from './Header/InfoDrawerBox';
 
@@ -81,14 +81,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   desktopHamburger: {
     backgroundColor: '#EFF1F5',
-    '&:hover':{
+    '&:hover': {
       backgroundColor: theme.palette.primary.main,
       '& > svg': {
-        fill: '#EFF1F5'
+        fill: '#EFF1F5',
       },
     },
     '& > svg': {
-      fill: theme.palette.primary.main
+      fill: theme.palette.primary.main,
     },
     '@media (max-width: 600px)': {
       display: 'none',
@@ -132,18 +132,18 @@ const Header: React.FC = () => {
       <Container maxWidth="lg">
         <Box component="div" className={classes.menuContainer}>
           <Box className={classes.logoWrapper}>
-            <Link href="/">
+            <MuiLink href="/">
               <Logo />
-            </Link>
+            </MuiLink>
           </Box>
 
           <Box className={classes.menuLinkWrapper}>
             <Box className={classes.menuItems}>
-              <Link href="/about">About</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/portfolio">Portfolio</Link>
-              <Link href="/career">Careers</Link>
-              <Link href="/blogs">Blogs</Link>
+              <MuiLink href="/about">About</MuiLink>
+              <MuiLink href="/services">Services</MuiLink>
+              <MuiLink href="/portfolio">Portfolio</MuiLink>
+              <MuiLink href="/career">Careers</MuiLink>
+              <MuiLink href="/blogs">Blogs</MuiLink>
             </Box>
             <Box className={classes.menuItems}>
               <Button
@@ -185,16 +185,19 @@ const Header: React.FC = () => {
           <IconButton edge="end" onClick={handleMobileMenuClose}>
             <CancelOutlinedIcon />
           </IconButton>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/career">Careers</Link>
-          <Link href="/blogs">Blogs</Link>
+          <MuiLink href="/about">About</MuiLink>
+          <MuiLink href="/services">Services</MuiLink>
+          <MuiLink href="/portfolio">Portfolio</MuiLink>
+          <MuiLink href="/career">Careers</MuiLink>
+          <MuiLink href="/blogs">Blogs</MuiLink>
         </Box>
       </Drawer>
-      
+
       {/* INFORMATION DRAWER  */}
-      <CompanyInfoDrawer onClose={handleInfoDrawerClose} isOpen={isInfoDrawerOpen} />
+      <CompanyInfoDrawer
+        onClose={handleInfoDrawerClose}
+        isOpen={isInfoDrawerOpen}
+      />
     </AppBar>
   );
 };
