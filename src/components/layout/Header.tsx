@@ -147,9 +147,9 @@ const Header: React.FC = () => {
             </Box>
             <Box className={classes.menuItems}>
               <Button
-                href="/contact"
                 variant="contained"
                 className={classes.menubtn}
+                onClick={() => router.push('/contact')}
               >
                 Contact Us
               </Button>
