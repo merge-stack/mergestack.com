@@ -15,7 +15,7 @@ import { makeStyles } from '@mui/styles';
 
 import MuiLink from 'src/Link';
 import Logo from 'src/components/svg/Logo';
-import CompanyInfoDrawer from './Header/InfoDrawerBox';
+import CompanyInfoDrawer from 'src/components/layout/Header/InfoDrawerBox';
 
 const useStyles = makeStyles((theme: Theme) => ({
   menuContainer: {

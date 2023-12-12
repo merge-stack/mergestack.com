@@ -12,8 +12,9 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import testimonialsData from 'src/components/home/testimonials/testimonials.json';
+import TestimonialCarousel from 'src/components/home/testimonials/TestimonialCarousel';
 
-const useStyles = makeStyles((theme : Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   testimonialRoot: {
     paddingBlock: '4rem',
     backgroundColor: theme.palette.custom.main,
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme : Theme) => ({
   },
   testimonialContainer: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexDirection: 'column',
     justifyContent: 'center',
     gap: '1rem',
   },
@@ -77,6 +78,7 @@ const TestimonialSection: React.FC = () => {
   const totalCircles = Math.ceil(testimonialsData.length / itemsPerSlide);
   const getVisibleTestimonials = () => {
     const start = activeSlide * itemsPerSlide;
+
     return testimonialsData.slice(start, start + itemsPerSlide);
   };
 
@@ -88,61 +90,7 @@ const TestimonialSection: React.FC = () => {
           <br />
           are saying about us
         </Typography>
-
-        <Box className={classes.slideContainer}>
-          {getVisibleTestimonials().map((testimonialsData) => (
-            <Paper
-              className={classes.testimonialWrapper}
-              elevation={1}
-              key={testimonialsData.id}
-            >
-              <Box display="flex" flexDirection="column" gap="0.25rem">
-                <Rating name="size-medium" defaultValue={5} disabled />
-                <Typography fontWeight="900" variant="h6">
-                  {testimonialsData.title}
-                </Typography>
-                <Typography variant="body1">
-                  &quot;{testimonialsData.text}&quot;
-                </Typography>
-              </Box>
-              <Box display="flex" gap="1rem">
-                <Image
-                  alt="Author"
-                  src={testimonialsData.img}
-                  width={55}
-                  height={55}
-                />
-                <Box>
-                  <Typography fontWeight="900" variant="body1">
-                    {testimonialsData.author}
-                  </Typography>
-                  <Typography variant="body2">
-                    {testimonialsData.designation}
-                  </Typography>
-                </Box>
-              </Box>
-            </Paper>
-          ))}
-        </Box>
-
-        <div className={classes.circlesContainer}>
-          <>
-            {Array.from({ length: totalCircles }, (_, index) => (
-              <IconButton
-                key={index}
-                onClick={() => setActiveSlide(index)} 
-              >
-                <CircleIcon
-                  fontSize="large"
-                  color={index === activeSlide ? 'primary' : 'disabled'} 
-                  className={`${classes.circleIcon} ${
-                    index === activeSlide ? 'active' : ''
-                  }`}
-                />
-              </IconButton>
-            ))}
-          </>
-        </div>
+        <TestimonialCarousel />
       </Container>
     </Box>
   );

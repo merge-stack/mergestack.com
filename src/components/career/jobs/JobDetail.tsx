@@ -15,8 +15,8 @@ import {
 import LayoutHoc from 'src/layoutHoc';
 import JobsData from 'src/components/career/jobs/jobs.json';
 import { useStyles } from 'src/components/career/style';
-import ApplyJobBox from './ApplyJobBox';
-import InformationCard from './InformationCard';
+import ApplyJobBox from 'src/components/career/jobs/ApplyJobBox';
+import InformationCard from 'src/components/career/jobs/InformationCard';
 
 interface IJobDetailProps {
   jobId: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Box, Paper, Typography, Container } from '@mui/material';
+import { Grid, Box, Paper, Typography, Container, Grow } from '@mui/material';
 import data from 'src/components/home/workingCycle/steps.json';
 import { BulbIcon } from 'src/components/svg/BulbIcon';
 import { WorkerIcon } from 'src/components/svg/WorkersIcon';
@@ -8,6 +8,7 @@ import { BuildingIcon } from 'src/components/svg/Building';
 import { CurvedArrowUp } from 'src/components/svg/CurvedArrowUpIcon';
 import { CurvedArrowDown } from 'src/components/svg/CurvedArrowDownIcon';
 import useStyles from 'src/components/home/workingCycle/style';
+import { useInView } from 'react-intersection-observer';
 
 const iconComponents: { [key: string]: React.ReactElement } = {
   'BulbIcon': <BulbIcon />,
@@ -17,10 +18,14 @@ const iconComponents: { [key: string]: React.ReactElement } = {
 };
 
 const WorkingCycle = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   const classes = useStyles();
 
   return (
-    <Box component="div" className={classes.workingCycleRoot}>
+    <Grow in={inView} timeout={500}>
+    <Box ref={ref} component="div" className={classes.workingCycleRoot}>
       <Typography className={classes.workingCycleTitle} variant="h2">
         Our Working Cycle
       </Typography>
@@ -61,6 +66,7 @@ const WorkingCycle = () => {
         </Grid>
       </Container>
     </Box>
+    </Grow>
   );
 };
 

@@ -2,12 +2,10 @@ import * as React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded';
 
-import TextBadge from 'src/components/common/TextBadge';
 import { useStyles } from 'src/components/contact/style';
 import { ChevronRightIcon } from 'src/components/svg/ChevronRightIcon';
-import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import { VerifiedIcon } from 'src/components/svg/VerifiedIcon';
-import ContactForm from './ContactForm';
+import ContactForm from 'src/components/contact/form/ContactForm';
 
 export function ContactFormContainer() {
   const classes = useStyles();
